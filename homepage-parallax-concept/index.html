@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Splash - Beachbody On Demand</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="images/favicon_32.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-mobile.css">
+    <!--    <link rel="stylesheet" type="text/css" href="css/parallax-style.css">-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <script src="http://bennettcodes.com/js/imagesloaded.pkgd.min.js"></script>
+<!--
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+-->
+
+    <!-- Behavioral Meta Data -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script language=javascript>
+        switch (true) {
+            //        MOBILE REDIR
+        case (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) && (!(/iPad/i.test(navigator.userAgent))):
+            //            location.replace("../mobile/index.php#");
+            break;
+            //        TABLET REDIR
+        case (!(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) && (/iPad/i.test(navigator.userAgent)):
+            //            location.replace("../tablet");
+            break;
+            //        DESKTOP REDIR
+        default:
+            //            location.replace("../index.php#");
+            break;
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="page-tracker">
+        <div id="page-tracker-line-top"></div>
+        <div id="page-tracker-line-bottom"></div>
+    </div>
+    <div id="container">
+        <div id="container-bg" class="white-bg"></div>
+        <div id="header">
+            <div id="header-bg"></div>
+            <div id="header-content">
+                <div id="logo-container">
+                    <img id="logo-white" src="images/logo_white.png">
+                    <img id="logo" src="images/logo.png">
+                </div>
+            </div>
+        </div>
+        <div id="video-container">
+            <div class="overlay black-bg-25"></div>
+            <video preload autoplay="autoplay" loop id="bgvid" width="100%" class="video">
+                <source class="video-src" src="videos/BB_Digital_slow_cut_v5_122914_DR-15MB_1_.ogv" type="video/ogg">
+                <source class="video-src" src="videos/BB_Digital_slow_cut_v5_122914_DR-15MB.mp4" type="video/mp4">
+                <img src="images/hero_image_tablet2.jpg" style="width: 100%" alt="hero video fallover" />
+            </video>
+        </div>
+        <div id="wrapper">
+            <ul id="hero-fg-scene" class="scene">
+                <li id="hero-fg-scene-monitor" class="layer" data-depth="0.25">
+                    <img id="hero-fg-scene-monitor-screen" class="parallax-middle trigger-item" src="images/monitor.png">
+                    <div id="hero-fg-scene-monitor-backdrop" class="parallax-middle trigger-item">
+                        <img id="hero-fg-scene-monitor-fpo" src="images/tiles-fpo.png">
+                        <img id="hero-fg-scene-monitor-glare" src="images/monitor-glare.png">
+                        <ul id="hero-tile-scene">
+                            <li class="layer tile desktop-tile" data-depth="1.90">
+                                <img class="tile-img" src="images/p90x-tile.png">
+                            </li>
+                            <li class="layer tile desktop-tile" data-depth="1.60">
+                                <img class="tile-img" src="images/turbo-fire-tile.png">
+                            </li>
+                            <li class="layer tile desktop-tile" data-depth="1.30">
+                                <img class="tile-img" src="images/insanity-tile.png">
+                            </li>
+                            <li class="layer tile desktop-tile" data-depth="1.00">
+                                <img class="tile-img" src="images/autumns-bod-exclusives-tile.png">
+                            </li>
+                            <li class="layer tile desktop-tile" data-depth="0.80">
+                                <img class="tile-img" src="images/22mhc-tile.png">
+                            </li>
+                            <li class="layer tile desktop-tile" data-depth="0.60">
+                                <img class="tile-img" src="images/21df-tile.png">
+                            </li>
+                            <li class="layer tile desktop-tile" data-depth="0.40">
+                                <img class="tile-img" src="images/body-beast-tile.png">
+                            </li>
+                            <li class="layer tile desktop-tile" data-depth="0.20">
+                                <img class="tile-img" src="images/cize-tile.png">
+                            </li>
+
+                            <li class="layer tile mobile-tile" data-depth="6.00">
+                                <img class="tile-img" src="images/p90x-tile.png">
+                            </li>
+                            <li class="layer tile mobile-tile" data-depth="5.00">
+                                <img class="tile-img" src="images/turbo-fire-tile.png">
+                            </li>
+                            <li class="layer tile mobile-tile" data-depth="4.00">
+                                <img class="tile-img" src="images/insanity-tile.png">
+                            </li>
+                            <li class="layer tile mobile-tile" data-depth="3.00">
+                                <img class="tile-img" src="images/autumns-bod-exclusives-tile.png">
+                            </li>
+                            <li class="layer tile mobile-tile" data-depth="2.00">
+                                <img class="tile-img" src="images/22mhc-tile.png">
+                            </li>
+                            <li class="layer tile mobile-tile" data-depth="1.50">
+                                <img class="tile-img" src="images/21df-tile.png">
+                            </li>
+                            <li class="layer tile mobile-tile" data-depth="1.00">
+                                <img class="tile-img" src="images/body-beast-tile.png">
+                            </li>
+                            <li class="layer tile mobile-tile" data-depth="0.50">
+                                <img class="tile-img" src="images/cize-tile.png">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="hero-content" class="layer desktop-tile" data-depth="0.25">
+                    <h1 id="hero-header">Beachbody<sup class="reg-sup">&reg;</sup><br>&nbsp;On<br>&nbsp;&nbsp;Demand<br><span class="emphasis">&nbsp;&nbsp;Is Here</span></h1>
+                    <p id="hero-description">Now you can work out anytime,
+                        <br>&nbsp;anywhere, with Beachbody On Demand.</p>
+                    <div id="hero-cta">
+                        <div id="hero-cta-bg">
+                            <div id="hero-cta-hover"></div>
+                        </div>
+                        Start Now
+                    </div>
+                </li>
+            </ul>
+            <div id="hero">
+                <div id="hero-bg"></div>
+                <svg version="1.1" id="bb-circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 334.1 335.3" style="enable-background:new 0 0 334.1 335.3;" xml:space="preserve">
+                    <g>
+                        <path class="st0" d="M0,168.6c1.1-48.5,18-89,52-122.1c2.4-2.4,4.5-3.4,8.2-2.6C71.6,46,83,48,94,51.9c4.1,1.4,8,3.2,11.5,5.8
+		c6.2,4.7,6.9,10.2,2.1,16.4c-4.2,5.3-9.5,9.3-15.1,12.9c-11.9,7.7-24.6,13.9-35.9,22.6c-4.5,3.4-9,6.9-12.3,11.6
+		c-4.4,6.3-3.3,11.3,3.5,14.8c8.7,4.5,18.3,5.8,27.9,7c26.4,3.3,53.1,4.1,79.6,6.3c30,2.4,60,4.9,88.9,13.8
+		c6.7,2.1,13.3,4.3,19.1,8.4c9.3,6.4,11.4,14.7,5.8,24.6c-6,10.7-15.5,18.1-25.3,25.1c-28.5,20.5-60.1,35.3-92,49.8
+		c-25.4,11.5-51.4,21.7-77.4,31.8c-2.9,1.1-4.8,0.7-7.2-1.1c-36.7-28.4-59-65.2-65.5-111.4c-0.3-1.8-0.6-3.6-0.8-5.4
+		C0.6,179,0.3,173.2,0,168.6z" />
+                        <path class="st0" d="M61.5,38.2C76.9,25.6,93,16.5,110.6,10.1c83.8-30.5,177.1,10.2,211.9,92.2c5.5,12.9,9.1,26.3,11.4,40.1
+		c0.4,2.7,0.6,4.5-3.4,3.2c-17.7-5.7-36.1-7.5-54.5-8.5c-41.6-2.5-83.2-1.4-124.9-2.2c-13.3-0.3-26.6-0.7-39.5-4.6
+		c-1.6-0.5-3.2-1-4.7-1.7c-6-3-7-7.6-3-13c3.5-4.7,8.2-8.3,13-11.6c7.4-5.2,15.1-9.7,23-14.1c6.7-3.7,13.4-7.5,18.7-13.2
+		c6.5-7,5.9-13-2.1-18.2c-9.8-6.4-21.1-8.9-32.3-11.3c-19.2-4-38.6-6.6-58.2-8.3C65,38.9,63.9,38.6,61.5,38.2z" />
+                        <path class="st0" d="M334,188.9c-9.1,59.6-39.9,104.1-94.6,129.9c-54.8,25.8-108.9,20.9-160.9-10.6c7.6-2.4,15.3-4.7,22.9-7.2
+		c57.9-18.8,114.7-40.1,168.4-69.1C292.4,219.7,314.5,206.4,334,188.9z" />
+                    </g>
+                </svg>
+                <div id="hero-vid-overlay" class="blue-gradient-bg"></div>
+                <div id="hero-vid-overlay2" class="dark-blue-bg"></div>
+                <ul id="hero-bg-scene" class="scene">
+                    <li id="hero-bg-scene-bg" class="layer" data-depth="0.00">
+                        <div id="hero-vid-bg">
+                            <video preload autoplay="autoplay" loop id="bgvid2" width="100%" class="video-bg">
+                                <source class="video-src" src="videos/BB_Digital_slow_cut_v5_122914_DR-15MB_1_.ogv" type="video/ogg">
+                                <source class="video-src" src="videos/BB_Digital_slow_cut_v5_122914_DR-15MB.mp4" type="video/mp4">
+                                <img src="images/hero_image_tablet2.jpg" style="width: 100%" alt="hero video fallover" />
+                            </video>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="sections">
+                <div id="all-access-section" class="section">
+                    <div class="section-content">
+                        <div class="section-header-container">
+                            <h1 class="section-header">Work Out<br>Anytime, Anywhere.</h1>
+                        </div>
+                        <div class="section-description-container">
+                            <p class="section-description">Stream your workouts from your web-enabled laptop, tablet, or mobile device.</p>
+
+                            <p class="section-description start-after-top">Whether you're traveling for work, on vacation, or would just rather do your workouts in the gym, now you can bring your Beachbody On Demand programs with you wherever you go.</p>
+                        </div>
+                    </div>
+                    <!--                        <div id="floor-container" class="trigger-item"></div>-->
+                    <div class="sections-border border-left"></div>
+                    <div class="sections-border border-right"></div>
+                </div>
+                <div class="section">
+                    <!--                        <div class="section-bg"></div>-->
+                </div>
+                <div class="section">
+                    <!--                        <div class="section-bg"></div>-->
+                </div>
+                <div class="section-bg-container">
+                    <img id="iphone-fpo" src="images/iphone-fpo.png">
+                    <div id="iphone-scene">
+                        <div id="p90x-ipad-img-container" class="section-img-container parallax-front trigger-item">
+                            <img id="p90x-ipad-img" class="section-img" src="images/p90x-ipad-grayscale2.png">
+                        </div>
+                        <div id="p90x-iphone-img-container" class="section-img-container parallax-middle trigger-item">
+                            <img id="p90x-iphone-img" class="section-img" src="images/p90x-iphone-grayscale2.png">
+                        </div>
+                        <div id="duffelbag-img-container" class="section-img-container parallax-back trigger-item">
+                            <img id="duffelbag-img" class="section-img" src="images/duffelbag-shadow-grayscale2.png">
+                        </div>
+                    </div>
+                    <div class="yoga-scene">
+                        <div id="girl-yoga-img-container" class="section-img-container parallax-front trigger-item">
+                            <img id="girl-yoga-img" class="section-img" src="images/girl-yoga2.png">
+                        </div>
+                        <div id="apartment-img-container" class="section-img-container parallax-back trigger-item">
+                            <div id="program-tile-container">
+                                <div id="program-tile-container-inner" class="tiles trigger-item">
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/piyo-tile.png">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_21D_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_22HC_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_BE_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/piyo-tile.png">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_21D_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_22HC_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_BE_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/piyo-tile.png">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_21D_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_22HC_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_BE_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/piyo-tile.png">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_21D_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_22HC_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_BE_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/piyo-tile.png">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_21D_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_22HC_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_BE_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/piyo-tile.png">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_21D_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_22HC_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_BE_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/piyo-tile.png">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_21D_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_22HC_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_BE_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/piyo-tile.png">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_21D_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_22HC_BoxArt_452x562.jpg">
+                                    </div>
+                                    <div class="program-tile">
+                                        <img class="program-tile-img" src="images/tiles/BOD_BE_BoxArt_452x562.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <img id="apartment-img" class="section-img" src="images/apartment-grayscale-light-bg.png">
+                        </div>
+                    </div>
+                    <!--
+                    <div class="yoga-scene">
+                        <div id="girl-yoga-img-container" class="section-img-container parallax-front trigger-item">
+                            <img id="girl-yoga-img" class="section-img" src="images/girl-yoga2.png">
+                        </div>
+                        <div id="apartment-img-container" class="section-img-container parallax-back trigger-item">
+                            <img id="apartment-img" class="section-img" src="images/apartment-grayscale-light-bg.png">
+                        </div>
+                    </div>
+-->
+                    <div class="section-bg-container-inner">
+                        <div id="first-section-bg" class="section-bg"></div>
+                        <div id="last-section-bg" class="section-bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="please-use-chrome">
+        Please use Google Chrome to view this page.
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/parallax.js"></script>
+    <script src="js/app.js"></script>
+    <!--
+    <script>
+        var heroForegroundScene = document.getElementById('hero-fg-scene');
+        var heroForegroundParallax = new Parallax(heroForegroundScene);
+    </script>
+-->
+</body>
+
+</html>

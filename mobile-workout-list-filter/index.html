@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!--320-->
+
+    <title>BOD Android: Pins</title>
+
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="../mobile-android-links/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800italic,800|Exo:400,100,100italic,200,300,200italic,300italic,400italic,600italic,700,700italic,800,800italic,900,900italic,600,500,500italic|Josefin+Sans:100,300,400' rel='stylesheet' type='text/css'>
+    
+</head>
+
+<body>
+    <img class="load-cache" src="../mobile-android-links/images/load-weight-light.gif">
+    <div id="debug">Hello</div>
+    <div id="mobile-alert">
+        Please view from your mobile device.
+    </div>
+    <!-- OUTER CONTAINER -->
+    <div id="outer-container">
+        <!-- MAIN CONTAINER -->
+        <div id="container">
+            <div id="header">
+                <div id="level-back-tap-region"></div>
+                <img class="back-icon" src="../mobile-android-links/images/icons/back-arrow-icon-blue.jpg">
+                <div id="gear-tap-region"></div>
+                <img class="gear-icon" src="../mobile-android-links/images/icons/gear-icon-white.png">
+                <img id="logo" src="../mobile-android-links/images/bbod-logo-blue.png">
+                <div id="filter-tap-region"></div>
+                <img class="filter-icon" src="../mobile-android-links/images/icons/filter-icon-white.png">
+                <div id="header-bottom-break"></div>
+            </div>
+            <div id="version-nav">
+                <div class="version-nav-item version-1-nav-item">
+                    <h3 class="version-nav-item-title-alt nav-active"><span class="title-large">A</span><br>Version A</h3>
+                    <div class="version-nav-item-bg-alt"></div>
+                    <h3 class="version-nav-item-title nav-inactive"><span class="title-large">A</span><br>Version A</h3>
+                </div>
+                <div class="version-nav-item version-2-nav-item">
+                    <h3 class="version-nav-item-title-alt nav-active"><span class="title-large">B</span><br>Version B</h3>
+                    <div class="version-nav-item-bg-alt"></div>
+                    <h3 class="version-nav-item-title nav-inactive"><span class="title-large">B</span><br>Version B</h3>
+                </div>
+                <div id="nav-top-break"></div>
+            </div>
+
+            <!-- PROGRAM CONTAINER -->
+            <div id="program-container">
+                <div id="twenty-two-minute-hard-corps-program" class="program">
+                    <div class="program-details-tap-region"></div>
+                    <div class="program-hero">
+                        <img id="ttmhc-logo" class="program-hero-logo" src="../mobile-android-links/images/programs/22-minute-hard-corps/22mhc-logo.png">
+                        <img class="program-hero-bg" src="../mobile-android-links/images/programs/22-minute-hard-corps/hero/22mhc-hero.jpg">
+                        <div class="program-hero-description">
+                            <p class="program-hero-description-text">Get epic results in 22 minutes a day in this military-inspired, 8-week boot camp program.</p>
+                        </div>
+                    </div>
+                    <div class="program-chapters">
+                        <div class="program-chapter">
+                            <div class="program-chapter-header">
+                                <img class="program-chapter-header-arrow" src="../mobile-android-links/images/icons/program-arrow-icon-gray.png">
+                                <h3 class="program-chapter-header-title">Lean Set</h3>
+                            </div>
+                            <div class="program-chapter-break"></div>
+                        </div>
+                        <div class="program-chapter-expanded">
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Total Body Cardio Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-remove-icon" src="../mobile-android-links/images/icons/offline-remove-icon-gray.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Upper Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Lower Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Pilates Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Cardio Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                        </div>
+                        <div class="program-chapter">
+                            <div class="program-chapter-header">
+                                <img class="program-chapter-header-arrow" src="../mobile-android-links/images/icons/program-arrow-icon-gray.png">
+                                <h3 class="program-chapter-header-title">Bulk Set</h3>
+                            </div>
+                            <div class="program-chapter-break"></div>
+                        </div>
+                        <div class="program-chapter-expanded">
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Total Body Cardio Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Upper Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Lower Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Pilates Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Cardio Fix</h3>
+                                <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png">
+                                <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                                <h5 class="program-chapter-item-time-text">30m</h5>
+                                <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-materials">
+                        <h3 class="program-materials-header">Program Materials</h3>
+                        <div class="program-material-row">
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/exclusive-toolkit-icon.png">
+                                <h4 class="program-material-title">Quick Start</h4>
+                                <p class="program-material-description">Be on your way to getting boot camp fit with these 4 steps.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/guia-de-nutricion-icon.png">
+                                <h4 class="program-material-title">Nutrition Guide</h4>
+                                <p class="program-material-description">Follow simple-to-prepare, delicious recipes and learn how to eat healthy portions.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/faq-icon.png">
+                                <h4 class="program-material-title">FAQ</h4>
+                                <p class="program-material-description">All the answers you need to get the results you want!</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/workout-calendar-icon.png">
+                                <h4 class="program-material-title">Workout Calendar</h4>
+                                <p class="program-material-description">Breaks down your workout for each day.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/hell-week-icon.png">
+                                <h4 class="program-material-title">Hell Week Challenge</h4>
+                                <p class="program-material-description">Two-a-day workouts to get you leaner, faster.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/tally-sheets-checked-icon.png">
+                                <h4 class="program-material-title">Tally Sheets</h4>
+                                <p class="program-material-description">Helps you keep a record as your performance improves.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/exclusive-toolkit-icon.png">
+                                <h4 class="program-material-title">Guide de D&eacute;marrage Rapide</h4>
+                                <p class="program-material-description">Suivez ces 4 etapes facilies pour creer votre proper chef-d'oeuvre physique</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/guia-de-nutricion-icon.png">
+                                <h4 class="program-material-title">Guide du Programme et de...</h4>
+                                <p class="program-material-description">Comprend votre plan de nutrition simple</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/workout-calendar-icon.png">
+                                <h4 class="program-material-title">Calendrier de 8 Semaines</h4>
+                                <p class="program-material-description">Planifie vos seances d'entrainement pour chaque journee.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/hell-week-icon.png">
+                                <h4 class="program-material-title">D&eacute;fi Hell Week</h4>
+                                <p class="program-material-description">Comprend votre plan de nutrition simple</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/tally-sheets-checked-icon.png">
+                                <h4 class="program-material-title">Feuille de Contr&ocirc;le</h4>
+                                <p class="program-material-description">Planifie vos seances d'entrainement pour chaque journee</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/guia-de-nutricion-icon.png">
+                                <h4 class="program-material-title">Gu&#237;a de Nutrici&#243;n</h4>
+                                <p class="program-material-description">Deux seances d'entrainement par jour pour maigrir plus rapidement</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/hell-week-icon.png">
+                                <h4 class="program-material-title">Reto 'Hell Week'</h4>
+                                <p class="program-material-description">Dos entrenamientos al dia para conseguir una figura mas delgada, mas rapido.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/tally-sheets-checked-icon.png">
+                                <h4 class="program-material-title">Hojas de control</h4>
+                                <p class="program-material-description">Te ayuda a mantener un registro de tu progreso</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/exclusive-toolkit-icon.png">
+                                <h4 class="program-material-title">Gu&iacute;a de inicio r&aacute;pido</h4>
+                                <p class="program-material-description">Estaras en el camino hacia un cuerpo delgado y fuerte con estos 4 pasos</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material">
+                                <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/workout-calendar-icon.png">
+                                <h4 class="program-material-title">Calendario de entrenamiento</h4>
+                                <p class="program-material-description">Te muestra tu rutina para cada dia.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-break"></div>
+                </div>
+            </div>
+
+            <!-- SECTION CONTAINER -->
+            <div id="section-container">
+
+                <!-- WORKOUTS SECTION v1 -->
+                <div id="workouts-section1" class="section active-section">
+                    <div class="section-bg"></div>
+                    <div class="workouts-section-slider-container">
+                        <div id="workouts-section-slider-text">
+                            <h3 id="workouts-section-slider-text-intro">Hello Travis!<br>Time to work out!</h3>
+                        </div>
+                    </div>
+
+                    <!-- POPULAR PROGRAMS LIST CONTAINER -->
+                    <div id="workouts-section-list-container" class="list-container">
+
+                        <div class="list-sign-in-container">
+                            <div class="list-sign-in-button list-left-sign-in-button">Sign In</div>
+                            <div class="list-sign-in-button list-right-sign-in-button">Start Trial</div>
+                        </div>
+                        <div id="list-members-counter-container">
+
+                        </div>
+
+                        <div id="workouts-section-list" class="list">
+                            <div id="workouts-section-list-item-container" class="list-item-container pins">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="section-break"></div>
+                </div>
+
+                <!-- WORKOUTS SECTION v2 -->
+                <div id="workouts-section2" class="section inactive-section">
+                    <div class="section-bg"></div>
+                    <div class="workouts-section-slider-container">
+                        <div id="workouts-section-slider-text">
+                            <h3 id="workouts-section-slider-text-intro">Hello Travis!<br>Time to work out!</h3>
+                        </div>
+                    </div>
+
+                    <div class="list-sign-in-container">
+                        <div class="list-sign-in-button list-left-sign-in-button">Sign In</div>
+                        <div class="list-sign-in-button list-right-sign-in-button">Start Trial</div>
+                    </div>
+                    <div id="workouts-section-members-counter-container">
+                        <h3 id="members-counter-title">Members Working Out Now</h3>
+                        <h3 id="members-counter-count">1,021</h3>
+                    </div>
+                    <div id="workouts-section-tile-rows-container" class="tile-rows-container">
+
+                        <!-- CARDIO TILES -->
+                        <div id="cardio-tile-row-container" class="tile-row-container">
+                            <div class="tile-row-header">
+                                <div class="tile-row-header-tap-region popular-programs-header-tap-region"></div>
+                                <h3 class="tile-row-title">Cardio</h3>
+                                <img class="tile-row-arrow" src="../mobile-android-links/images/icons/arrow-right-icon-gray.png">
+                                <h4 class="cardio-programs-row-count tile-row-workouts-count"></h4>
+                            </div>
+                            <div class="cardio-programs-row tile-row">
+                                <div class="tile-container">
+                                    
+                                </div>
+                            </div>
+                            <div class="tile-row-break"></div>
+                        </div>
+
+                        <!-- LOW IMPACT TILES -->
+                        <div id="low-impact-tile-row-container" class="tile-row-container">
+                            <div class="tile-row-header">
+                                <div class="tile-row-header-tap-region premium-content-header-tap-region"></div>
+                                <h3 class="tile-row-title">Low Impact</h3>
+                                <img class="tile-row-arrow" src="../mobile-android-links/images/icons/arrow-right-icon-gray.png">
+                                <h4 class="low-impact-programs-row-count tile-row-workouts-count"></h4>
+                            </div>
+                            <div class="low-impact-programs-row tile-row">
+                                <div class="tile-container">
+                                    
+                                </div>
+                            </div>
+                            <div class="tile-row-break"></div>
+                        </div>
+
+                        <!-- MUSCLE BUILDING TILES -->
+                        <div id="muscle-building-tile-row-container" class="tile-row-container">
+                            <div class="tile-row-header">
+                                <div class="tile-row-header-tap-region popular-programs-header-tap-region"></div>
+                                <h3 class="tile-row-title">Muscle Building</h3>
+                                <img class="tile-row-arrow" src="../mobile-android-links/images/icons/arrow-right-icon-gray.png">
+                                <h4 class="purchased-programs-row-count tile-row-workouts-count"></h4>
+                            </div>
+                            <div class="muscle-building-programs-row tile-row">
+                                <div class="tile-container">
+                                    
+                                </div>
+                            </div>
+                            <div class="tile-row-break"></div>
+                        </div>
+
+                        <!-- SLIM &AMP; TONE TILES -->
+                        <div id="slim-tone-tile-row-container" class="tile-row-container">
+                            <div class="tile-row-header">
+                                <div class="tile-row-header-tap-region popular-programs-header-tap-region"></div>
+                                <h3 class="tile-row-title">Slim &amp; Tone</h3>
+                                <img class="tile-row-arrow" src="../mobile-android-links/images/icons/arrow-right-icon-gray.png">
+                                <h4 class="purchased-programs-row-count tile-row-workouts-count"></h4>
+                            </div>
+                            <div class="slim-tone-programs-row tile-row">
+                                <div class="tile-container">
+                                    
+                                </div>
+                            </div>
+                            <div class="tile-row-break"></div>
+                        </div>
+
+                        <!-- DANCE TILES -->
+                        <div id="dance-tile-row-container" class="tile-row-container">
+                            <div class="tile-row-header">
+                                <div class="tile-row-header-tap-region popular-programs-header-tap-region"></div>
+                                <h3 class="tile-row-title">Dance</h3>
+                                <img class="tile-row-arrow" src="../mobile-android-links/images/icons/arrow-right-icon-gray.png">
+                                <h4 class="purchased-programs-row-count tile-row-workouts-count"></h4>
+                            </div>
+                            <div class="dance-programs-row tile-row">
+                                <div class="tile-container">
+                                    
+                                </div>
+                            </div>
+                            <div class="tile-row-break"></div>
+                        </div>
+
+                    </div>
+                    <div class="section-break"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../mobile-android-links/js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/variables.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/functions.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/app.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/programs.js"></script>
+
+    <script type="text/javascript">
+    </script>
+
+
+</body>
+
+</html>

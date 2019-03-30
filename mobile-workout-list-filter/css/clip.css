@@ -1,0 +1,8 @@
+/*Chrome,Safari*/
+-webkit-clip-path: polygon(221px 384px,737px 390px,733px 134px,496px 140px,475px 171px,451px 141px,217px 140px,218px 384px);
+
+/*Firefox*/
+clip-path: url("#clipPolygon");
+
+/* iOS support inline encoded svg file*/
+-webkit-mask: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIwIiBoZWlnaHQ9IjAiPgogIDxjbGlwUGF0aCBpZD0ic3ZnQ2xpcCI+CiAgICA8cGF0aCBpZD0ic3ZnUGF0aCIgZD0iTTIyMSwzODQgTDczNywzOTAgNzMzLDEzNCA0OTYsMTQwIDQ3NSwxNzEgNDUxLDE0MSAyMTcsMTQwIDIxOCwzODQgeiIvPgogIDwvY2xpcFBhdGg+CiAgPHBhdGggaWQ9InN2Z01hc2siIGQ9Ik0yMjEsMzg0IEw3MzcsMzkwIDczMywxMzQgNDk2LDE0MCA0NzUsMTcxIDQ1MSwxNDEgMjE3LDE0MCAyMTgsMzg0IHoiICAvPgo8L3N2Zz4=) no-repeat;

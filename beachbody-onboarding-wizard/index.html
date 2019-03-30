@@ -1,0 +1,1513 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Template</title>
+
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <!--    <link rel="stylesheet" href="css/clip.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/results.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800italic,800|Exo:400,100,100italic,200,300,200italic,300italic,400italic,600italic,700,700italic,800,800italic,900,900italic,600,500,500italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<!--
+    <div id="password-overlay">
+        <input id="password-input" type="password" placeholder="Please Enter Password" autofocus>
+    </div>
+-->
+    <svg width="0" height="0">
+        <clipPath id="clipPolygon">
+            <polygon points="221 384,737 390,733 134,496 140,475 171,451 141,217 140,218 384">
+            </polygon>
+        </clipPath>
+    </svg>
+    <div id="cached-images-container">
+        <img class="cached-images" src="images/card1-fpo.jpg">
+        <img class="cached-images" src="images/card2-fpo.jpg">
+        <img class="cached-images" src="images/card3-fpo.jpg">
+        <img class="cached-images" src="images/card4-fpo.jpg">
+        <img class="cached-images" src="images/bbod-logo.png">
+        <img class="cached-images" src="images/fpo.jpg">
+        <img class="cached-images" src="images/hero/hero-bg.jpg">
+        <img class="cached-images" src="images/hero/hero-bg2.jpg">
+        <img class="cached-images" src="images/hero/hero-bg3.jpg">
+        <img class="cached-images" src="images/hero/hero-bg4.jpg">
+        <img class="cached-images" src="images/status-bar-fpo.png">
+        <img class="cached-images" src="images/tip-bubble-cropped.png">
+        <img class="cached-images" src="images/tip-bubble.png">
+        <img class="cached-images" src="images/icons/nav-item-icon-1.jpg">
+        <img class="cached-images" src="images/icons/nav-item-icon-2.jpg">
+        <img class="cached-images" src="images/icons/nav-item-icon-3.jpg">
+        <img class="cached-images" src="images/icons/nav-item-icon-4.jpg">
+        <img class="cached-images" src="images/icons/nav-item-icon-5.jpg">
+        <img class="cached-images" src="images/icons/down-arrow.svg">
+        <img class="cached-images" src="images/icons/right-arrow-blue.svg">
+        <img class="cached-images" src="images/icons/right-arrow-circle-blue.svg">
+    </div>
+    <div id="loading-overlay"></div>
+    <div id="toggle-fpo" class="bb-link">
+        <div id="toggle-fpo-bg"></div>
+        <div id="toggle-fpo-bg-alt"></div>
+        <h6 id="toggle-fpo-text">Comp</h6>
+    </div>
+    <div id="toggle-live" class="bb-link">
+        <div id="toggle-live-bg"></div>
+        <div id="toggle-live-bg-alt"></div>
+        <h6 id="toggle-live-text">HTML</h6>
+    </div>
+    <img id="fpo" src="images/fpo.jpg">
+    <img id="fpo2" src="images/fpo2.jpg">
+<!--        <img id="fpo-results" src="images/fpo-results.jpg">-->
+    <div id="nav" class="live">
+        <div id="nav-block"></div>
+        <div class="nav-item-hover">
+            <div class="nav-item-hover-bg"></div>
+            <div class="nav-item-hover-title">
+                <p class="nav-item-hover-title-sub">My</p>
+                <p class="nav-item-hover-title-main">Bod</p>
+                <img class="nav-item-hover-icon" src="images/icons/nav-item-icon-1.jpg">
+            </div>
+        </div>
+        <div class="nav-item-hover">
+            <div class="nav-item-hover-bg"></div>
+            <div class="nav-item-hover-title">
+                <p class="nav-item-hover-title-sub">Proven</p>
+                <p class="nav-item-hover-title-main">Workout Programs</p>
+                <img class="nav-item-hover-icon" src="images/icons/nav-item-icon-2.jpg">
+            </div>
+        </div>
+        <div class="nav-item-hover">
+            <div class="nav-item-hover-bg"></div>
+            <div class="nav-item-hover-title">
+                <p class="nav-item-hover-title-sub">Supportive</p>
+                <p class="nav-item-hover-title-main">Community</p>
+                <img class="nav-item-hover-icon" src="images/icons/nav-item-icon-3.jpg">
+            </div>
+        </div>
+        <div class="nav-item-hover">
+            <div class="nav-item-hover-bg"></div>
+            <div class="nav-item-hover-title">
+                <p class="nav-item-hover-title-sub">Complete</p>
+                <p class="nav-item-hover-title-main">Fitness</p>
+                <img class="nav-item-hover-icon" src="images/icons/nav-item-icon-4.jpg">
+            </div>
+        </div>
+        <div class="nav-item-hover">
+            <div class="nav-item-hover-bg"></div>
+            <div class="nav-item-hover-title">
+                <p class="nav-item-hover-title-sub">Good</p>
+                <p class="nav-item-hover-title-main">Nutrition</p>
+                <img class="nav-item-hover-icon" src="images/icons/nav-item-icon-5.jpg">
+            </div>
+        </div>
+        <div id="nav-inner">
+            <img id="logo" src="images/bbod-logo.png">
+            <div id="user-info">
+                <div id="user-info-dropdown-hover-region"></div>
+                <div id="logout-hover-region"></div>
+                <div id="user-info-dropdown">
+                    <div id="user-info-dropdown-list">
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">All Fitness Programs</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Best Sellers</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Weight Loss</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Advanced</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Express</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Abs/Core</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Dance</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Extreme Results</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Cardio/Fat Burning</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Getting Started</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Specialty Programs</p>
+                        </div>
+                        <div class="user-info-option">
+                            <div class="user-info-option-bg"></div>
+                            <p class="user-info-option-title">Compare Fitness Programs</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="user-info-name">
+                    <p>Anne Johnston</p>
+                    <div class="down-arrow">
+                        <svg version="1.1" id="down-arrow-svg" class="cached-images" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27.9 18.3" style="enable-background:new 0 0 27.9 18.3;" xml:space="preserve">
+                            <path d="M4.4,0L0,4.4l13.9,13.9L27.9,4.4L23.4,0l-9.5,9.5L4.4,0z" />
+                        </svg>
+                    </div>
+                </div>
+                <div id="user-info-log-out">
+                    <p>Log Out</p>
+                </div>
+            </div>
+            <div id="search">
+                <input type="text" id="top-search-input" class="search-input">
+                <img class="search-icon-black" src="images/icons/search-icon-black.svg">
+            </div>
+            <div id="nav-items">
+                <div class="nav-item">
+                    <div class="nav-item-title">
+                        <p class="nav-item-title-sub">My</p>
+                        <p class="nav-item-title-main">Bod</p>
+                    </div>
+                    <img class="nav-item-icon" src="images/icons/nav-item-icon-1.jpg">
+                </div>
+                <div class="nav-item">
+                    <div class="nav-item-title">
+                        <p class="nav-item-title-sub">Proven</p>
+                        <p class="nav-item-title-main">Workout Programs</p>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-item-title">
+                        <p class="nav-item-title-sub">Supportive</p>
+                        <p class="nav-item-title-main">Community</p>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-item-title">
+                        <p class="nav-item-title-sub">Complete</p>
+                        <p class="nav-item-title-main">Fitness</p>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-item-title">
+                        <p class="nav-item-title-sub">Good</p>
+                        <p class="nav-item-title-main">Nutrition</p>
+                    </div>
+                </div>
+            </div>
+            <div id="class-search">
+                <p id="class-search-title">Find a <span class="class-emphasis">Live Class</span> in your area</p>
+                <input id="class-search-input" type="text" class="search-input" placeholder="City or Zip Code">
+                <img class="right-arrow-circle-blue bb-link" src="images/icons/right-arrow-circle-blue.svg">
+            </div>
+            <div id="help-others">
+                <h6 id="help-others-title">Ready to help<br>others get fit?</h6>
+                <a id="help-others-link" class="bb-link">Become a Beachbody Coach 
+                <img class="right-arrow-blue" src="images/icons/right-arrow-blue.svg"></a>
+            </div>
+        </div>
+    </div>
+    <div id="container" class="live">
+        <div id="content">
+            <div id="hero">
+                <div id="results-quick">
+                    <div class="results-quick-section">
+                        <h3>Finding your perfect workout...</h3>
+                    </div>
+<!--
+                    <div class="results-quick-section">
+                        <h3>Fitness Goal </h3>
+                        <p id="goal-results-quick"></p>
+                    </div>
+                    <div class="results-quick-section">
+                        <h3>Fitness Level </h3>
+                        <p id="level-results-quick"></p>
+                    </div>
+                    <div class="results-quick-section">
+                        <h3>Workout Type </h3>
+                        <p id="type-results-quick"></p>
+                    </div>
+                    <div class="results-quick-section">
+                        <h3>Workout Time </h3>
+                        <p id="time-results-quick"></p>
+                    </div>
+-->
+                </div>
+                <div class="hero-card-tip-bubble-container">
+                    <div class="hero-card-tip-bubble-close">&#10005;</div>
+                    <div class="hero-card-tip-bubble-triangle"></div>
+                    <div class="hero-card-tip-bubble-bg"></div>
+                    <h6 class="hero-card-tip-bubble-text">Find a workout program<br>that fits <b>Your</b> needs</h6>
+                    <div class="hero-card-tip-bubble-triangle"></div>
+                </div>
+                <!--                <img class="hero-card-tip-bubble" src="images/tip-bubble-cropped.png">-->
+                <img id="status-bar-fpo" src="images/status-bar-fpo.png">
+                <div id="status-bar-container">
+                    <div id="status-bar">
+                        <div id="progress-labels-container">
+                            <div class="top-labels-container">
+                                <p class="progress-labels top-labels progress-label">Progress</p>
+                                <p class="progress-labels top-labels finish-label">Finish</p>
+                            </div>
+                            <div class="bottom-labels-container">
+                                <p class="progress-labels bottom-labels my-goal-label">My Goal</p>
+                                <p class="progress-labels bottom-labels fitness-level-label">Fitness Level</p>
+                                <p class="progress-labels bottom-labels workout-type-label">Workout Type</p>
+                                <p class="progress-labels bottom-labels workout-time-label">Workout Time</p>
+                            </div>
+                        </div>
+                        <div class="checkmark twenty-five-percent"></div>
+                        <div class="checkmark fifty-percent"></div>
+                        <div class="checkmark seventy-five-percent"></div>
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+                <div id="hero-bg-container">
+                    <img id="hero-bg1" class="hero-bg" src="images/hero/hero-bg.jpg">
+                    <img id="hero-bg2" class="hero-bg" src="images/hero/hero-bg2.jpg">
+                    <img id="hero-bg3" class="hero-bg" src="images/hero/hero-bg3.jpg">
+                    <img id="hero-bg4" class="hero-bg" src="images/hero/hero-bg4.jpg">
+                </div>
+                <div id="hero-black-overlay"></div>
+                <h6 id="hero-greeting">Welcome, Anne</h6>
+                <div id="hero-cards">
+                    <div class="hero-card">
+                        <div class="hero-card-shadow"></div>
+                        <div class="hero-card-header">
+                            <!--                            <div class="hero-clipped-triangle clip-triangle"></div>-->
+                            <div class="hero-card-header-bg"></div>
+                            <h6 class="hero-card-header-title">Select Your Goal</h6>
+                        </div>
+                        <div id="hero-card-body1" class="hero-card-body">
+                            <div class="hero-card-border-container">
+                                <div class="hero-card-border-row-full">
+                                    <div class="hero-card-column-half">
+                                        <div class="hero-card-column-half-left-borders"></div>
+                                    </div>
+                                    <div class="hero-card-column-half">
+                                        <div class="hero-card-column-half-right-borders"></div>
+                                    </div>
+                                </div>
+                                <div class="hero-card-border-row-full">
+                                    <div class="hero-card-column-half">
+                                        <div class="hero-card-column-half-left-borders"></div>
+                                    </div>
+                                    <div class="hero-card-column-half">
+                                        <div class="hero-card-column-half-right-borders"></div>
+                                    </div>
+                                </div>
+                                <div class="hero-card-border-row-full">
+                                    <div class="hero-card-column-half">
+                                        <div class="hero-card-column-half-left-borders"></div>
+                                    </div>
+                                    <div class="hero-card-column-half">
+                                        <div class="hero-card-column-half-right-borders"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-card-row-container">
+                                <div id="hero-card-row-1" class="hero-card-row-full">
+                                    <div class="hero-card-column-half left-column">
+
+                                        <!-- LOSE WEIGHT OPTION -->
+                                        <div id="lose-weight-option" class="hero-card-options option1">
+                                            <div id="lose-weight-hover-bg" class="hero-card-options-hover-bg option-active"></div>
+                                            <div class="hero-card-options-bg option-inactive"></div>
+                                            <div class="hero-card-options-hover-info-container option-active">
+                                                <svg version="1.1" id="lose-weight-hover-icon" class="hero-card-options-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45.5 49.5" style="enable-background:new 0 0 45.5 49.5;" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M40.8,49.5c2.6,0,4.8-2.1,4.8-4.8v-36c0-2.6-2.1-4.8-4.8-4.8h-8.6H32l-0.1-0.1c-1.5-1.6-3.4-2.7-5.4-3.3c0,0,0,0-0.1,0
+		c-0.4-0.1-0.7-0.2-1.1-0.3c-0.2,0-0.4-0.1-0.6-0.1c-0.2,0-0.5-0.1-0.7-0.1C23.6,0,23.2,0,22.8,0s-0.9,0-1.3,0.1
+		c-0.2,0-0.5,0.1-0.7,0.1c-0.2,0-0.4,0.1-0.6,0.1c-0.4,0.1-0.8,0.2-1.1,0.3c0,0,0,0-0.1,0c-2,0.6-3.9,1.8-5.4,3.3L13.5,4h-0.1H4.8
+		C2.1,4,0,6.1,0,8.8v36c0,2.6,2.1,4.8,4.8,4.8H40.8z M22.8,1.4c6.3,0,11.4,5.1,11.4,11.4S29,24.1,22.8,24.1S11.4,19,11.4,12.8
+		S16.5,1.4,22.8,1.4z M1.5,44.8v-36c0-1.8,1.5-3.4,3.2-3.4h7.5L12,5.8c-1.3,2-2,4.5-2,7c0,7,5.7,12.8,12.8,12.8s12.8-5.7,12.8-12.8
+		c0-2.5-0.7-4.9-2-7l-0.2-0.4h7.5c1.8,0,3.2,1.5,3.2,3.4v36c0,1.6-1.1,2.9-2.6,3.2C41.2,48,41,48,40.8,48h-36c-0.2,0-0.4,0-0.6-0.1
+		C2.6,47.7,1.5,46.3,1.5,44.8z" />
+                                                    </g>
+                                                    <path d="M24.5,14.8c0-0.6-0.3-1.2-0.9-1.5l-0.1-0.1V7.8c0-0.4-0.3-0.8-0.8-0.8S22,7.3,22,7.8v5.4l-0.1,0.1c-0.5,0.3-0.9,0.9-0.9,1.5
+	c0,1,0.8,1.8,1.8,1.8S24.5,15.7,24.5,14.8z" />
+                                                </svg>
+                                                <h6 class="hero-card-options-hover-title">Lose Weight</h6>
+                                            </div>
+                                            <div class="hero-card-options-info-container option-inactive">
+                                                <svg version="1.1" id="lose-weight-icon" class="hero-card-options-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45.5 49.5" style="enable-background:new 0 0 45.5 49.5;" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M40.8,49.5c2.6,0,4.8-2.1,4.8-4.8v-36c0-2.6-2.1-4.8-4.8-4.8h-8.6H32l-0.1-0.1c-1.5-1.6-3.4-2.7-5.4-3.3c0,0,0,0-0.1,0
+		c-0.4-0.1-0.7-0.2-1.1-0.3c-0.2,0-0.4-0.1-0.6-0.1c-0.2,0-0.5-0.1-0.7-0.1C23.6,0,23.2,0,22.8,0s-0.9,0-1.3,0.1
+		c-0.2,0-0.5,0.1-0.7,0.1c-0.2,0-0.4,0.1-0.6,0.1c-0.4,0.1-0.8,0.2-1.1,0.3c0,0,0,0-0.1,0c-2,0.6-3.9,1.8-5.4,3.3L13.5,4h-0.1H4.8
+		C2.1,4,0,6.1,0,8.8v36c0,2.6,2.1,4.8,4.8,4.8H40.8z M22.8,1.4c6.3,0,11.4,5.1,11.4,11.4S29,24.1,22.8,24.1S11.4,19,11.4,12.8
+		S16.5,1.4,22.8,1.4z M1.5,44.8v-36c0-1.8,1.5-3.4,3.2-3.4h7.5L12,5.8c-1.3,2-2,4.5-2,7c0,7,5.7,12.8,12.8,12.8s12.8-5.7,12.8-12.8
+		c0-2.5-0.7-4.9-2-7l-0.2-0.4h7.5c1.8,0,3.2,1.5,3.2,3.4v36c0,1.6-1.1,2.9-2.6,3.2C41.2,48,41,48,40.8,48h-36c-0.2,0-0.4,0-0.6-0.1
+		C2.6,47.7,1.5,46.3,1.5,44.8z" />
+                                                    </g>
+                                                    <path d="M24.5,14.8c0-0.6-0.3-1.2-0.9-1.5l-0.1-0.1V7.8c0-0.4-0.3-0.8-0.8-0.8S22,7.3,22,7.8v5.4l-0.1,0.1c-0.5,0.3-0.9,0.9-0.9,1.5
+	c0,1,0.8,1.8,1.8,1.8S24.5,15.7,24.5,14.8z" />
+                                                </svg>
+                                                <h6 class="hero-card-options-title">Lose Weight</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hero-card-column-half right-column">
+
+                                        <!-- BUILD MUSCLE OPTION -->
+                                        <div id="build-muscle-option" class="hero-card-options option2">
+                                            <div id=build-muscle-hover-bg class="hero-card-options-hover-bg option-active"></div>
+                                            <div class="hero-card-options-bg option-inactive"></div>
+                                            <div class="hero-card-options-hover-info-container option-active">
+                                                <svg version="1.1" id="build-muscle-hover-icon" class="hero-card-options-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.5 49.5" style="enable-background:new 0 0 49.5 49.5;" xml:space="preserve">
+                                                    <path d="M24.2,1.1C23.6,0.4,22.8,0,22,0c0,0,0,0,0,0c-0.5,0-1,0.2-1.5,0.5c-1.3,0.9-7,5.3-8.4,6.5c-0.8,0.7-1.5,2.1-2.7,4.5
+	l-0.1,0.2C9,12.6,8,14.3,7,16.2c-1.9,3.4-4.1,7.2-4.9,9.3C0.6,29.6,0,35.3,0,38.9c0,2.9,3.8,4.8,6,5.7c0.8,0.3,1.6,0.6,2.3,1
+	c3.4,1.5,7,3,13.4,3c2.8,0,5.8-0.9,8.4-1.7c2.1-0.7,4.1-1.3,5.6-1.3c4.1,0,4.2,2.9,4.2,3.2c0,0.3,0.1,0.5,0.3,0.6
+	c0.2,0.1,0.5,0.2,0.7,0.1c7.8-3,8.5-11.6,8.5-21.7c0-0.2-0.1-0.5-0.3-0.6c-0.1-0.1-2.9-2.1-7.3-2.1c-0.9,0-1.9,0.1-3.2,0.3
+	c-4.9,0.8-7.9,4-9,5.3l-0.1,0.2l-0.2-0.1C28.2,30,25.7,29,22.6,29c0,0,0,0,0,0c-1.7,0-3.3,0.3-5,0.9c-0.3,0.1-0.7,0.3-1,0.4
+	l-0.3,0.1l-0.1-0.3c-0.6-2.7-0.8-4.9-0.8-6.9c0-1.8,1-5.9,1.5-7.6l0.1-0.2h1.2c1,0,2.1-0.5,3.3-1.1c1.2-0.6,2.6-1.2,3.8-1.2
+	c1.9,0,3.3-1.2,3.3-2.7c0-0.7-0.3-1.2-0.8-1.7l-0.2-0.1l0.1-0.2c0.3-0.5,0.5-1,0.5-1.6c0-0.9-0.6-1.7-2.2-3.5
+	C25.5,2.7,24.9,2,24.2,1.1z M23.8,9.4l2.4,0c0.6,0.3,1,0.6,1,1.1c0,0.8-0.8,1.3-1.9,1.3c-1.5,0-3,0.7-4.4,1.4c-1,0.5-2,1-2.7,1h-1.7
+	c-0.3,0-0.5,0.1-0.6,0.4c-0.5,1-1.7,6.4-1.7,8.8c0,2.6,0.3,5.1,0.9,7.8l0.1,0.2l-0.2,0.1c-1.6,1-2.9,2.2-3.5,2.8
+	c-0.3,0.2-0.3,0.7,0,0.9c0.2,0.3,0.7,0.3,0.9,0c0.6-0.6,2.1-2,3.9-3c0.7-0.4,1.4-0.8,2-1c1.5-0.5,3-0.8,4.5-0.8c4,0,6.8,1.9,6.9,1.9
+	c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.3-0.1,0.4-0.3c0,0,2.9-4.5,8.6-5.4c1.3-0.2,2.2-0.3,2.9-0.3c3.1,0,5.3,1.1,6.2,1.6l0.1,0.1l0,0.1
+	c0,8.8-0.4,16.3-6.4,19.4l-0.4,0.2l-0.1-0.4c-0.3-1-1.5-3.3-5.4-3.3c-1.7,0-3.8,0.6-6,1.3c-2.5,0.8-5.4,1.7-8,1.7
+	c-6.2,0-9.4-1.4-12.9-2.9c-0.8-0.3-1.5-0.7-2.3-1c-1.2-0.5-5.1-2.2-5.1-4.4c0-3.5,0.5-9,2-12.9c0.7-1.9,3-5.9,4.8-9.1
+	c1.1-2,2-3.6,2.5-4.6l0.1-0.2c1-2.1,1.7-3.6,2.3-4.1c1.4-1.2,7.1-5.5,8.3-6.4c0.6-0.4,1.2-0.3,1.7,0.4c0.6,0.8,1.2,1.5,1.7,2
+	l0.1,0.1c1.3,1.6,1.9,2.3,1.9,2.6c0,0.7-0.4,1.1-0.6,1.2l-0.1,0l-2.3,0c-0.4,0-0.7,0.3-0.7,0.6S23.4,9.4,23.8,9.4z" />
+                                                </svg>
+                                                <h6 class="hero-card-options-hover-title">Build Muscle</h6>
+                                            </div>
+                                            <div class="hero-card-options-info-container option-inactive">
+                                                <svg version="1.1" id="build-muscle-icon" class="hero-card-options-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.5 49.5" style="enable-background:new 0 0 49.5 49.5;" xml:space="preserve">
+                                                    <path d="M24.2,1.1C23.6,0.4,22.8,0,22,0c0,0,0,0,0,0c-0.5,0-1,0.2-1.5,0.5c-1.3,0.9-7,5.3-8.4,6.5c-0.8,0.7-1.5,2.1-2.7,4.5
+	l-0.1,0.2C9,12.6,8,14.3,7,16.2c-1.9,3.4-4.1,7.2-4.9,9.3C0.6,29.6,0,35.3,0,38.9c0,2.9,3.8,4.8,6,5.7c0.8,0.3,1.6,0.6,2.3,1
+	c3.4,1.5,7,3,13.4,3c2.8,0,5.8-0.9,8.4-1.7c2.1-0.7,4.1-1.3,5.6-1.3c4.1,0,4.2,2.9,4.2,3.2c0,0.3,0.1,0.5,0.3,0.6
+	c0.2,0.1,0.5,0.2,0.7,0.1c7.8-3,8.5-11.6,8.5-21.7c0-0.2-0.1-0.5-0.3-0.6c-0.1-0.1-2.9-2.1-7.3-2.1c-0.9,0-1.9,0.1-3.2,0.3
+	c-4.9,0.8-7.9,4-9,5.3l-0.1,0.2l-0.2-0.1C28.2,30,25.7,29,22.6,29c0,0,0,0,0,0c-1.7,0-3.3,0.3-5,0.9c-0.3,0.1-0.7,0.3-1,0.4
+	l-0.3,0.1l-0.1-0.3c-0.6-2.7-0.8-4.9-0.8-6.9c0-1.8,1-5.9,1.5-7.6l0.1-0.2h1.2c1,0,2.1-0.5,3.3-1.1c1.2-0.6,2.6-1.2,3.8-1.2
+	c1.9,0,3.3-1.2,3.3-2.7c0-0.7-0.3-1.2-0.8-1.7l-0.2-0.1l0.1-0.2c0.3-0.5,0.5-1,0.5-1.6c0-0.9-0.6-1.7-2.2-3.5
+	C25.5,2.7,24.9,2,24.2,1.1z M23.8,9.4l2.4,0c0.6,0.3,1,0.6,1,1.1c0,0.8-0.8,1.3-1.9,1.3c-1.5,0-3,0.7-4.4,1.4c-1,0.5-2,1-2.7,1h-1.7
+	c-0.3,0-0.5,0.1-0.6,0.4c-0.5,1-1.7,6.4-1.7,8.8c0,2.6,0.3,5.1,0.9,7.8l0.1,0.2l-0.2,0.1c-1.6,1-2.9,2.2-3.5,2.8
+	c-0.3,0.2-0.3,0.7,0,0.9c0.2,0.3,0.7,0.3,0.9,0c0.6-0.6,2.1-2,3.9-3c0.7-0.4,1.4-0.8,2-1c1.5-0.5,3-0.8,4.5-0.8c4,0,6.8,1.9,6.9,1.9
+	c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.3-0.1,0.4-0.3c0,0,2.9-4.5,8.6-5.4c1.3-0.2,2.2-0.3,2.9-0.3c3.1,0,5.3,1.1,6.2,1.6l0.1,0.1l0,0.1
+	c0,8.8-0.4,16.3-6.4,19.4l-0.4,0.2l-0.1-0.4c-0.3-1-1.5-3.3-5.4-3.3c-1.7,0-3.8,0.6-6,1.3c-2.5,0.8-5.4,1.7-8,1.7
+	c-6.2,0-9.4-1.4-12.9-2.9c-0.8-0.3-1.5-0.7-2.3-1c-1.2-0.5-5.1-2.2-5.1-4.4c0-3.5,0.5-9,2-12.9c0.7-1.9,3-5.9,4.8-9.1
+	c1.1-2,2-3.6,2.5-4.6l0.1-0.2c1-2.1,1.7-3.6,2.3-4.1c1.4-1.2,7.1-5.5,8.3-6.4c0.6-0.4,1.2-0.3,1.7,0.4c0.6,0.8,1.2,1.5,1.7,2
+	l0.1,0.1c1.3,1.6,1.9,2.3,1.9,2.6c0,0.7-0.4,1.1-0.6,1.2l-0.1,0l-2.3,0c-0.4,0-0.7,0.3-0.7,0.6S23.4,9.4,23.8,9.4z" />
+                                                </svg>
+                                                <h6 class="hero-card-options-title">Build Muscle</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="hero-card-row-2" class="hero-card-row-full">
+                                    <div class="hero-card-column-half left-column">
+
+                                        <!-- GET TONED OPTION -->
+                                        <div id="get-toned-option" class="hero-card-options option3">
+                                            <div id="get-toned-hover-bg" class="hero-card-options-hover-bg option-active"></div>
+                                            <div class="hero-card-options-bg option-inactive"></div>
+                                            <div class="hero-card-options-hover-info-container option-active">
+                                                <svg version="1.1" id="get-fit-hover-icon" class="hero-card-options-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.8 53.3" style="enable-background:new 0 0 58.8 53.3;" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M45.3,20.2c-4.4-9.2,0-15.8,0.2-16.1c0.1-0.1,0.1-0.3,0.1-0.5c0-0.2-0.2-0.3-0.3-0.4C45,3.2,37.7,0,29.4,0
+		c-8.2,0-15.6,3.2-15.9,3.3c-0.2,0.1-0.3,0.2-0.3,0.4c0,0.2,0,0.3,0.1,0.5c0.2,0.3,4.6,6.9,0.2,16.1C8,31.7,7,42.4,10.6,52.1
+		c0.1,0.3,0.4,0.4,0.7,0.3c0.3-0.1,0.4-0.4,0.3-0.7c-3.5-9.4-2.5-19.8,2.8-31c3.7-7.8,1.5-13.9,0.3-16.1l-0.2-0.5l0.5-0.2
+		c2.2-0.8,8.1-2.8,14.3-2.8c6.2,0,12,1.9,14.3,2.8l0.5,0.2L44,4.6c-1.1,2.3-3.4,8.4,0.3,16.1c5.3,11.2,6.3,21.6,2.8,31
+		c-0.1,0.3,0,0.6,0.3,0.7c0.3,0.1,0.6,0,0.7-0.3C51.8,42.4,50.8,31.7,45.3,20.2z" />
+                                                        <path d="M29.1,23.6c0-0.8,0.7-1.5,1.5-1.5c0,0,0,0,0,0c-0.3-0.3-0.6-0.5-1.1-0.5c-0.8,0-1.5,0.7-1.5,1.5c0,0.8,0.6,1.4,1.4,1.5
+		C29.2,24.3,29.1,24,29.1,23.6z" />
+                                                        <path d="M29.8,31.8c-0.2,0-0.3,0-0.4,0c-3.6,0-17.4-4.2-18-4.4l0.4-1.4c0.1,0,14.4,4.3,17.6,4.3l0.1,0c1.9,0.3,11.3-2.4,17.1-4.3
+		l0.5,1.4C45.6,27.9,33.4,31.8,29.8,31.8z" />
+                                                        <path d="M30,43.1h-1.5c0-6.2-13.4-9.8-18.6-10.7l0.3-1.5C11,31,30,34.4,30,43.1z" />
+                                                        <path d="M30,43.1h-1.5c0-8.7,19-12,19.8-12.2l0.3,1.5C43.5,33.3,30,36.9,30,43.1z" />
+                                                        <rect x="28.5" y="42.4" width="1.5" height="10.9" />
+                                                        <g>
+                                                            <rect x="0" y="10.8" width="9.7" height="1.5" />
+                                                            <rect x="8.1" y="7.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.5044 9.2382)" width="1.5" height="5.8" />
+                                                            <rect x="6" y="12.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -6.6485 10.1263)" width="5.8" height="1.5" />
+                                                        </g>
+                                                        <g>
+                                                            <rect x="49.1" y="10.8" width="9.7" height="1.5" />
+                                                            <rect x="49.2" y="10.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 5.362 39.1212)" width="1.5" height="5.8" />
+                                                            <rect x="47" y="9.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 7.5046 38.2304)" width="5.8" height="1.5" />
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <h6 class="hero-card-options-hover-title">Get Toned</h6>
+                                            </div>
+                                            <div class="hero-card-options-info-container option-inactive">
+                                                <svg version="1.1" id="get-toned-icon" class="hero-card-options-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58.8 53.3" style="enable-background:new 0 0 58.8 53.3;" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M45.3,20.2c-4.4-9.2,0-15.8,0.2-16.1c0.1-0.1,0.1-0.3,0.1-0.5c0-0.2-0.2-0.3-0.3-0.4C45,3.2,37.7,0,29.4,0
+		c-8.2,0-15.6,3.2-15.9,3.3c-0.2,0.1-0.3,0.2-0.3,0.4c0,0.2,0,0.3,0.1,0.5c0.2,0.3,4.6,6.9,0.2,16.1C8,31.7,7,42.4,10.6,52.1
+		c0.1,0.3,0.4,0.4,0.7,0.3c0.3-0.1,0.4-0.4,0.3-0.7c-3.5-9.4-2.5-19.8,2.8-31c3.7-7.8,1.5-13.9,0.3-16.1l-0.2-0.5l0.5-0.2
+		c2.2-0.8,8.1-2.8,14.3-2.8c6.2,0,12,1.9,14.3,2.8l0.5,0.2L44,4.6c-1.1,2.3-3.4,8.4,0.3,16.1c5.3,11.2,6.3,21.6,2.8,31
+		c-0.1,0.3,0,0.6,0.3,0.7c0.3,0.1,0.6,0,0.7-0.3C51.8,42.4,50.8,31.7,45.3,20.2z" />
+                                                        <path d="M29.1,23.6c0-0.8,0.7-1.5,1.5-1.5c0,0,0,0,0,0c-0.3-0.3-0.6-0.5-1.1-0.5c-0.8,0-1.5,0.7-1.5,1.5c0,0.8,0.6,1.4,1.4,1.5
+		C29.2,24.3,29.1,24,29.1,23.6z" />
+                                                        <path d="M29.8,31.8c-0.2,0-0.3,0-0.4,0c-3.6,0-17.4-4.2-18-4.4l0.4-1.4c0.1,0,14.4,4.3,17.6,4.3l0.1,0c1.9,0.3,11.3-2.4,17.1-4.3
+		l0.5,1.4C45.6,27.9,33.4,31.8,29.8,31.8z" />
+                                                        <path d="M30,43.1h-1.5c0-6.2-13.4-9.8-18.6-10.7l0.3-1.5C11,31,30,34.4,30,43.1z" />
+                                                        <path d="M30,43.1h-1.5c0-8.7,19-12,19.8-12.2l0.3,1.5C43.5,33.3,30,36.9,30,43.1z" />
+                                                        <rect x="28.5" y="42.4" width="1.5" height="10.9" />
+                                                        <g>
+                                                            <rect x="0" y="10.8" width="9.7" height="1.5" />
+                                                            <rect x="8.1" y="7.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.5044 9.2382)" width="1.5" height="5.8" />
+                                                            <rect x="6" y="12.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -6.6485 10.1263)" width="5.8" height="1.5" />
+                                                        </g>
+                                                        <g>
+                                                            <rect x="49.1" y="10.8" width="9.7" height="1.5" />
+                                                            <rect x="49.2" y="10.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 5.362 39.1212)" width="1.5" height="5.8" />
+                                                            <rect x="47" y="9.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 7.5046 38.2304)" width="5.8" height="1.5" />
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <h6 class="hero-card-options-title">Get Toned</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hero-card-column-half right-column">
+
+                                        <!-- GET FIT OPTION -->
+                                        <div id="get-fit-option" class="hero-card-options option4">
+                                            <div id="get-fit-hover-bg" class="hero-card-options-hover-bg option-active"></div>
+                                            <div class="hero-card-options-bg option-inactive"></div>
+                                            <div class="hero-card-options-hover-info-container option-active">
+                                                <svg version="1.1" id="get-fit-hover-icon" class="hero-card-options-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 57.5 46" style="enable-background:new 0 0 57.5 46;" xml:space="preserve">
+                                                    <path d="M40.9,0.3C39.9,0.1,39,0,38.1,0C32,0,28.5,4.3,27,6.8l-0.6,1.1l-0.6-1.1C24.2,4.3,20.8,0,14.7,0c-0.9,0-1.8,0.1-2.8,0.3
+	C4.6,1.6,0,7.2,0,14.9c0,7.5,4.5,15.2,13,22.4c6.4,5.4,12.7,8.5,13,8.6c0.2,0.1,0.5,0.1,0.8,0c0.3-0.1,6.6-3.2,13-8.6
+	c4-3.4,7.2-6.9,9.4-10.5l0.2-0.4h7.3c0.5,0,0.9-0.4,0.9-0.9c0-0.5-0.4-0.9-0.9-0.9H36.1l-3-6c-0.1-0.3-0.5-0.5-0.8-0.5
+	c-0.3,0-0.6,0.2-0.7,0.6l-4.4,11.8l-4.9-15c-0.1-0.3-0.4-0.6-0.8-0.6c-0.4,0-0.7,0.2-0.8,0.5L17,24.8h-6.3c-0.5,0-0.9,0.4-0.9,0.9
+	c0,0.5,0.4,0.9,0.9,0.9h6.9c0.3,0,0.7-0.2,0.8-0.5l3-7.5l5,15.1c0.1,0.3,0.4,0.6,0.8,0.6h0c0.4,0,0.7-0.2,0.8-0.6l4.6-12.3l2.3,4.7
+	c0.1,0.3,0.4,0.5,0.8,0.5h11.8l-0.8,1.2C40.4,36.3,29.8,42.4,26.7,44l-0.4,0.2L26,44C22,41.8,1.6,30.2,1.7,14.9
+	c0-6.9,4-11.7,10.5-13c0.8-0.2,1.7-0.2,2.5-0.2c8.2,0,10.8,8.5,10.9,8.9c0.1,0.4,0.4,0.6,0.8,0.6c0.4,0,0.7-0.3,0.8-0.6
+	c0-0.1,2.6-8.9,10.9-8.9c0.8,0,1.6,0.1,2.5,0.2C47.1,3.2,51,8,51.1,14.9c0,1.6-0.2,3.3-0.7,5h1.8c0.4-1.7,0.6-3.3,0.6-5
+	C52.7,7.2,48.2,1.6,40.9,0.3z" />
+                                                </svg>
+                                                <h6 class="hero-card-options-hover-title">Get Fit</h6>
+                                            </div>
+                                            <div class="hero-card-options-info-container option-inactive">
+                                                <svg version="1.1" id="get-fit-icon" class="hero-card-options-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 57.5 46" style="enable-background:new 0 0 57.5 46;" xml:space="preserve">
+                                                    <path d="M40.9,0.3C39.9,0.1,39,0,38.1,0C32,0,28.5,4.3,27,6.8l-0.6,1.1l-0.6-1.1C24.2,4.3,20.8,0,14.7,0c-0.9,0-1.8,0.1-2.8,0.3
+	C4.6,1.6,0,7.2,0,14.9c0,7.5,4.5,15.2,13,22.4c6.4,5.4,12.7,8.5,13,8.6c0.2,0.1,0.5,0.1,0.8,0c0.3-0.1,6.6-3.2,13-8.6
+	c4-3.4,7.2-6.9,9.4-10.5l0.2-0.4h7.3c0.5,0,0.9-0.4,0.9-0.9c0-0.5-0.4-0.9-0.9-0.9H36.1l-3-6c-0.1-0.3-0.5-0.5-0.8-0.5
+	c-0.3,0-0.6,0.2-0.7,0.6l-4.4,11.8l-4.9-15c-0.1-0.3-0.4-0.6-0.8-0.6c-0.4,0-0.7,0.2-0.8,0.5L17,24.8h-6.3c-0.5,0-0.9,0.4-0.9,0.9
+	c0,0.5,0.4,0.9,0.9,0.9h6.9c0.3,0,0.7-0.2,0.8-0.5l3-7.5l5,15.1c0.1,0.3,0.4,0.6,0.8,0.6h0c0.4,0,0.7-0.2,0.8-0.6l4.6-12.3l2.3,4.7
+	c0.1,0.3,0.4,0.5,0.8,0.5h11.8l-0.8,1.2C40.4,36.3,29.8,42.4,26.7,44l-0.4,0.2L26,44C22,41.8,1.6,30.2,1.7,14.9
+	c0-6.9,4-11.7,10.5-13c0.8-0.2,1.7-0.2,2.5-0.2c8.2,0,10.8,8.5,10.9,8.9c0.1,0.4,0.4,0.6,0.8,0.6c0.4,0,0.7-0.3,0.8-0.6
+	c0-0.1,2.6-8.9,10.9-8.9c0.8,0,1.6,0.1,2.5,0.2C47.1,3.2,51,8,51.1,14.9c0,1.6-0.2,3.3-0.7,5h1.8c0.4-1.7,0.6-3.3,0.6-5
+	C52.7,7.2,48.2,1.6,40.9,0.3z" />
+                                                </svg>
+                                                <h6 class="hero-card-options-title">Get Fit</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="hero-card-row-3" class="hero-card-row-full">
+                                    <div class="hero-card-column-half left-column">
+
+                                        <!-- GET STRONGER OPTION -->
+                                        <div id="get-stronger-option" class="hero-card-options option5">
+                                            <div id="get-stronger-hover-bg" class="hero-card-options-hover-bg option-active"></div>
+                                            <div class="hero-card-options-bg option-inactive"></div>
+                                            <div class="hero-card-options-hover-info-container option-active">
+                                                <svg version="1.1" id="get-stronger-hover-icon" class="hero-card-options-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.2 21.2" style="enable-background:new 0 0 51.2 21.2;" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M51.2,10.6c0-0.3-0.3-0.6-0.6-0.6h-1h-0.4V7.1c0-1-0.7-1.9-1.7-2.1c-0.1,0-0.3,0-0.4,0h-1.5h-0.4V2.1c0-1-0.7-1.9-1.7-2.1
+		c-0.1,0-0.3,0-0.4,0h-3c-0.1,0-0.3,0-0.4,0c-1,0.2-1.7,1.1-1.7,2.1V10h-0.4h-24h-0.4V2.1c0-1-0.7-1.9-1.7-2.1c-0.1,0-0.3,0-0.4,0
+		h-3C8,0,7.8,0,7.7,0C6.7,0.2,6,1.1,6,2.1V5H5.6H4.1C4,5,3.8,5,3.7,5C2.7,5.2,2,6.1,2,7.1V10H1.6h-1C0.3,10,0,10.3,0,10.6
+		s0.3,0.6,0.6,0.6H2v2.9c0,1.2,1,2.1,2.1,2.1H6v2.9c0,1.2,1,2.1,2.1,2.1h3c1.2,0,2.1-1,2.1-2.1v-7.9H38v7.9c0,1.2,1,2.1,2.1,2.1h3
+		c1.2,0,2.1-1,2.1-2.1v-2.9h1.9c1.2,0,2.1-1,2.1-2.1v-2.9h1.4C51,11.2,51.2,11,51.2,10.6z M6,15H5.6H4.1c-0.1,0-0.1,0-0.2,0
+		c-0.4-0.1-0.7-0.4-0.7-0.8v-7c0-0.5,0.4-0.9,0.9-0.9H6V15z M12,19.1c0,0.4-0.3,0.7-0.7,0.8c-0.1,0-0.1,0-0.2,0h-3
+		c-0.1,0-0.1,0-0.2,0c-0.4-0.1-0.7-0.4-0.7-0.8v-17c0-0.5,0.4-0.9,0.9-0.9h3c0.5,0,0.9,0.4,0.9,0.9V19.1z M44,19.1
+		c0,0.4-0.3,0.7-0.7,0.8c-0.1,0-0.1,0-0.2,0h-3c-0.1,0-0.1,0-0.2,0c-0.4-0.1-0.7-0.4-0.7-0.8v-17c0-0.5,0.4-0.9,0.9-0.9h3
+		c0.5,0,0.9,0.4,0.9,0.9V19.1z M48,14.1c0,0.4-0.3,0.7-0.7,0.8c-0.1,0-0.1,0-0.2,0h-1.5h-0.4V6.2h1.9c0.5,0,0.9,0.4,0.9,0.9V14.1z" />
+                                                    </g>
+                                                </svg>
+                                                <h6 class="hero-card-options-hover-title">Get Stronger</h6>
+                                            </div>
+                                            <div class="hero-card-options-info-container option-inactive">
+                                                <svg version="1.1" id="get-stronger-icon" class="hero-card-options-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51.2 21.2" style="enable-background:new 0 0 51.2 21.2;" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M51.2,10.6c0-0.3-0.3-0.6-0.6-0.6h-1h-0.4V7.1c0-1-0.7-1.9-1.7-2.1c-0.1,0-0.3,0-0.4,0h-1.5h-0.4V2.1c0-1-0.7-1.9-1.7-2.1
+		c-0.1,0-0.3,0-0.4,0h-3c-0.1,0-0.3,0-0.4,0c-1,0.2-1.7,1.1-1.7,2.1V10h-0.4h-24h-0.4V2.1c0-1-0.7-1.9-1.7-2.1c-0.1,0-0.3,0-0.4,0
+		h-3C8,0,7.8,0,7.7,0C6.7,0.2,6,1.1,6,2.1V5H5.6H4.1C4,5,3.8,5,3.7,5C2.7,5.2,2,6.1,2,7.1V10H1.6h-1C0.3,10,0,10.3,0,10.6
+		s0.3,0.6,0.6,0.6H2v2.9c0,1.2,1,2.1,2.1,2.1H6v2.9c0,1.2,1,2.1,2.1,2.1h3c1.2,0,2.1-1,2.1-2.1v-7.9H38v7.9c0,1.2,1,2.1,2.1,2.1h3
+		c1.2,0,2.1-1,2.1-2.1v-2.9h1.9c1.2,0,2.1-1,2.1-2.1v-2.9h1.4C51,11.2,51.2,11,51.2,10.6z M6,15H5.6H4.1c-0.1,0-0.1,0-0.2,0
+		c-0.4-0.1-0.7-0.4-0.7-0.8v-7c0-0.5,0.4-0.9,0.9-0.9H6V15z M12,19.1c0,0.4-0.3,0.7-0.7,0.8c-0.1,0-0.1,0-0.2,0h-3
+		c-0.1,0-0.1,0-0.2,0c-0.4-0.1-0.7-0.4-0.7-0.8v-17c0-0.5,0.4-0.9,0.9-0.9h3c0.5,0,0.9,0.4,0.9,0.9V19.1z M44,19.1
+		c0,0.4-0.3,0.7-0.7,0.8c-0.1,0-0.1,0-0.2,0h-3c-0.1,0-0.1,0-0.2,0c-0.4-0.1-0.7-0.4-0.7-0.8v-17c0-0.5,0.4-0.9,0.9-0.9h3
+		c0.5,0,0.9,0.4,0.9,0.9V19.1z M48,14.1c0,0.4-0.3,0.7-0.7,0.8c-0.1,0-0.1,0-0.2,0h-1.5h-0.4V6.2h1.9c0.5,0,0.9,0.4,0.9,0.9V14.1z" />
+                                                    </g>
+                                                </svg>
+                                                <h6 class="hero-card-options-title">Get Stronger</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hero-card-column-half right-column">
+
+                                        <!-- PERFORMANCE OPTION -->
+                                        <div id="performance-option" class="hero-card-options option6">
+                                            <div id="performance-hover-bg" class="hero-card-options-hover-bg option-active"></div>
+                                            <div class="hero-card-options-bg option-inactive"></div>
+                                            <div class="hero-card-options-hover-info-container option-active">
+                                                <svg version="1.1" id="performance-hover-icon" class="hero-card-options-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 43.5 22.5" style="enable-background:new 0 0 43.5 22.5;" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M0,20.8c0,1,0.8,1.8,1.8,1.8s1.8-0.8,1.8-1.8c0-0.1,0-0.3-0.1-0.4l0-0.1L14.2,9.4l0.1,0c0.2,0,0.3,0.1,0.4,0.1
+		c0.3,0,0.7-0.1,1-0.3l0.1-0.1L27,14.7l0,0.1c0.1,0.9,0.8,1.6,1.7,1.6c1,0,1.8-0.8,1.8-1.8c0-0.1,0-0.3-0.1-0.4l0-0.1L42,2.6v5.2
+		c0,0.4,0.3,0.8,0.8,0.8s0.8-0.3,0.8-0.8v-7c0-0.4-0.3-0.8-0.8-0.8h-7C35.3,0,35,0.3,35,0.8s0.3,0.8,0.8,0.8h5.2L29.3,13.1l-0.1,0
+		C29,13,28.9,13,28.8,13c-0.2,0-0.3,0-0.5,0.1c-0.2,0-0.3,0.1-0.5,0.2l-0.1,0.1L16.5,7.8l0-0.1C16.4,6.7,15.7,6,14.8,6
+		c-1,0-1.8,0.8-1.8,1.8c0,0.1,0,0.3,0.1,0.4l0,0.1L2.3,19.1l-0.1,0C2,19,1.9,19,1.8,19C0.8,19,0,19.8,0,20.8z" />
+                                                    </g>
+                                                </svg>
+                                                <h6 class="hero-card-options-hover-title">Performance</h6>
+                                            </div>
+                                            <div class="hero-card-options-info-container option-inactive">
+                                                <svg version="1.1" id="performance-icon" class="hero-card-options-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 43.5 22.5" style="enable-background:new 0 0 43.5 22.5;" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M0,20.8c0,1,0.8,1.8,1.8,1.8s1.8-0.8,1.8-1.8c0-0.1,0-0.3-0.1-0.4l0-0.1L14.2,9.4l0.1,0c0.2,0,0.3,0.1,0.4,0.1
+		c0.3,0,0.7-0.1,1-0.3l0.1-0.1L27,14.7l0,0.1c0.1,0.9,0.8,1.6,1.7,1.6c1,0,1.8-0.8,1.8-1.8c0-0.1,0-0.3-0.1-0.4l0-0.1L42,2.6v5.2
+		c0,0.4,0.3,0.8,0.8,0.8s0.8-0.3,0.8-0.8v-7c0-0.4-0.3-0.8-0.8-0.8h-7C35.3,0,35,0.3,35,0.8s0.3,0.8,0.8,0.8h5.2L29.3,13.1l-0.1,0
+		C29,13,28.9,13,28.8,13c-0.2,0-0.3,0-0.5,0.1c-0.2,0-0.3,0.1-0.5,0.2l-0.1,0.1L16.5,7.8l0-0.1C16.4,6.7,15.7,6,14.8,6
+		c-1,0-1.8,0.8-1.8,1.8c0,0.1,0,0.3,0.1,0.4l0,0.1L2.3,19.1l-0.1,0C2,19,1.9,19,1.8,19C0.8,19,0,19.8,0,20.8z" />
+                                                    </g>
+                                                </svg>
+                                                <h6 class="hero-card-options-title">Performance</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-card-footer">
+                            <div class="hero-card-footer-bg"></div>
+                            <div class="hero-card-footer-title-bg">
+                                <div class="hero-card-footer-title-bg-bubble"></div>
+                            </div>
+                            <div id="hero-card-footer-title-block-1" class="hero-card-footer-title-block"></div>
+                            <h6 class="hero-card-footer-title">
+                                Next
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-card-shadow"></div>
+                        <div class="hero-card-header">
+                            <div class="hero-card-header-bg"></div>
+                            <h6 class="hero-card-header-title">Fitness Level</h6>
+                        </div>
+                        <div id="hero-card-body2" class="hero-card-body">
+                            <div class="hero-card-slider-container">
+                                <div class="hero-card-slider">
+                                    <div class="hero-card-slider-bar">
+                                        <div class="hero-card-slider-option-container">
+                                            <div class="hero-card-slider-option">
+                                                <h6 class="hero-card-slider-option-title">Advance</h6>
+                                                <div class="hero-card-slider-option-bubble a-bubble">
+                                                    <div class="option-bubble-outer"></div>
+                                                    <div class="option-bubble-middle"></div>
+                                                    <div class="option-bubble-inner"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hero-card-slider-option">
+                                                <h6 class="hero-card-slider-option-title">Intermediate/<br>Advance</h6>
+                                                <div class="hero-card-slider-option-bubble ia-bubble">
+                                                    <div class="option-bubble-outer"></div>
+                                                    <div class="option-bubble-middle"></div>
+                                                    <div class="option-bubble-inner"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hero-card-slider-option">
+                                                <h6 class="hero-card-slider-option-title">Intermediate</h6>
+                                                <div class="hero-card-slider-option-bubble i-bubble">
+                                                    <div class="option-bubble-outer"></div>
+                                                    <div class="option-bubble-middle"></div>
+                                                    <div class="option-bubble-inner"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hero-card-slider-option">
+                                                <h6 class="hero-card-slider-option-title">Beginner/<br>Intermediate</h6>
+                                                <div class="hero-card-slider-option-bubble bi-bubble">
+                                                    <div class="option-bubble-outer"></div>
+                                                    <div class="option-bubble-middle"></div>
+                                                    <div class="option-bubble-inner"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hero-card-slider-option">
+                                                <h6 class="hero-card-slider-option-title">Beginner</h6>
+                                                <div class="hero-card-slider-option-bubble b-bubble">
+                                                    <div class="option-bubble-outer"></div>
+                                                    <div class="option-bubble-middle"></div>
+                                                    <div class="option-bubble-inner"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hero-card-slider-bar-progress">
+                                            <div class="hero-card-slider-bar-progress-bg"></div>
+                                            <div class="hero-card-slider-bar-progress-blue-fade"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hero-card-graph-container">
+                                        <div id="hero-card-graph-bar-1" class="hero-card-graph-bar">
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div id="hero-card-graph-bar-2" class="hero-card-graph-bar">
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div id="hero-card-graph-bar-3" class="hero-card-graph-bar">
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div id="hero-card-graph-bar-4" class="hero-card-graph-bar">
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div id="hero-card-graph-bar-5" class="hero-card-graph-bar">
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                            <div class="graph-bar-fill">
+                                                <div class="graph-bar-fill-inner"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-card-footer">
+                            <div class="hero-card-footer-bg"></div>
+                            <div class="hero-card-footer-back-bg">
+                                <div class="hero-card-footer-back-bg-bubble"></div>
+                            </div>
+                            <div id="hero-card-footer-back-block-2" class="hero-card-footer-back-block"></div>
+                            <h6 class="hero-card-footer-back">
+                                Back
+                            </h6>
+                            <div class="hero-card-footer-title-bg">
+                                <div class="hero-card-footer-title-bg-bubble"></div>
+                            </div>
+                            <div id="hero-card-footer-title-block-2" class="hero-card-footer-title-block"></div>
+                            <h6 class="hero-card-footer-title">
+                                Next
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="hero-card">
+                        <div class="hero-card-shadow"></div>
+                        <div class="hero-card-header">
+                            <div class="hero-card-header-bg"></div>
+                            <h6 class="hero-card-header-title">Workout Type</h6>
+                        </div>
+                        <div id="hero-card-body3" class="hero-card-body">
+                            <div class="hero-card-type-row-container">
+                                <div class="hero-card-type-row">
+                                    <div id="type-1-cardio" class="hero-card-type">
+                                        <div class="hero-card-type-info-hover-container type1">
+                                            <div id="cardio-hover-button" class="hero-card-type-info-hover-button">
+                                                <svg version="1.1" id="cardio-icon-white" class="hero-card-type-info-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-72 244 466 305" enable-background="new -72 244 466 305" xml:space="preserve">
+                                                    <g>
+                                                        <path fill="#FFFFFF" d="M190.1,276.3c-1.6,5.5-2.9,9.5-4,13.6c-22.1,81.5-44.2,163-66.3,244.5c-0.7,2.4-1.3,4.8-2,7.2
+		c-1.1,3.4-3.2,5.5-6.9,5.4c-3.9-0.1-6-2.6-6.8-6.2c-2.1-9.1-4.1-18.2-6.2-27.3C85.3,457.8,72.7,402.1,60,346.4
+		c-0.2-0.9-0.5-1.8-1.1-3.9c-1.2,2.2-2,3.5-2.6,4.9c-9.4,21.1-19.1,42.2-28.1,63.5c-2.7,6.4-6.9,8.8-13.4,8.7c-10-0.1-20,0.1-30,0.2
+		c-14.3,0.2-28.7,0.4-43,0.6c-1.8,0-3.7,0.1-5.5-0.1c-3.8-0.4-6.4-2.2-6.5-6.2s2.3-6.1,6.1-6.6c2.5-0.3,5-0.3,7.5-0.3
+		c22-0.2,44-0.6,66-0.6c4.6,0,7.1-1.3,9-5.7c11.3-26,22.9-51.8,34.5-77.6c0.5-1.1,0.6-2.5,1.5-3.1c2.3-1.9,4.8-4.5,7.4-4.8
+		c3.8-0.4,5.5,3,6.3,6.6c5.3,23.6,10.6,47.1,15.9,70.7c8.7,38.3,17.4,76.7,26,115c0.4,1.6,0.8,3.2,1.6,6.4c1.1-3.5,1.8-5.5,2.3-7.6
+		c21-77.3,42-154.6,63-231.9c1.9-6.9,3.8-13.8,5.6-20.7c1.1-4,2.2-8,7.4-8c5,0,6.5,3.8,7.6,7.9c12.1,43.2,24.3,86.5,36.5,129.7
+		c7.1,25.2,14.1,50.4,21.2,75.5c0.6,2.2,1.3,4.4,2.4,7.8c1.6-3.3,2.6-5.5,3.6-7.7c12.2-26.6,24.6-53.2,36.6-80
+		c2.8-6.3,6.9-8.8,13.5-8.7c23.7,0.4,47.3,0.6,71,0.9c1.3,0,2.7,0,4,0.2c3.8,0.6,6.3,2.7,6.1,6.6c-0.1,4-2.8,6.1-6.5,6.2
+		c-5.2,0.2-10.3-0.1-15.5-0.1c-18.5-0.2-37-0.3-55.5-0.6c-3.5-0.1-5.4,1.1-6.8,4.3c-14.3,31.5-28.8,63-43.2,94.5
+		c-0.6,1.2-1.1,2.4-1.7,3.6c-1.6,3.3-4,5.4-7.8,5c-3.7-0.4-5.4-2.9-6.3-6.2c-3.3-11.9-6.7-23.7-10-35.6
+		c-15.8-55.6-31.4-111.2-47-166.9C191.6,280.8,191.1,279.3,190.1,276.3z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="cardio-hover-text" class="hero-card-type-info-hover-title">Cardio</h6>
+                                        </div>
+                                        <div class="hero-card-type-info-container">
+                                            <div id="cardio-button" class="hero-card-type-info-button">
+                                                <svg version="1.1" id="cardio-icon-blue" class="hero-card-type-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-72 244 466 305" style="enable-background:new -72 244 466 305;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #177AF1 !important;
+                                                            stroke: none !important;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path class="st0" d="M190.1,276.3c-1.6,5.5-2.9,9.5-4,13.6c-22.1,81.5-44.2,163-66.3,244.5c-0.7,2.4-1.3,4.8-2,7.2
+		c-1.1,3.4-3.2,5.5-6.9,5.4c-3.9-0.1-6-2.6-6.8-6.2c-2.1-9.1-4.1-18.2-6.2-27.3C85.3,457.8,72.7,402.1,60,346.4
+		c-0.2-0.9-0.5-1.8-1.1-3.9c-1.2,2.2-2,3.5-2.6,4.9c-9.4,21.1-19.1,42.2-28.1,63.5c-2.7,6.4-6.9,8.8-13.4,8.7c-10-0.1-20,0.1-30,0.2
+		c-14.3,0.2-28.7,0.4-43,0.6c-1.8,0-3.7,0.1-5.5-0.1c-3.8-0.4-6.4-2.2-6.5-6.2s2.3-6.1,6.1-6.6c2.5-0.3,5-0.3,7.5-0.3
+		c22-0.2,44-0.6,66-0.6c4.6,0,7.1-1.3,9-5.7c11.3-26,22.9-51.8,34.5-77.6c0.5-1.1,0.6-2.5,1.5-3.1c2.3-1.9,4.8-4.5,7.4-4.8
+		c3.8-0.4,5.5,3,6.3,6.6c5.3,23.6,10.6,47.1,15.9,70.7c8.7,38.3,17.4,76.7,26,115c0.4,1.6,0.8,3.2,1.6,6.4c1.1-3.5,1.8-5.5,2.3-7.6
+		c21-77.3,42-154.6,63-231.9c1.9-6.9,3.8-13.8,5.6-20.7c1.1-4,2.2-8,7.4-8c5,0,6.5,3.8,7.6,7.9c12.1,43.2,24.3,86.5,36.5,129.7
+		c7.1,25.2,14.1,50.4,21.2,75.5c0.6,2.2,1.3,4.4,2.4,7.8c1.6-3.3,2.6-5.5,3.6-7.7c12.2-26.6,24.6-53.2,36.6-80
+		c2.8-6.3,6.9-8.8,13.5-8.7c23.7,0.4,47.3,0.6,71,0.9c1.3,0,2.7,0,4,0.2c3.8,0.6,6.3,2.7,6.1,6.6c-0.1,4-2.8,6.1-6.5,6.2
+		c-5.2,0.2-10.3-0.1-15.5-0.1c-18.5-0.2-37-0.3-55.5-0.6c-3.5-0.1-5.4,1.1-6.8,4.3c-14.3,31.5-28.8,63-43.2,94.5
+		c-0.6,1.2-1.1,2.4-1.7,3.6c-1.6,3.3-4,5.4-7.8,5c-3.7-0.4-5.4-2.9-6.3-6.2c-3.3-11.9-6.7-23.7-10-35.6
+		c-15.8-55.6-31.4-111.2-47-166.9C191.6,280.8,191.1,279.3,190.1,276.3z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="cardio-text" class="hero-card-type-info-title">Cardio</h6>
+                                        </div>
+                                    </div>
+                                    <div id="type-2-muscle-building" class="hero-card-type">
+                                        <div class="hero-card-type-info-hover-container type2">
+                                            <div id="muscle-building-hover-button" class="hero-card-type-info-hover-button">
+                                                <svg version="1.1" id="muscle-building-icon-white" class="hero-card-type-info-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-56 532 554 262" enable-background="new -56 532 554 262" xml:space="preserve">
+                                                    <g>
+                                                        <path fill="#FFFFFF" d="M370,794c-17.7,0-35.3,0-53,0c-11.7-4-16.3-12.2-16.1-24.4c0.4-34.2,0.1-68.3,0.1-102.5c0-1.9,0-3.9,0-5.9
+		c-53.6,0-106.7,0-160,0c0,2.2,0,4,0,5.9c0,34.2-0.2,68.3,0.1,102.5c0.1,12.3-4.4,20.5-16.1,24.4c-17.7,0-35.3,0-53,0
+		c-11.7-4-16.3-12.2-16.1-24.4c0.4-34.1,0.1-68.3,0.1-102.5c0-1.9,0-3.9,0-5.9c-9.3,0-18,0-27,0c0,2.2,0,4,0,5.8
+		c0,20.8,0,41.6,0,62.5c0,13.2-8.3,21.5-21.6,21.5c-12.8,0-25.7-0.4-38.5,0.1C-43.5,751.6-52,747-56,735c0-47.7,0-95.3,0-143
+		c4-12,12.5-16.6,24.9-16.1c12.8,0.5,25.7,0.1,38.5,0.1c13.3,0,21.5,8.3,21.6,21.5c0,14.8,0,29.6,0,44.5c0,1.8,0,3.5,0,5.3
+		c9.4,0,18.1,0,27,0c0-2.3,0-4.1,0-5.9c0-28.1,0.3-56.3-0.1-84.4c-0.2-12.5,4.1-21,16.1-25c17.7,0,35.3,0,53,0
+		c12,4,16.3,12.5,16.1,24.9c-0.4,28.3-0.1,56.7-0.1,85c0,1.8,0,3.5,0,5.4c53.7,0,106.7,0,160,0c0-2.2,0-4.1,0-5.9
+		c0-28.2,0.3-56.3-0.1-84.5C300.7,544.5,305,536,317,532c17.7,0,35.3,0,53,0c12,4,16.3,12.5,16.1,24.9c-0.4,28.3-0.1,56.6-0.1,84.9
+		c0,1.8,0,3.6,0,5.5c9.3,0,18,0,27,0c0-16.9,0-33.4,0-49.8c0-13.2,8.3-21.4,21.6-21.5c12.8,0,25.7,0.4,38.5-0.1
+		c12.4-0.5,20.9,4.1,24.9,16.1c0,47.7,0,95.3,0,143c-4,12-12.5,16.6-24.9,16.1c-12.6-0.5-25.3-0.1-38-0.1c-13.9,0-22.1-8.1-22.1-22
+		c0-20.8,0-41.6,0-62.5c0-1.8,0-3.5,0-5.3c-9.4,0-18.1,0-27,0c0,2.3,0,4.1,0,5.9c0,34.2-0.2,68.3,0.1,102.5
+		C386.3,781.8,381.7,790,370,794z M128,663.3c0-36.2,0-72.3,0-108.5c0-7.6-2.2-9.7-9.8-9.7c-13.3,0-26.7,0-40,0
+		c-6.7,0-9.1,2.4-9.1,9c0,72.7,0,145.3,0,218c0,6.6,2.4,9,9.1,9c13.2,0,26.3,0,39.5,0c8.4,0,10.4-2,10.4-10.2
+		C128,734.9,128,699.1,128,663.3z M373,663.1c0-36.3,0-72.7,0-109c0-6.7-2.4-9.1-9-9.1c-13.7,0-27.3,0-41,0c-6.6,0-9,2.4-9,9.1
+		c0,72.5,0,145,0,217.5c0,7,2.3,9.3,9.2,9.4c13.2,0,26.3,0,39.5,0c8.3,0,10.2-2,10.2-10.3C373,734.8,373,699,373,663.1z M16,663.9
+		c0-22,0-44,0-66c0-6.3-2.4-8.8-8.7-8.8c-13.8,0-27.7,0-41.5,0c-6.3,0-8.7,2.5-8.7,8.9c0,43.7,0,87.3,0,131c0,6.7,2.4,9.1,9,9.1
+		c13.5,0,27,0,40.5,0c7.2,0,9.4-2.3,9.4-9.6C16,706.8,16,685.3,16,663.9z M426,663c0,21.8,0,43.7,0,65.5c0,7.2,2.3,9.5,9.6,9.5
+		c13.5,0,27,0,40.5,0c6.4,0,8.8-2.4,8.8-8.7c0-43.8,0-87.6,0-131.5c0-6.3-2.5-8.7-8.8-8.7c-13.5,0-27,0-40.5,0
+		c-7.3,0-9.6,2.2-9.6,9.5C426,620,426,641.5,426,663z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="muscle-building-hover-text" class="hero-card-type-info-hover-title">Muscle<br>Building</h6>
+                                        </div>
+                                        <div class="hero-card-type-info-container">
+                                            <div id="muscle-building-button" class="hero-card-type-info-button">
+                                                <svg version="1.1" id="muscle-building-icon-blue" class="hero-card-type-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-28 266 554 262" style="enable-background:new -28 266 554 262;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #177AF1 !important;
+                                                            stroke: none !important;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path class="st0" d="M398,528c-17.7,0-35.3,0-53,0c-11.7-4-16.3-12.2-16.1-24.4c0.4-34.2,0.1-68.3,0.1-102.5c0-1.9,0-3.9,0-5.9
+		c-53.6,0-106.7,0-160,0c0,2.2,0,4,0,5.9c0,34.2-0.2,68.3,0.1,102.5c0.1,12.3-4.4,20.5-16.1,24.4c-17.7,0-35.3,0-53,0
+		c-11.7-4-16.3-12.2-16.1-24.4c0.4-34.1,0.1-68.3,0.1-102.5c0-1.9,0-3.9,0-5.9c-9.3,0-18,0-27,0c0,2.2,0,4,0,5.8
+		c0,20.8,0,41.6,0,62.5c0,13.2-8.3,21.5-21.6,21.5c-12.8,0-25.7-0.4-38.5,0.1C-15.5,485.6-24,481-28,469c0-47.7,0-95.3,0-143
+		c4-12,12.5-16.6,24.9-16.1c12.8,0.5,25.7,0.1,38.5,0.1c13.3,0,21.5,8.3,21.6,21.5c0,14.8,0,29.6,0,44.5c0,1.8,0,3.5,0,5.3
+		c9.4,0,18.1,0,27,0c0-2.3,0-4.1,0-5.9c0-28.1,0.3-56.3-0.1-84.4c-0.2-12.5,4.1-21,16.1-25c17.7,0,35.3,0,53,0
+		c12,4,16.3,12.5,16.1,24.9c-0.4,28.3-0.1,56.7-0.1,85c0,1.8,0,3.5,0,5.4c53.7,0,106.7,0,160,0c0-2.2,0-4.1,0-5.9
+		c0-28.2,0.3-56.3-0.1-84.5C328.7,278.5,333,270,345,266c17.7,0,35.3,0,53,0c12,4,16.3,12.5,16.1,24.9c-0.4,28.3-0.1,56.6-0.1,84.9
+		c0,1.8,0,3.6,0,5.5c9.3,0,18,0,27,0c0-16.9,0-33.4,0-49.8c0-13.2,8.3-21.4,21.6-21.5c12.8,0,25.7,0.4,38.5-0.1
+		c12.4-0.5,20.9,4.1,24.9,16.1c0,47.7,0,95.3,0,143c-4,12-12.5,16.6-24.9,16.1c-12.6-0.5-25.3-0.1-38-0.1c-13.9,0-22.1-8.1-22.1-22
+		c0-20.8,0-41.6,0-62.5c0-1.8,0-3.5,0-5.3c-9.4,0-18.1,0-27,0c0,2.3,0,4.1,0,5.9c0,34.2-0.2,68.3,0.1,102.5
+		C414.3,515.8,409.7,524,398,528z M156,397.3c0-36.2,0-72.3,0-108.5c0-7.6-2.2-9.7-9.8-9.7c-13.3,0-26.7,0-40,0
+		c-6.7,0-9.1,2.4-9.1,9c0,72.7,0,145.3,0,218c0,6.6,2.4,9,9.1,9c13.2,0,26.3,0,39.5,0c8.4,0,10.4-2,10.4-10.2
+		C156,468.9,156,433.1,156,397.3z M401,397.1c0-36.3,0-72.7,0-109c0-6.7-2.4-9.1-9-9.1c-13.7,0-27.3,0-41,0c-6.6,0-9,2.4-9,9.1
+		c0,72.5,0,145,0,217.5c0,7,2.3,9.3,9.2,9.4c13.2,0,26.3,0,39.5,0c8.3,0,10.2-2,10.2-10.3C401,468.8,401,433,401,397.1z M44,397.9
+		c0-22,0-44,0-66c0-6.3-2.4-8.8-8.7-8.8c-13.8,0-27.7,0-41.5,0c-6.3,0-8.7,2.5-8.7,8.9c0,43.7,0,87.3,0,131c0,6.7,2.4,9.1,9,9.1
+		c13.5,0,27,0,40.5,0c7.2,0,9.4-2.3,9.4-9.6C44,440.8,44,419.3,44,397.9z M454,397c0,21.8,0,43.7,0,65.5c0,7.2,2.3,9.5,9.6,9.5
+		c13.5,0,27,0,40.5,0c6.4,0,8.8-2.4,8.8-8.7c0-43.8,0-87.6,0-131.5c0-6.3-2.5-8.7-8.8-8.7c-13.5,0-27,0-40.5,0
+		c-7.3,0-9.6,2.2-9.6,9.5C454,354,454,375.5,454,397z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="muscle-building-text" class="hero-card-type-info-title">Muscle<br>Building</h6>
+                                        </div>
+                                    </div>
+                                    <div id="type-3-slim-tone" class="hero-card-type">
+                                        <div class="hero-card-type-info-hover-container type3">
+                                            <div id="slim-tone-hover-button" class="hero-card-type-info-hover-button">
+                                                <svg version="1.1" id="slim-tone-icon-white" class="hero-card-type-info-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-172 200.9 266.1 393.1" style="enable-background:new -172 200.9 266.1 393.1;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #FFFFFF;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path fill="#ffffff" d="M-138.8,580.7c0-2.7,0-4.7,0-6.7c0-19.5,0.1-39-0.1-58.5c-0.1-5.5,1.5-9.9,5-14.1
+		c27.4-32.5,54.7-65.1,81.9-97.7c1.5-1.8,2.9-3.6,4.7-5.7c-5.3-6.4-10.5-12.7-15.7-19c-22.7-26.9-45.3-54.1-68.1-81.1
+		c-4-4.7-5.9-9.6-5.8-15.9c0.3-20.5,0.1-41,0.1-61.5c0-2,0-3.9,0-6.6c-8.5,0-16.5,0-24.4,0c-7.5,0.1-10.9-2.1-10.8-6.6
+		c0.2-4.4,3.4-6.4,10.6-6.4c81.5,0,163,0,244.5,0c1.5,0,3-0.1,4.5,0.1c4,0.5,6.7,2.5,6.5,6.8c-0.1,4-2.8,6-6.6,6.1
+		c-7.3,0.2-14.7,0.4-22,0c-4.7-0.2-6.3,1.1-6.2,6c0.3,20.8,0,41.7,0.2,62.5c0.1,6.1-1.8,10.9-5.7,15.4c-26.9,32-53.7,64.1-80.6,96.2
+		c-1.1,1.3-2.1,2.6-3.3,4.1c1.7,2.1,3.2,4,4.8,5.9c27.3,32.6,54.6,65.2,81.9,97.7c3.3,3.9,4.9,8,4.8,13.2c-0.2,19.7-0.1,39.3-0.1,59
+		c0,2,0,4,0,6.8c3,0,5.5,0,8.1,0c5.8,0,11.7-0.1,17.5,0c4.1,0.1,7.3,3.1,7.1,6.7c-0.2,4.3-2.8,6.1-6.8,6.4c-1.2,0.1-2.3,0.1-3.5,0.1
+		c-81.8,0-163.7,0-245.5,0c-0.3,0-0.7,0-1,0c-6.1-0.1-9.4-2.4-9.3-6.6c0.1-4.1,3.6-6.6,9.4-6.6C-155,580.7-147.3,580.7-138.8,580.7z
+		 M-39,407.9c-0.8,1.3-1.2,2-1.8,2.7c-27.5,32.9-55,65.7-82.3,98.6c-1.6,1.9-2.5,5.1-2.5,7.7c-0.2,19.5-0.1,39-0.1,58.5
+		c0,1.6,0.2,3.2,0.3,5c57.9,0,115.5,0,173.1,0c0.1-1.3,0.4-2.3,0.4-3.3c0-20.5,0.1-41-0.1-61.5c0-2.4-1.4-5.1-3-7
+		c-16.1-19.5-32.4-38.9-48.7-58.3C-15.1,436.4-26.7,422.6-39,407.9z M-38.4,388.2c0.9-1.5,1.3-2.2,1.9-2.9
+		C-9.7,353.2,17.2,321.2,44,289c1.5-1.8,2.2-4.8,2.2-7.3c0.2-20.7,0-41.3,0.2-62c0-4.5-1.1-5.9-5.8-5.9c-52.8,0.2-105.7,0.2-158.5,0
+		c-4.3,0-5.8,0.9-5.7,5.5c0.2,20.8,0,41.7,0.2,62.5c0,2.7,1.2,6,2.9,8c17.7,21.5,35.6,42.8,53.5,64.1
+		C-57.8,365.1-48.5,376.2-38.4,388.2z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="slim-tone-hover-text" class="hero-card-type-info-hover-title">Slim<br>&amp; Tone</h6>
+                                        </div>
+                                        <div class="hero-card-type-info-container">
+                                            <div id="slim-tone-button" class="hero-card-type-info-button">
+                                                <svg version="1.1" id="slim-tone-icon-blue" class="hero-card-type-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-172 200.9 266.1 393.1" style="enable-background:new -172 200.9 266.1 393.1;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #177AF1 !important;
+                                                            stroke: none !important;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path class="st0" d="M-138.8,580.7c0-2.7,0-4.7,0-6.7c0-19.5,0.1-39-0.1-58.5c-0.1-5.5,1.5-9.9,5-14.1
+		c27.4-32.5,54.7-65.1,81.9-97.7c1.5-1.8,2.9-3.6,4.7-5.7c-5.3-6.4-10.5-12.7-15.7-19c-22.7-26.9-45.3-54.1-68.1-81.1
+		c-4-4.7-5.9-9.6-5.8-15.9c0.3-20.5,0.1-41,0.1-61.5c0-2,0-3.9,0-6.6c-8.5,0-16.5,0-24.4,0c-7.5,0.1-10.9-2.1-10.8-6.6
+		c0.2-4.4,3.4-6.4,10.6-6.4c81.5,0,163,0,244.5,0c1.5,0,3-0.1,4.5,0.1c4,0.5,6.7,2.5,6.5,6.8c-0.1,4-2.8,6-6.6,6.1
+		c-7.3,0.2-14.7,0.4-22,0c-4.7-0.2-6.3,1.1-6.2,6c0.3,20.8,0,41.7,0.2,62.5c0.1,6.1-1.8,10.9-5.7,15.4c-26.9,32-53.7,64.1-80.6,96.2
+		c-1.1,1.3-2.1,2.6-3.3,4.1c1.7,2.1,3.2,4,4.8,5.9c27.3,32.6,54.6,65.2,81.9,97.7c3.3,3.9,4.9,8,4.8,13.2c-0.2,19.7-0.1,39.3-0.1,59
+		c0,2,0,4,0,6.8c3,0,5.5,0,8.1,0c5.8,0,11.7-0.1,17.5,0c4.1,0.1,7.3,3.1,7.1,6.7c-0.2,4.3-2.8,6.1-6.8,6.4c-1.2,0.1-2.3,0.1-3.5,0.1
+		c-81.8,0-163.7,0-245.5,0c-0.3,0-0.7,0-1,0c-6.1-0.1-9.4-2.4-9.3-6.6c0.1-4.1,3.6-6.6,9.4-6.6C-155,580.7-147.3,580.7-138.8,580.7z
+		 M-39,407.9c-0.8,1.3-1.2,2-1.8,2.7c-27.5,32.9-55,65.7-82.3,98.6c-1.6,1.9-2.5,5.1-2.5,7.7c-0.2,19.5-0.1,39-0.1,58.5
+		c0,1.6,0.2,3.2,0.3,5c57.9,0,115.5,0,173.1,0c0.1-1.3,0.4-2.3,0.4-3.3c0-20.5,0.1-41-0.1-61.5c0-2.4-1.4-5.1-3-7
+		c-16.1-19.5-32.4-38.9-48.7-58.3C-15.1,436.4-26.7,422.6-39,407.9z M-38.4,388.2c0.9-1.5,1.3-2.2,1.9-2.9
+		C-9.7,353.2,17.2,321.2,44,289c1.5-1.8,2.2-4.8,2.2-7.3c0.2-20.7,0-41.3,0.2-62c0-4.5-1.1-5.9-5.8-5.9c-52.8,0.2-105.7,0.2-158.5,0
+		c-4.3,0-5.8,0.9-5.7,5.5c0.2,20.8,0,41.7,0.2,62.5c0,2.7,1.2,6,2.9,8c17.7,21.5,35.6,42.8,53.5,64.1
+		C-57.8,365.1-48.5,376.2-38.4,388.2z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="slim-tone-text" class="hero-card-type-info-title">Slim<br>&amp; Tone</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hero-card-type-row">
+                                    <div id="type-4-yoga" class="hero-card-type">
+                                        <div class="hero-card-type-info-hover-container type4">
+                                            <div id="yoga-hover-button" class="hero-card-type-info-hover-button">
+                                                <svg version="1.1" id="yoga-icon-white" class="hero-card-type-info-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-70 202.4 469.4 389.6" style="enable-background:new -70 202.4 469.4 389.6;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #FFFFFF;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path fill="#ffffff" d="M94.8,589.1c-51.1,0-102.3,0-153.4,0c-1.7,0-3.4,0-5-0.2c-5.4-0.8-7.7-4.8-5.6-9.8c0.8-1.8,1.9-3.5,3-5.2
+		C-18.8,504,28.6,434.1,76,364.2c21.6-31.8,43.2-63.7,64.8-95.6c0.8-1.2,1.7-2.5,2.2-3.9c2.8-7.6,3.3-8,11.1-7.4
+		c24.1,1.9,48.2,3.8,72.2,5.9c3.9,0.3,6-0.7,8-4c7.9-13.4,17.6-25.4,29.2-35.9c26.4-23.9,55.4-26.7,86.9-11.3
+		c33.6,16.5,51.7,48.1,48.8,87.1c-0.7,9.7-3.2,19.3-5.7,28.8c-12,46.1-23.8,92.3-36.9,138c-3.3,11.4-2.6,22.5-4,33.7
+		c-6.1,46.9-34,74.3-77.8,87.7c-10.9,3.3-22,4.7-33.5,4.7c-48.8-0.2-97.6-0.1-146.4-0.1C94.8,590.9,94.8,590,94.8,589.1z M-52,576.2
+		c3.8,0,6.1,0,8.3,0c96,0.9,192,1.8,288,2.5c8.4,0.1,17-1.4,25.1-3.4c44.8-11.3,70.2-43.6,70.7-89.6c0.3-32.5-8.9-61.6-33.7-83.5
+		c-30.2-26.6-64.4-39.9-105-26.5c-17.9,5.9-34.2,14.6-46.2,29.4c-21,25.7-20.3,54.7-10.8,84.3c6.3,19.6,20.4,32.3,40.1,38
+		c26.6,7.7,51.9,3.7,75-11.6c21.2-14,29.3-34.2,24.4-58.3c-2.6-12.9-9.9-22.5-21.5-28.5c-14.9-7.7-30.7-8.5-46.7-4.7
+		c-23.2,5.5-28.7,24-25.1,43.4c1.5,8.2,7,12.5,15.4,11.9c5-0.4,10-2.2,14.8-3.8c4.3-1.5,7.8-0.8,9.4,2.7c1.8,4,0.1,6.9-3.3,8.8
+		c-9.1,5-18.7,7-28.9,4.7c-7.5-1.7-13.2-6.1-16.9-13c-10.7-19.8-3.2-49.9,16.4-60.9c22.1-12.5,45.3-11.8,68.3-1.9
+		c12.6,5.4,21.8,14.6,27.3,27.2c10.8,24.6,5.5,53.7-13.5,72.7c-18.8,18.7-42.1,27.4-68.1,27.9c-40.3,0.8-73.7-19.4-83-63
+		c-5.3-25.1-4.8-49.8,8.6-72.7c4.3-7.4,8.9-14.7,13.6-21.9c23.3-35.3,46.7-70.6,70.1-105.9c0.8-1.2,1.4-2.5,2.3-4.1
+		c-2.1-0.3-3.5-0.6-5-0.7c-18.3-1.5-36.6-2.6-54.8-4.5c-5.7-0.6-8.9,0.8-12.2,5.6c-62.2,92.1-124.7,184-187,276
+		C-41.1,560-46.1,567.4-52,576.2z M348.4,446.3c0.8-2.2,1.1-3.1,1.4-4c9.6-36.2,19.2-72.5,28.8-108.7c4.3-16.4,8.9-32.6,7.6-50.1
+		c-2.8-36.8-36.2-68.4-73.3-68.3c-17.9,0.1-31.5,9-44.1,20.7c-13.2,12.2-21.3,28.1-31.2,42.6c-20.1,29.3-39.3,59.1-58.9,88.7
+		c-0.8,1.1-1.3,2.4-2.7,5c34.8-17.9,68.6-20.2,103.2-3.9C313,384.3,336.9,409,348.4,446.3z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="yoga-hover-text" class="hero-card-type-info-hover-title">Yoga</h6>
+                                        </div>
+                                        <div class="hero-card-type-info-container">
+                                            <div id="yoga-button" class="hero-card-type-info-button">
+                                                <svg version="1.1" id="yoga-icon-blue" class="hero-card-type-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-70 202.4 469.4 389.6" style="enable-background:new -70 202.4 469.4 389.6;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #177AF1 !important;
+                                                            stroke: none !important;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path class="st0" d="M94.8,589.1c-51.1,0-102.3,0-153.4,0c-1.7,0-3.4,0-5-0.2c-5.4-0.8-7.7-4.8-5.6-9.8c0.8-1.8,1.9-3.5,3-5.2
+		C-18.8,504,28.6,434.1,76,364.2c21.6-31.8,43.2-63.7,64.8-95.6c0.8-1.2,1.7-2.5,2.2-3.9c2.8-7.6,3.3-8,11.1-7.4
+		c24.1,1.9,48.2,3.8,72.2,5.9c3.9,0.3,6-0.7,8-4c7.9-13.4,17.6-25.4,29.2-35.9c26.4-23.9,55.4-26.7,86.9-11.3
+		c33.6,16.5,51.7,48.1,48.8,87.1c-0.7,9.7-3.2,19.3-5.7,28.8c-12,46.1-23.8,92.3-36.9,138c-3.3,11.4-2.6,22.5-4,33.7
+		c-6.1,46.9-34,74.3-77.8,87.7c-10.9,3.3-22,4.7-33.5,4.7c-48.8-0.2-97.6-0.1-146.4-0.1C94.8,590.9,94.8,590,94.8,589.1z M-52,576.2
+		c3.8,0,6.1,0,8.3,0c96,0.9,192,1.8,288,2.5c8.4,0.1,17-1.4,25.1-3.4c44.8-11.3,70.2-43.6,70.7-89.6c0.3-32.5-8.9-61.6-33.7-83.5
+		c-30.2-26.6-64.4-39.9-105-26.5c-17.9,5.9-34.2,14.6-46.2,29.4c-21,25.7-20.3,54.7-10.8,84.3c6.3,19.6,20.4,32.3,40.1,38
+		c26.6,7.7,51.9,3.7,75-11.6c21.2-14,29.3-34.2,24.4-58.3c-2.6-12.9-9.9-22.5-21.5-28.5c-14.9-7.7-30.7-8.5-46.7-4.7
+		c-23.2,5.5-28.7,24-25.1,43.4c1.5,8.2,7,12.5,15.4,11.9c5-0.4,10-2.2,14.8-3.8c4.3-1.5,7.8-0.8,9.4,2.7c1.8,4,0.1,6.9-3.3,8.8
+		c-9.1,5-18.7,7-28.9,4.7c-7.5-1.7-13.2-6.1-16.9-13c-10.7-19.8-3.2-49.9,16.4-60.9c22.1-12.5,45.3-11.8,68.3-1.9
+		c12.6,5.4,21.8,14.6,27.3,27.2c10.8,24.6,5.5,53.7-13.5,72.7c-18.8,18.7-42.1,27.4-68.1,27.9c-40.3,0.8-73.7-19.4-83-63
+		c-5.3-25.1-4.8-49.8,8.6-72.7c4.3-7.4,8.9-14.7,13.6-21.9c23.3-35.3,46.7-70.6,70.1-105.9c0.8-1.2,1.4-2.5,2.3-4.1
+		c-2.1-0.3-3.5-0.6-5-0.7c-18.3-1.5-36.6-2.6-54.8-4.5c-5.7-0.6-8.9,0.8-12.2,5.6c-62.2,92.1-124.7,184-187,276
+		C-41.1,560-46.1,567.4-52,576.2z M348.4,446.3c0.8-2.2,1.1-3.1,1.4-4c9.6-36.2,19.2-72.5,28.8-108.7c4.3-16.4,8.9-32.6,7.6-50.1
+		c-2.8-36.8-36.2-68.4-73.3-68.3c-17.9,0.1-31.5,9-44.1,20.7c-13.2,12.2-21.3,28.1-31.2,42.6c-20.1,29.3-39.3,59.1-58.9,88.7
+		c-0.8,1.1-1.3,2.4-2.7,5c34.8-17.9,68.6-20.2,103.2-3.9C313,384.3,336.9,409,348.4,446.3z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="yoga-text" class="hero-card-type-info-title">Yoga</h6>
+                                        </div>
+                                    </div>
+                                    <div id="type-5-dance" class="hero-card-type">
+                                        <div class="hero-card-type-info-hover-container type5">
+                                            <div id="dance-hover-button" class="hero-card-type-info-hover-button">
+                                                <svg version="1.1" id="dance-icon-white" class="hero-card-type-info-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-105 208.9 400.2 376.1" style="enable-background:new -105 208.9 400.2 376.1;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #FFFFFF;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path fill="#ffffff" d="M-105,522c8.3-38.5,51.9-53,83.2-49.6c15.5,1.7,29.9,6.4,42.6,15.7c0.5,0.4,1.1,0.5,2.4,1.2
+		c0-6.7,0-12.8,0-18.9c-0.1-33.1-0.1-66.3-0.2-99.4c0-49.7,0-99.3-0.1-149c0-9.1,3.9-12.9,13.2-12.9c80.1,0,160.3,0,240.4,0
+		c2.7,0,5.3-0.3,8-0.2c6,0.1,10,4,10.4,9.9c0.2,3.7,0.1,7.3,0.1,11c0,95.1,0,190.3,0,285.4c0,6.3,0.2,12.7-0.6,18.9
+		c-2.1,15.5-10.9,26.9-23.3,35.7c-10.9,7.8-23.2,12.1-36.4,14.1c-1.3,0.2-2.5,0.6-3.8,1c-6.7,0-13.3,0-20,0
+		c-5.8-1.3-11.7-2.4-17.4-4.1c-14.5-4.4-27.2-11.8-36.5-24c-14.6-19-13.3-43,3.2-60.7c15.2-16.2,34.7-23.1,56.4-24.1
+		c20.4-1,39.3,3.9,56.1,16c0.5,0.4,1.1,0.5,2.2,1.1c0.1-2.3,0.2-4,0.2-5.7c0-45.2,0.1-90.3,0-135.5c0-7.7-0.5-15.3-0.2-23
+		c0.2-4.8-1.6-5.9-6-5.9c-31.8,0.1-63.7,0.1-95.5,0.1c-41.3,0-82.7,0-124,0c-2.1,0-4.2,0-6.8,0c0,2.9,0,5,0,7.1
+		c0,65.3-1.1,130.7,0.4,195.9c0.6,27.3-18.4,51.4-50.2,59.7c-4.6,1.2-9.4,2.1-14,3.1c-6.7,0-13.3,0-20,0c-0.9-0.3-1.8-0.7-2.8-0.9
+		c-29.5-5-52.8-17.8-61.2-49.1C-105,530.7-105,526.3-105,522z M158.5,299.4c37.2,0,74.3-0.1,111.5,0.1c4.1,0,5.4-1.2,5.4-5.3
+		c-0.2-20-0.2-40,0-60c0-4.3-1.4-5.2-5.4-5.2c-74,0.1-147.9,0.1-221.9,0c-3.9,0-5.2,1-5.1,5c0.2,19.8,0.3,39.7,0,59.5
+		c-0.1,4.9,1.5,6.1,6.2,6.1C85.5,299.4,122,299.4,158.5,299.4z M-34.2,486.8c-15.5,0.4-32.6,5.2-46.1,19
+		c-13.2,13.6-13.3,31.5-0.1,45.1c3.9,4,8.5,7.5,13.4,10.3c14.7,8.3,30.7,10.5,47.4,8.1c14.9-2.1,28.3-7.6,38.7-18.9
+		c12.2-13.3,12.3-30.4,0.1-43.7c-2.8-3-6-5.8-9.4-8.1C-2.5,490.3-16.2,486.9-34.2,486.8z M220.2,570.2c16.8-0.1,31.5-4.1,44.4-13.8
+		c6.7-5,11.8-11.3,14.3-19.4c4-12.8-1.3-26.4-14.1-36.2c-23.9-18.6-63.4-18.7-87.4-0.2c-20.8,16-20.8,40.1,0.1,55.9
+		C190.4,566.2,205.2,570.1,220.2,570.2z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="dance-hover-text" class="hero-card-type-info-hover-title">Dance</h6>
+                                        </div>
+                                        <div class="hero-card-type-info-container">
+                                            <div id="dance-button" class="hero-card-type-info-button">
+                                                <svg version="1.1" id="dance-icon-blue" class="hero-card-type-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-105 208.9 400.2 376.1" style="enable-background:new -105 208.9 400.2 376.1;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #177AF1 !important;
+                                                            stroke: none !important;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path class="st0" d="M-105,522c8.3-38.5,51.9-53,83.2-49.6c15.5,1.7,29.9,6.4,42.6,15.7c0.5,0.4,1.1,0.5,2.4,1.2
+		c0-6.7,0-12.8,0-18.9c-0.1-33.1-0.1-66.3-0.2-99.4c0-49.7,0-99.3-0.1-149c0-9.1,3.9-12.9,13.2-12.9c80.1,0,160.3,0,240.4,0
+		c2.7,0,5.3-0.3,8-0.2c6,0.1,10,4,10.4,9.9c0.2,3.7,0.1,7.3,0.1,11c0,95.1,0,190.3,0,285.4c0,6.3,0.2,12.7-0.6,18.9
+		c-2.1,15.5-10.9,26.9-23.3,35.7c-10.9,7.8-23.2,12.1-36.4,14.1c-1.3,0.2-2.5,0.6-3.8,1c-6.7,0-13.3,0-20,0
+		c-5.8-1.3-11.7-2.4-17.4-4.1c-14.5-4.4-27.2-11.8-36.5-24c-14.6-19-13.3-43,3.2-60.7c15.2-16.2,34.7-23.1,56.4-24.1
+		c20.4-1,39.3,3.9,56.1,16c0.5,0.4,1.1,0.5,2.2,1.1c0.1-2.3,0.2-4,0.2-5.7c0-45.2,0.1-90.3,0-135.5c0-7.7-0.5-15.3-0.2-23
+		c0.2-4.8-1.6-5.9-6-5.9c-31.8,0.1-63.7,0.1-95.5,0.1c-41.3,0-82.7,0-124,0c-2.1,0-4.2,0-6.8,0c0,2.9,0,5,0,7.1
+		c0,65.3-1.1,130.7,0.4,195.9c0.6,27.3-18.4,51.4-50.2,59.7c-4.6,1.2-9.4,2.1-14,3.1c-6.7,0-13.3,0-20,0c-0.9-0.3-1.8-0.7-2.8-0.9
+		c-29.5-5-52.8-17.8-61.2-49.1C-105,530.7-105,526.3-105,522z M158.5,299.4c37.2,0,74.3-0.1,111.5,0.1c4.1,0,5.4-1.2,5.4-5.3
+		c-0.2-20-0.2-40,0-60c0-4.3-1.4-5.2-5.4-5.2c-74,0.1-147.9,0.1-221.9,0c-3.9,0-5.2,1-5.1,5c0.2,19.8,0.3,39.7,0,59.5
+		c-0.1,4.9,1.5,6.1,6.2,6.1C85.5,299.4,122,299.4,158.5,299.4z M-34.2,486.8c-15.5,0.4-32.6,5.2-46.1,19
+		c-13.2,13.6-13.3,31.5-0.1,45.1c3.9,4,8.5,7.5,13.4,10.3c14.7,8.3,30.7,10.5,47.4,8.1c14.9-2.1,28.3-7.6,38.7-18.9
+		c12.2-13.3,12.3-30.4,0.1-43.7c-2.8-3-6-5.8-9.4-8.1C-2.5,490.3-16.2,486.9-34.2,486.8z M220.2,570.2c16.8-0.1,31.5-4.1,44.4-13.8
+		c6.7-5,11.8-11.3,14.3-19.4c4-12.8-1.3-26.4-14.1-36.2c-23.9-18.6-63.4-18.7-87.4-0.2c-20.8,16-20.8,40.1,0.1,55.9
+		C190.4,566.2,205.2,570.1,220.2,570.2z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="dance-text" class="hero-card-type-info-title">Dance</h6>
+                                        </div>
+                                    </div>
+                                    <div id="type-6-low-impact" class="hero-card-type">
+                                        <div class="hero-card-type-info-hover-container type6">
+                                            <div id="low-impact-hover-button" class="hero-card-type-info-hover-button">
+                                                <svg version="1.1" id="low-impact-icon-white" class="hero-card-type-info-hover-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-47 281 516 231" style="enable-background:new -47 281 516 231;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #FFFFFF;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path fill="#ffffff" d="M208.8,388.3c0.1-2.2,0.3-3.6,0.3-5.1c0-30-0.1-60-0.1-90c0-8.2,4.3-12.2,13.5-12.2c48.7,0,97.3,0,146,0
+		c29,0,58,0,87,0c1.8,0,3.7,0,5.5,0.3c4.8,0.8,8,4.6,8.1,9.4c0.1,5-3.1,9-8.1,9.9c-1.9,0.3-4,0.3-6,0.3c-72.8,0-145.7,0-218.5,0
+		c-2,0-3.9,0-6.7,0c0,2.4,0,4.4,0,6.3c0,29.2,0,58.3,0,87.5c0,10.1-3.3,13.4-13.5,13.4c-33,0-66,0-99,0c-2,0-3.9,0-6.5,0
+		c0,2.5,0,4.4,0,6.4c0.1,28.5,0.2,57,0.2,85.5c0,6.6-4.3,11.1-11.7,11.8c-3,0.3-6,0.2-9,0.2c-41.2,0-82.3,0-123.5,0
+		c-0.5,0-1,0-1.5,0c-7.8-0.1-12.3-3.7-12.3-10c0-6.2,4.5-9.9,12.4-9.9c39.8,0,79.7-0.1,119.5,0.1c4.8,0,6.2-1.2,6.1-6.1
+		c-0.3-27.2-0.2-54.3-0.2-81.5c0-10.5,5.8-16.3,16.4-16.3c31.7,0,63.3,0,95,0C204.2,388.3,206.2,388.3,208.8,388.3z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="low-impact-hover-text" class="hero-card-type-info-hover-title">Low<br>Impact</h6>
+                                        </div>
+                                        <div class="hero-card-type-info-container">
+                                            <div id="low-impact-button" class="hero-card-type-info-button">
+                                                <svg version="1.1" id="low-impact-icon-blue" class="hero-card-type-info-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-47 281 516 231" style="enable-background:new -47 281 516 231;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st0 {
+                                                            fill: #177AF1 !important;
+                                                            stroke: none !important;
+                                                        }
+                                                    </style>
+                                                    <g>
+                                                        <path class="st0" d="M208.8,388.3c0.1-2.2,0.3-3.6,0.3-5.1c0-30-0.1-60-0.1-90c0-8.2,4.3-12.2,13.5-12.2c48.7,0,97.3,0,146,0
+		c29,0,58,0,87,0c1.8,0,3.7,0,5.5,0.3c4.8,0.8,8,4.6,8.1,9.4c0.1,5-3.1,9-8.1,9.9c-1.9,0.3-4,0.3-6,0.3c-72.8,0-145.7,0-218.5,0
+		c-2,0-3.9,0-6.7,0c0,2.4,0,4.4,0,6.3c0,29.2,0,58.3,0,87.5c0,10.1-3.3,13.4-13.5,13.4c-33,0-66,0-99,0c-2,0-3.9,0-6.5,0
+		c0,2.5,0,4.4,0,6.4c0.1,28.5,0.2,57,0.2,85.5c0,6.6-4.3,11.1-11.7,11.8c-3,0.3-6,0.2-9,0.2c-41.2,0-82.3,0-123.5,0
+		c-0.5,0-1,0-1.5,0c-7.8-0.1-12.3-3.7-12.3-10c0-6.2,4.5-9.9,12.4-9.9c39.8,0,79.7-0.1,119.5,0.1c4.8,0,6.2-1.2,6.1-6.1
+		c-0.3-27.2-0.2-54.3-0.2-81.5c0-10.5,5.8-16.3,16.4-16.3c31.7,0,63.3,0,95,0C204.2,388.3,206.2,388.3,208.8,388.3z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <h6 id="low-impact-text" class="hero-card-type-info-title">Low<br>Impact</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-card-footer">
+                            <div class="hero-card-footer-bg"></div>
+                            <div class="hero-card-footer-back-bg">
+                                <div class="hero-card-footer-back-bg-bubble"></div>
+                            </div>
+                            <div id="hero-card-footer-back-block-3" class="hero-card-footer-back-block"></div>
+                            <h6 class="hero-card-footer-back">
+                                Back
+                            </h6>
+                            <div class="hero-card-footer-title-bg">
+                                <div class="hero-card-footer-title-bg-bubble"></div>
+                            </div>
+                            <div id="hero-card-footer-title-block-3" class="hero-card-footer-title-block"></div>
+                            <h6 class="hero-card-footer-title">
+                                Next
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-card-shadow"></div>
+                        <div class="hero-card-header">
+                            <div class="hero-card-header-bg"></div>
+                            <h6 class="hero-card-header-title">Workout Time</h6>
+                        </div>
+                        <div id="hero-card-body4" class="hero-card-body">
+                            <div class="hero-card-time-container">
+                                <div class="hero-card-time-controls-container">
+                                    <div id="hero-card-time-control-left" class="hero-card-time-control">
+                                        <div class="time-control-left-bg"></div>
+                                        <div class="time-control-left-bg-hover"></div>
+                                        <img class="time-control-left-arrow" src="images/icons/left-arrow-black.svg">
+                                        <img class="time-control-left-arrow-hover" src="images/icons/left-arrow-black.svg">
+                                    </div>
+                                    <div id="hero-card-time-control-right" class="hero-card-time-control">
+                                        <div class="time-control-right-bg"></div>
+                                        <div class="time-control-right-bg-hover"></div>
+                                        <img class="time-control-right-arrow" src="images/icons/right-arrow-black.svg">
+                                        <img class="time-control-right-arrow-hover" src="images/icons/right-arrow-black.svg">
+                                    </div>
+                                    <div class="hero-card-time-module-container">
+                                        <div class="hero-card-time-module-timer">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="timer-circle" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="35 35 130 130" preserveAspectRatio="none">
+                                                <circle cx="100" cy="100" r="57" id="blue-halo" fill="none" stroke="#00CC33" stroke-width="15" stroke-dasharray="0,20000" transform="rotate(-90,100,100)" />
+                                                <text id="myResultsTimer" text-anchor="middle" x="100" y="110" style="font-size: 36px;">0%</text>
+                                            </svg>
+                                            <div class="hero-card-time-module-track-bar">
+                                                <div class="hero-card-time-module-track-bar-bg"></div>
+                                                <div class="hero-card-time-module-progress-bar"></div>
+                                            </div>
+                                            <div class="timer-bg"></div>
+                                            <h5 class="timer-digits">60</h5>
+                                            <h6 class="timer-minutes">mins</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-card-footer">
+                            <div class="hero-card-footer-bg"></div>
+                            <div class="hero-card-footer-back-bg">
+                                <div class="hero-card-footer-back-bg-bubble"></div>
+                            </div>
+                            <div id="hero-card-footer-back-block-4" class="hero-card-footer-back-block"></div>
+                            <h6 class="hero-card-footer-back">
+                                Back
+                            </h6>
+                            <div class="hero-card-footer-title-bg">
+                                <div class="hero-card-footer-title-bg-bubble"></div>
+                            </div>
+                            <div id="hero-card-footer-title-block-4" class="hero-card-footer-title-block"></div>
+                            <h6 class="hero-card-footer-title">
+                                Next
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div id="popular"></div>
+                <div id="trending"></div>
+                <div id="inspirational"></div>
+            </div>
+            <div id="results-container">
+                <div class="result-hero-header">
+                    <h5 class="result-hero-header-text">Results based on your goals</h5>
+                </div>
+                <div class="result-row result-hero">
+                    <div class="result-hero-body">
+                        <div class="results-hero-tag-container">
+                            <div class="results-hero-tag-bg"></div>
+                            <div class="results-hero-tag">
+                                <h6 class="results-hero-tag-text">Your Best Match</h6>
+                            </div>
+                        </div>
+                        <div class="results-hero-time-module-container">
+                            <div class="results-hero-time-module-timer">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="result-hero-circle" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="35 35 130 130" preserveAspectRatio="none">
+                                    <circle cx="100" cy="100" r="57" id="gold-halo" fill="none" stroke="#eda60e" stroke-width="15" stroke-dasharray="0,20000" transform="rotate(-90,100,100)" />
+                                    <text id="myTimer" text-anchor="middle" x="100" y="110" style="font-size: 36px;">0%</text>
+                                </svg>
+                                <div class="results-hero-time-module-track-bar">
+                                    <div class="results-hero-time-module-track-bar-bg"></div>
+                                    <div class="results-hero-time-module-progress-bar"></div>
+                                </div>
+                                <div class="results-hero-timer-bg"></div>
+                                <h5 class="results-hero-timer-digits">82%</h5>
+                            </div>
+                        </div>
+                        <div class="results-hero-title-container">
+                            <div class="results-hero-title-bg"></div>
+                            <div class="results-hero-title-text-container">
+                                <h3 class="results-hero-title-main">P90X2</h3>
+                                <h6 class="results-hero-title-sub">Tony Horton</h6>
+                            </div>
+                            <div class="results-hero-title-stars-container">
+                                <svg version="1.1" class="results-hero-star" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 262.3 250.3" style="enable-background:new 0 0 262.3 250.3;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st1 {
+                                            fill: none;
+                                            stroke: #FFFFFF !important;
+                                            stroke-width: 15;
+                                        }
+                                    </style>
+                                    <g id="layer1">
+                                        <path id="path2160" class="st1 star-full" d="M131.1,7.5c4.9,0,36.2,71.8,40.2,74.7c4,2.9,81.9,10.5,83.4,15.1c1.5,4.7-57.1,56.6-58.6,61.3
+		s15.4,81.1,11.4,84c-4,2.9-71.5-36.8-76.4-36.8s-72.4,39.7-76.4,36.8c-4-2.9,12.9-79.4,11.4-84C64.6,153.9,6,102,7.5,97.3
+		C9,92.6,87,85.1,91,82.2C94.9,79.3,126.2,7.5,131.1,7.5z" />
+                                    </g>
+                                </svg>
+                                <svg version="1.1" class="results-hero-star" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 262.3 250.3" style="enable-background:new 0 0 262.3 250.3;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st1 {
+                                            fill: none;
+                                            stroke: #FFFFFF !important;
+                                            stroke-width: 15;
+                                        }
+                                    </style>
+                                    <g id="layer1">
+                                        <path id="path2160" class="st1 star-full" d="M131.1,7.5c4.9,0,36.2,71.8,40.2,74.7c4,2.9,81.9,10.5,83.4,15.1c1.5,4.7-57.1,56.6-58.6,61.3
+		s15.4,81.1,11.4,84c-4,2.9-71.5-36.8-76.4-36.8s-72.4,39.7-76.4,36.8c-4-2.9,12.9-79.4,11.4-84C64.6,153.9,6,102,7.5,97.3
+		C9,92.6,87,85.1,91,82.2C94.9,79.3,126.2,7.5,131.1,7.5z" />
+                                    </g>
+                                </svg>
+                                <svg version="1.1" class="results-hero-star" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 262.3 250.3" style="enable-background:new 0 0 262.3 250.3;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st1 {
+                                            fill: none;
+                                            stroke: #FFFFFF !important;
+                                            stroke-width: 15;
+                                        }
+                                    </style>
+                                    <g id="layer1">
+                                        <path id="path2160" class="st1 star-full" d="M131.1,7.5c4.9,0,36.2,71.8,40.2,74.7c4,2.9,81.9,10.5,83.4,15.1c1.5,4.7-57.1,56.6-58.6,61.3
+		s15.4,81.1,11.4,84c-4,2.9-71.5-36.8-76.4-36.8s-72.4,39.7-76.4,36.8c-4-2.9,12.9-79.4,11.4-84C64.6,153.9,6,102,7.5,97.3
+		C9,92.6,87,85.1,91,82.2C94.9,79.3,126.2,7.5,131.1,7.5z" />
+                                    </g>
+                                </svg>
+                                <svg version="1.1" class="results-hero-star" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 262.3 250.3" style="enable-background:new 0 0 262.3 250.3;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st1 {
+                                            fill: none;
+                                            stroke: #FFFFFF !important;
+                                            stroke-width: 15;
+                                        }
+                                    </style>
+                                    <g id="layer1">
+                                        <path id="path2160" class="st1 star-full" d="M131.1,7.5c4.9,0,36.2,71.8,40.2,74.7c4,2.9,81.9,10.5,83.4,15.1c1.5,4.7-57.1,56.6-58.6,61.3
+		s15.4,81.1,11.4,84c-4,2.9-71.5-36.8-76.4-36.8s-72.4,39.7-76.4,36.8c-4-2.9,12.9-79.4,11.4-84C64.6,153.9,6,102,7.5,97.3
+		C9,92.6,87,85.1,91,82.2C94.9,79.3,126.2,7.5,131.1,7.5z" />
+                                    </g>
+                                </svg>
+                                <svg version="1.1" class="results-hero-star" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 262.3 250.3" style="enable-background:new 0 0 262.3 250.3;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st1 {
+                                            fill: none;
+                                            stroke: #FFFFFF !important;
+                                            stroke-width: 15;
+                                        }
+                                    </style>
+                                    <g id="layer1">
+                                        <path id="path2160" class="st1 star-full" d="M131.1,7.5c4.9,0,36.2,71.8,40.2,74.7c4,2.9,81.9,10.5,83.4,15.1c1.5,4.7-57.1,56.6-58.6,61.3
+		s15.4,81.1,11.4,84c-4,2.9-71.5-36.8-76.4-36.8s-72.4,39.7-76.4,36.8c-4-2.9,12.9-79.4,11.4-84C64.6,153.9,6,102,7.5,97.3
+		C9,92.6,87,85.1,91,82.2C94.9,79.3,126.2,7.5,131.1,7.5z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="results-hero-title-thumbs-container">
+                                <div class="results-hero-thumbs-up"></div>
+                                <div class="results-hero-thumbs-down"></div>
+                                <div class="results-ratings-number">2,234</div>
+                            </div>
+                        </div>
+                        <div class="results-hero-description-container">
+                            <p class="results-hero-description-text">Engages more muscles
+                                <br>with every move for pro-level
+                                <br>results lorem ipsum dolor amet
+                                <br>
+                                <br><b class="results-emphasized">90 Days | 50-60 min/day<br>Meal plan</b></p>
+                        </div>
+                        <div class="results-hero-start-button">
+                            <h6 class="results-hero-start-button-text">Start P90X2</h6>
+                        </div>
+                        <div class="results-hero-related-container">
+                            <div class="results-hero-related-header-container">
+                                <h6 class="results-hero-related-header-text">Related to your goals</h6>
+                            </div>
+                            <div class="results-hero-related-stats-container">
+                                <div class="results-hero-related-stats-row">
+                                    <div class="stats-row-title">
+                                        <h6 class="stats-row-title-text">Fat Loss</h6>
+                                    </div>
+                                    <div class="stats-row-bar">
+                                        <div class="stats-row-bar-percentage percentage-start">0%</div>
+                                        <div class="stats-row-bar-percentage percentage-end">100%</div>
+                                        <div class="stats-row-bar-unit-container">
+                                            <div class="stats-row-bar-inner">
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-active"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="results-hero-related-stats-row">
+                                    <div class="stats-row-title">
+                                        <h6 class="stats-row-title-text">Muscle Gain</h6>
+                                    </div>
+                                    <div class="stats-row-bar">
+                                        <div class="stats-row-bar-percentage percentage-start">0%</div>
+                                        <div class="stats-row-bar-percentage percentage-end">100%</div>
+                                        <div class="stats-row-bar-unit-container">
+                                            <div class="stats-row-bar-inner">
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-active"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="results-hero-related-stats-row">
+                                    <div class="stats-row-title">
+                                        <h6 class="stats-row-title-text">Cardio</h6>
+                                    </div>
+                                    <div class="stats-row-bar">
+                                        <div class="stats-row-bar-percentage percentage-start">0%</div>
+                                        <div class="stats-row-bar-percentage percentage-end">100%</div>
+                                        <div class="stats-row-bar-unit-container">
+                                            <div class="stats-row-bar-inner">
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-active"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="results-hero-related-stats-row">
+                                    <div class="stats-row-title">
+                                        <h6 class="stats-row-title-text">Intermediate</h6>
+                                    </div>
+                                    <div class="stats-row-bar">
+                                        <div class="stats-row-bar-percentage percentage-start">0%</div>
+                                        <div class="stats-row-bar-percentage percentage-end">100%</div>
+                                        <div class="stats-row-bar-unit-container">
+                                            <div class="stats-row-bar-inner">
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-active"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="results-hero-related-stats-row">
+                                    <div class="stats-row-title">
+                                        <h6 class="stats-row-title-text">30 min/day</h6>
+                                    </div>
+                                    <div class="stats-row-bar">
+                                        <div class="stats-row-bar-percentage percentage-start">0%</div>
+                                        <div class="stats-row-bar-percentage percentage-end">100%</div>
+                                        <div class="stats-row-bar-unit-container">
+                                            <div class="stats-row-bar-inner">
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-inactive"></div>
+                                                <div class="stats-row-bar-unit bar-unit-active"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results-hero-see-more-container">
+                            <h6 class="see-more-text">See More &nbsp;<img id="down-arrow-orange" class="cached-images" src="images/icons/down-arrow-orange.svg"></h6>
+                        </div>
+                        <img class="result-hero-body-bg" src="images/results/hero-bg.png">
+                    </div>
+                </div>
+                <div class="result-row result-header">
+                    <h5 class="result-header-text">Members Library</h5>
+                    <div class="result-header-line"></div>
+                </div>
+                <div class="result-row result">
+                    <div id="members-library-body" class="result-body">
+                        <img class="result-body-bg" src="images/results/thumbs/members-library-thumb.jpg">
+                    </div>
+                </div>
+                <div class="result-row result-break"></div>
+                <div class="result-row result-header">
+                    <h5 class="result-header-text">Purchased Programs</h5>
+                    <div class="result-header-line"></div>
+                </div>
+                <div class="result-row result">
+                    <div id="purchased-programs-1-body" class="result-body">
+                        <img class="result-body-bg" src="images/results/thumbs/purchased-thumb1.jpg">
+                    </div>
+                </div>
+                <div class="result-row result-header">
+                    <h5 class="result-header-text">Purchased Programs</h5>
+                    <div class="result-header-line"></div>
+                </div>
+                <div class="result-row result">
+                    <div id="purchased-programs-2-body" class="result-body">
+                        <img class="result-body-bg" src="images/results/thumbs/purchased-thumb2.jpg">
+                    </div>
+                </div>
+                <div class="result-row result-break"></div>
+                <div class="result-row result-header">
+                    <div class="result-header-line"></div>
+                </div>
+                <div class="result-row result-break"></div>
+                <div class="result-row result-header">
+                    <img id="results-bottom-buttons" src="images/results-bottom-buttons.jpg">
+                </div>
+                <div class="result-row result-break"></div>
+                <div class="result-row result-end-break"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/variables.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript">
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1990 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+input {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0;
+    line-height: 1em;
+}
+
+p,
+input {
+    font-size: 1vw;
+}
+
+h1 {
+    font-size: 8vw;
+}
+
+h2 {
+    font-size: 6vw;
+}
+
+h3 {
+    font-size: 5vw;
+}
+
+h4 {
+    font-size: 4vw;
+}
+
+h5 {
+    font-size: 3vw;
+}
+
+h6 {
+    font-size: 2vw;
+}
+
+#loading-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 1);
+    top: 0;
+    left: 0;
+    z-index: 1100;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*    background-color: rgba(246, 246, 249, 1);*/
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#hero {
+    width: 100%;
+    height: calc(100vw * 0.5421875);
+    position: relative;
+    float: left;
+}
+
+#hero-bg-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+#hero-bg1 {
+    z-index: 0;
+    opacity: 1;
+}
+
+#hero-bg2 {
+    z-index: -10;
+    opacity: 0;
+}
+
+#hero-bg3 {
+    z-index: -20;
+    opacity: 0;
+}
+
+#hero-bg4 {
+    z-index: -30;
+    opacity: 0;
+}
+
+.hero-bg {
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: -20vw;
+}
+
+#hero-black-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#hero-greeting {
+    position: absolute;
+    top: 3.5vw;
+    left: 2vw;
+    font-size: 2.45vw;
+    font-weight: 600;
+    opacity: 0.5;
+    color: rgba(255, 255, 255, 1);
+    /*    color: rgba(41, 44, 48, 1);*/
+}
+
+#hero-cards {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-card {
+    width: calc(100% * 0.319);
+    position: absolute;
+    bottom: calc(100% * 0.077);
+    left: 7vw;
+}
+
+.hero-card:first-child {
+    box-shadow: none;
+}
+
+.hero-card-header {
+    width: 100%;
+    height: calc(100% * 0.126);
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.hero-card-header-bg,
+.hero-card-footer-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-card-header-bg {
+    opacity: 0.9;
+}
+
+.hero-card-header-title,
+.hero-card-footer-title,
+.hero-card-footer-back {
+    height: 100%;
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    top: 0;
+    z-index: 10;
+}
+
+.hero-card-header-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.9vw;
+    font-weight: 300;
+    left: 0;
+}
+
+.hero-card-footer-back {
+    width: auto;
+    text-align: right;
+    font-size: 1.2vw;
+    font-weight: 500;
+    padding: 0 1.6vw;
+    pointer-events: none;
+    left: 0;
+    text-transform: uppercase;
+}
+
+.hero-card-footer-back-block {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-color: rgba(239, 168, 0, 1);
+    display: none;
+    top: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.hero-card-footer-back-bg {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-card-footer-back-bg-bubble {
+    height: 100%;
+    position: relative;
+    pointer-events: none;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.hero-card-footer-title {
+    width: auto;
+    text-align: right;
+    font-size: 1.2vw;
+    font-weight: 500;
+    padding: 0 1.6vw;
+    pointer-events: none;
+    right: 0;
+    text-transform: uppercase;
+}
+
+.hero-card-footer-title-block {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-color: rgba(239, 168, 0, 1);
+    display: none;
+    top: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.hero-card-footer-title-bg {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.hero-card-footer-title-bg-bubble {
+    height: 100%;
+    position: relative;
+    pointer-events: none;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.hero-card-body {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(246, 246, 249, 1);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    z-index: 20;
+    left: 0;
+}
+
+
+/*
+#hero-card-body1 {
+    background-image: url(../images/card1-fpo.jpg);
+}
+*/
+
+
+/*#hero-card-body2 {
+    background-image: url(../images/card2-fpo-v3.jpg);
+}*/
+
+
+/*#hero-card-body3 {
+    background-image: url(../images/card3-fpo-v2.jpg);
+}*/
+
+
+/*
+#hero-card-body4 {
+    background-image: url(../images/card4-fpo-v3.jpg);
+}
+*/
+
+.hero-card-row-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.hero-card-border-row-full {
+    width: 100%;
+    height: 33.3%;
+    position: relative;
+    float: left;
+}
+
+.hero-card-row-full {
+    width: 100%;
+    height: 33.3%;
+    position: absolute;
+    left: 0;
+}
+
+.hero-card-column-half {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.hero-card-border-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-card-column-half-left-borders {
+    width: calc(100% - 1vw);
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    bottom: 0;
+    right: 0;
+}
+
+.hero-card-border-row-full:first-child > .hero-card-column-half:first-child > .hero-card-column-half-left-borders {
+    height: calc(100% - 1vw);
+    bottom: 0;
+}
+
+.hero-card-border-row-full:last-child > .hero-card-column-half:first-child > .hero-card-column-half-left-borders {
+    width: calc(100% - 1vw);
+    height: calc(100% - 1vw);
+    border-bottom: none;
+    top: 0;
+}
+
+.hero-card-column-half-right-borders {
+    width: calc(100% - 1vw);
+    height: calc(100% - 1vw);
+    position: absolute;
+    z-index: -1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-card-border-row-full:last-child > .hero-card-column-half:last-child > .hero-card-column-half-right-borders {
+    width: calc(100% - 1vw);
+    height: calc(100% - 1vw);
+    border-bottom: none;
+}
+
+.hero-card-options {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.hero-card-options-hover-info-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 51;
+    pointer-events: none;
+}
+
+.hero-card-options-info-container,
+.hero-card-options-hover-info-container {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    text-align: center;
+}
+
+.hero-card-options-bg,
+.hero-card-options-hover-bg {
+    width: calc(100% + 1px);
+    height: 100%;
+    left: -1px;
+    position: absolute;
+}
+
+.hero-card-options-bg {
+    z-index: 0;
+}
+
+.hero-card-options-hover-bg {
+    opacity: 0;
+    z-index: 50;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#177af1+0,23d5db+100 */
+    background: rgb(23, 122, 241);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(23, 122, 241, 1) 0%, rgba(35, 213, 219, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(23, 122, 241, 1) 0%, rgba(35, 213, 219, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(23, 122, 241, 1) 0%, rgba(35, 213, 219, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#177af1', endColorstr='#23d5db', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.hero-card-options-icon,
+.hero-card-options-hover-icon {
+    width: 30%;
+    height: auto;
+    position: relative;
+}
+
+.hero-card-options-hover-icon {
+    opacity: 0;
+    fill: rgba(255, 255, 255, 1);
+}
+
+.hero-card-options-title,
+.hero-card-options-hover-title {
+    width: 100%;
+    height: auto;
+    font-size: 1.2vw;
+    font-weight: 600;
+    position: relative;
+    margin-top: 1vw;
+    float: left;
+}
+
+.hero-card-options-hover-title {
+    opacity: 0;
+    color: rgba(255, 255, 255, 1);
+}
+
+.hero-card-footer {
+    width: 100%;
+    height: calc(100% * 0.092);
+    background-color: rgba(246, 246, 249, 1);
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+}
+
+#nav {
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    /*    background-color: rgba(255,255,255,1);*/
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+#nav-inner {
+    width: calc(100% - 4vw);
+    height: auto;
+    margin: calc(2vw * 1.62162162) 2vw;
+    position: relative;
+    float: left;
+}
+
+#nav-block {
+    width: 100%;
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#logo {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+#nav-items {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 2vw;
+    float: left;
+}
+
+.nav-item {
+    width: 100%;
+    height: calc(4.8vw - 1px);
+    position: relative;
+    /*border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 1);*/
+    display: block;
+    float: left;
+}
+
+.nav-item-hover {
+    width: 100%;
+    position: absolute;
+    /*border-bottom-width:1px;
+    border-bottom-style: solid;
+    border-bottom-color:white;*/
+    overflow: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav-item-hover-bg,
+.nav-item-hover-title,
+.nav-item-hover-title-sub,
+.nav-item-hover-title-main {
+    pointer-events: none;
+}
+
+.nav-item-hover:first-child {
+    /*border-top-width:1px;
+    border-top-style: solid;
+    border-top-color:white;*/
+}
+
+.nav-item-hover-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.nav-item-hover-title {
+    width: calc(100% - 4vw);
+    height: calc(100% - 1px);
+    position: absolute;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    top: 0;
+    right: 0;
+    margin: 0 2vw;
+    z-index: 60;
+}
+
+.nav-item-hover-title-sub,
+.nav-item-hover-title-main {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    left: 0;
+}
+
+.nav-item-hover-title-sub {
+    top: 1vw;
+}
+
+.nav-item-hover-title-main {
+    bottom: 1vw;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.03vw;
+    text-shadow: 0.07vw 0.07vw 0 rgba(0, 0, 0, 1);
+}
+
+.nav-item-title {
+    pointer-events: none;
+}
+
+.nav-item-title-sub,
+.nav-item-title-main {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.nav-item-title-sub {
+    top: 1vw;
+}
+
+.nav-item-title-main {
+    bottom: 1vw;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    letter-spacing: 0.03vw;
+}
+
+.nav-item-icon,
+.nav-item-hover-icon {
+    border-radius: 50%;
+}
+
+.nav-item-icon {
+    width: auto;
+    height: 3.1vw;
+    position: absolute;
+    top: 1vw;
+    right: 0;
+}
+
+.nav-item-hover-icon {
+    width: auto;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+
+#user-info {
+    width: 100%;
+    height: 2.1vw;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 6vw;
+    float: left;
+}
+
+#user-info-name {
+    width: auto;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+#user-info-name p {
+    font-weight: 700;
+    font-size: 0.9vw;
+}
+
+.down-arrow {
+    width: 0.6vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#user-info-log-out {
+    width: auto;
+    height: auto;
+    position: relative;
+    pointer-events: none;
+    float: right;
+}
+
+#user-info-log-out p {
+    text-transform: uppercase;
+}
+
+#search {
+    width: 100%;
+    height: calc(16vw * 0.16);
+    position: relative;
+    margin-top: 2vw;
+    float: left;
+}
+
+.search-input {
+    width: 100%;
+    height: 3vw;
+    position: relative;
+    padding: 0 4vw 0 1.2vw;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 1);
+    float: left;
+}
+
+.search-input:focus {
+    outline: none
+}
+
+.search-icon-black {
+    position: absolute;
+    width: 1.5vw;
+    right: 1vw;
+    top: 0.8vw;
+}
+
+#class-search {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 11vw;
+    float: left;
+}
+
+#class-search-input {
+    margin-top: 1vw;
+}
+
+#class-search-title {}
+
+.class-emphasis {
+    font-style: italic;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+#content {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    /*    background-color: rgba(255,255,255,1);*/
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+#content-inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+    float: left;
+}
+
+#fpo {
+    width: 100vw;
+    height: auto;
+    z-index: 998;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#fpo2 {
+    width: 100vw;
+    height: auto;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    pointer-events: none;
+}
+
+#fpo-results {
+    width: 100vw;
+    height: auto;
+    z-index: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+#toggle-fpo {
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 3.5vw;
+    right: 2vw;
+    z-index: 999;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    line-height: 1em;
+    padding: 1vw;
+    opacity: 0.3;
+}
+
+#toggle-fpo-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+#toggle-fpo-bg,
+#toggle-fpo-bg-alt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#toggle-fpo-bg {
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 1;
+    z-index: -1;
+}
+
+#toggle-fpo-bg-alt {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3bbb61+0,b5eea3+100 */
+    background: rgb(59, 187, 97);
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, rgba(59, 187, 97, 1) 0%, rgba(181, 238, 163, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(59, 187, 97, 1) 0%, rgba(181, 238, 163, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(59, 187, 97, 1) 0%, rgba(181, 238, 163, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3bbb61', endColorstr='#b5eea3', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    opacity: 1;
+    z-index: 0;
+}
+
+#toggle-live {
+    width: auto;
+    height: auto;
+    position: fixed;
+    right: 2vw;
+    z-index: 999;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    line-height: 1em;
+    padding: 1vw;
+}
+
+#toggle-live-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+#toggle-live-bg,
+#toggle-live-bg-alt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#toggle-live-bg {
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 1;
+    z-index: -1;
+}
+
+#toggle-live-bg-alt {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3bbb61+0,b5eea3+100 */
+    background: rgb(59, 187, 97);
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, rgba(59, 187, 97, 1) 0%, rgba(181, 238, 163, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(59, 187, 97, 1) 0%, rgba(181, 238, 163, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(59, 187, 97, 1) 0%, rgba(181, 238, 163, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3bbb61', endColorstr='#b5eea3', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    opacity: 1;
+    z-index: 0;
+}
+
+#toggle-live,
+#toggle-fpo {
+    border-radius: 0.5vw;
+}
+
+.right-arrow-circle-blue {
+    position: absolute;
+    top: 3vw;
+    right: 1.5vw;
+    width: 1.3vw;
+}
+
+.right-arrow-blue {
+    width: 0.6vw;
+    height: auto;
+    position: absolute;
+    top: 0.1vw;
+    right: -0.7vw;
+}
+
+#help-others {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 3vw;
+    float: left;
+}
+
+#help-others-title {
+    width: auto;
+    height: auto;
+    font-weight: 200;
+    font-size: 1.55vw;
+    line-height: 1.2em;
+    position: relative;
+    float: left;
+}
+
+.bb-button,
+.bb-link,
+.nav-item,
+.hero-card-footer-back-bg,
+.hero-card-footer-title-bg,
+.nav-item-hover,
+#user-info-name,
+#user-info-dropdown-hover-region,
+#logout-hover-region,
+.user-info-option,
+.hero-card-tip-bubble-close,
+.hero-card-tip-bubble-bg,
+.hero-card-options,
+.hero-card-slider-option-bubble,
+.hero-card-type-info-hover-container,
+.hero-card-time-control,
+#logo {
+    cursor: pointer;
+}
+
+#help-others-link {
+    width: auto;
+    height: auto;
+    position: relative;
+    float: left;
+    margin-top: 0.6vw;
+    text-decoration: none;
+    font-size: 1.04vw;
+    color: #177af1;
+}
+
+.hero-card-shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.75+0,0.1+100 */
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#1a000000', GradientType=1);
+    /* IE6-9 */
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+.hero-card:first-child > .hero-card-shadow {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bb-orange-bg,
+.hero-card-footer-bg,
+#progress-bar {
+    background-color: rgba(239, 168, 0, 1);
+}
+
+.bb-dark-orange-bg,
+.hero-card-footer-title-bg-bubble,
+.hero-card-footer-back-bg-bubble {
+    background-color: rgba(197, 138, 0, 1);
+}
+
+.bb-blue-bg,
+.hero-card-header-bg {
+    background-color: rgba(23, 122, 241, 1);
+}
+
+.bb-ocean-blue-bg,
+.nav-item-hover-bg {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#177af1+0,23d5db+100 */
+    background: rgb(23, 122, 241);
+    /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(23, 122, 241, 1) 0%, rgba(35, 213, 219, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(23, 122, 241, 1) 0%, rgba(35, 213, 219, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(23, 122, 241, 1) 0%, rgba(35, 213, 219, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#177af1', endColorstr='#23d5db', GradientType=1);
+    /* IE6-9 */
+}
+
+#user-info-dropdown {
+    position: absolute;
+    z-index: 999;
+}
+
+#user-info-dropdown-hover-region,
+#logout-hover-region {
+    position: absolute;
+    z-index: 0;
+}
+
+#user-info-dropdown-list {
+    width: 100%;
+    height: auto;
+    position: relative;
+    pointer-events: auto;
+    float: left;
+}
+
+.user-info-option {
+    width: calc(100% - 4.8vw);
+    height: auto;
+    padding: 1.5vw 2.4vw;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2f2f2+100 */
+    background: rgb(255, 255, 255);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);
+    /* IE6-9 */
+    position: relative;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    float: left;
+}
+
+.user-info-option-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.user-info-option-title {
+    width: 100%;
+    position: relative;
+    font-size: 0.9vw;
+    font-weight: 400;
+    text-align: center;
+    float: left;
+}
+
+.hero-card-tip-bubble {
+    width: calc((100% * 0.319) + 2.6vw);
+    height: auto;
+    position: absolute;
+    top: 11.4vw;
+    left: 4.5vw;
+    z-index: 900;
+}
+
+#status-bar-fpo {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    pointer-events: none;
+}
+
+.clip-triangle {
+    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.hero-clipped-triangle {
+    width: 1.2vw;
+    height: 1.2vw;
+    position: absolute;
+    background-color: purple;
+    top: 0;
+    left: 12vw;
+    z-index: 500;
+}
+
+.hero-card-tip-bubble-container {
+    width: auto;
+    height: auto;
+    position: absolute;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50&0.5+0,1+50 */
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 50%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 50%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 50%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#ffffff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    top: 11.3vw;
+    overflow: visible;
+    left: 7vw;
+    z-index: 500;
+}
+
+.hero-card-tip-bubble-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 0;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.hero-card-tip-bubble-text {
+    position: relative;
+    font-size: 1.6vw;
+    font-weight: 400;
+    padding: 1.5vw 2vw;
+    text-align: center;
+    pointer-events: none;
+    display: block;
+    float: left;
+}
+
+.hero-card-tip-bubble-close {
+    width: auto;
+    height: auto;
+    font-size: 1.5vw;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: -2.5vw;
+    z-index: 100;
+}
+
+.hero-card-tip-bubble-triangle {
+    width: 0;
+    height: 0;
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 1vw solid rgba(255, 255, 255, 1);
+    position: absolute;
+    pointer-events: none;
+    z-index: 100;
+    left: 11.5vw;
+    bottom: -0.9vw;
+}
+
+.hero-card-slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.hero-card-slider {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-card-slider-bar {
+    width: 0.8vw;
+    height: 22vw;
+    top: calc(50% - 11vw);
+    left: calc(50% - 0.4vw);
+    position: absolute;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.hero-card-slider-bar-progress {
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-card-slider-bar-progress-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-card-slider-bar-progress-blue-fade {
+    width: 100%;
+    height: 4vw;
+    position: absolute;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#177af1+0,177af1+25,177af1+100&1+0,1+25,0+100 */
+    background: -moz-linear-gradient(top, rgba(23, 122, 241, 1) 0%, rgba(23, 122, 241, 1) 25%, rgba(23, 122, 241, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(23, 122, 241, 1) 0%, rgba(23, 122, 241, 1) 25%, rgba(23, 122, 241, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(23, 122, 241, 1) 0%, rgba(23, 122, 241, 1) 25%, rgba(23, 122, 241, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#177af1', endColorstr='#00177af1', GradientType=0);
+    /* IE6-9 */
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-card-slider-option-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.hero-card-slider-option {
+    width: 1.8vw;
+    height: 1.8vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*
+.hero-card-slider-option:first-child {
+    top: 0;
+}
+
+.hero-card-slider-option:last-child {
+    bottom: 1.2vw;
+}
+*/
+
+.hero-card-slider-option-title {
+    width: auto;
+    height: auto;
+    color: rgba(0, 0, 0, 1);
+    font-size: 1vw;
+    opacity: 0.4;
+    position: absolute;
+    text-align: right;
+    right: 2vw;
+    line-height: 1em;
+}
+
+.hero-card-slider-option-bubble {
+    width: 1.8vw;
+    height: 1.8vw;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.option-bubble-outer,
+.option-bubble-middle,
+.option-bubble-inner {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+}
+
+.option-bubble-outer {
+    width: 1.4vw;
+    height: 1.4vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(206, 205, 210, 1);
+    z-index: 0;
+}
+
+.option-bubble-middle {
+    width: 1.2vw;
+    height: 1.2vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(206, 205, 210, 1);
+    z-index: 1;
+}
+
+.option-bubble-inner {
+    width: 0.6vw;
+    height: 0.6vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.hero-card-graph-container {
+    width: 10vw;
+    position: absolute;
+    bottom: 11.7vw;
+    left: 16.8vw;
+    z-index: 0;
+}
+
+.hero-card-graph-bar {
+    width: 1vw;
+    position: absolute;
+    bottom: 0;
+    box-shadow: inset 0 0 0 0.1vw rgba(23, 122, 241, 1);
+}
+
+.hero-card-graph-bar:first-child {
+    left: 0;
+}
+
+.hero-card-graph-bar:last-child {
+    left: 4.8vw;
+}
+
+.graph-bar-fill {
+    width: 100%;
+    height: 0.44vw;
+    position: relative;
+    float: left;
+    border-top: 0.1vw solid rgba(23, 122, 241, 1);
+}
+
+.graph-bar-fill-inner {
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    background-color: rgba(23, 122, 241, 1);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#status-bar-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+#status-bar {
+    height: 0.4vw;
+    width: 36.4vw;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    bottom: 5.3vw;
+    right: 6.3vw;
+    z-index: 0;
+}
+
+#progress-labels-container {
+    width: 100%;
+    height: 1.9vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-labels {
+    font-size: 0.7vw;
+}
+
+.top-labels-container {
+    width: 100%;
+    height: 1.1vw;
+    position: absolute;
+    top: -1.1vw;
+    left: 0;
+}
+
+.top-labels {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.bottom-labels-container {
+    width: 100%;
+    height: 1.1vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-labels {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    float: left;
+}
+
+.progress-label {
+    left: 0;
+    text-align: left;
+    color: rgba(239, 168, 0, 1);
+}
+
+.finish-label {
+    right: 0;
+    text-align: right;
+    color: rgba(255, 255, 255, 1);
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.checkmark {
+    width: 0.13vw;
+    height: 1.1vw;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    top: 0.4vw;
+    left: 0;
+}
+
+.hero-card-type-row-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-card-type-row {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    float: left;
+}
+
+.hero-card-type {
+    width: 33%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+#cardio-icon-blue,
+#cardio-icon-white {
+    width: 4vw;
+    top: 4.4vw;
+    left: 3.1vw;
+}
+
+#muscle-building-icon-blue,
+#muscle-building-icon-white {
+    width: 4.6vw;
+    top: 4.5vw;
+    left: 1.8vw;
+}
+
+#slim-tone-icon-blue,
+#slim-tone-icon-white {
+    width: 2.25vw;
+    top: 4vw;
+    left: 1.9vw;
+}
+
+#yoga-icon-blue,
+#yoga-icon-white {
+    width: 4vw;
+    top: 2.2vw;
+    left: 3vw;
+}
+
+#dance-icon-blue,
+#dance-icon-white {
+    left: 2.1vw;
+    width: 3.5vw;
+    top: 2.3vw;
+}
+
+#low-impact-icon-blue,
+#low-impact-icon-white {
+    left: 1vw;
+    top: 3.1vw;
+    width: 4.2vw;
+}
+
+.hero-card-type-info-hover-container,
+.hero-card-type-info-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-card-type-info-hover-icon,
+.hero-card-type-info-icon {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 32.5%;
+    z-index: 10;
+}
+
+.hero-card-type-info-icon {
+    z-index: 10;
+}
+
+.hero-card-type-info-title {
+    z-index: 10;
+}
+
+.hero-card-type-info-hover-button {
+    z-index: 0;
+    background-color: rgba(23, 122, 241, 1);
+}
+
+.hero-card-type-info-button {
+    background-color: white;
+}
+
+.hero-card-type-info-container {
+    z-index: 0;
+}
+
+.hero-card-type-info-hover-container {
+    z-index: 10;
+}
+
+.hero-card-type-info-button,
+.hero-card-type-info-hover-button {
+    width: 5.2vw;
+    height: 5.2vw;
+    position: absolute;
+    box-shadow: 0 0.3vw 0.5vw -0.2vw rgba(0, 0, 0, 0.3);
+    top: 3.1vw;
+    border-radius: 0.5vw;
+    left: 2.6vw;
+    z-index: 0;
+}
+
+.hero-card-type-info-hover-button {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#177af1+0,23d5db+100 */
+    background: #177af1;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #177af1 0%, #23d5db 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #177af1 0%, #23d5db 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #177af1 0%, #23d5db 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#177af1', endColorstr='#23d5db', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.hero-card-type-info-title,
+.hero-card-type-info-hover-title {
+    width: 100%;
+    height: auto;
+    font-size: 1.2vw;
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    left: 1vw;
+    top: 9.1vw;
+    font-size: 1.1vw;
+}
+
+.hero-card-type-row:last-child .hero-card-type-info-hover-title,
+.hero-card-type-row:last-child .hero-card-type-info-title {
+    top: 7.4vw;
+}
+
+.hero-card-type-info-hover-title {
+    color: rgba(255, 255, 255, 1);
+}
+
+#muscle-building-text,
+#muscle-building-hover-text {
+    left: -0.2vw
+}
+
+.hero-card-type-row:last-child .hero-card-type-info-hover-button,
+.hero-card-type-row:last-child .hero-card-type-info-button {
+    top: 1.4vw;
+}
+
+#slim-tone-text,
+#slim-tone-hover-text {
+    left: -1.2vw
+}
+
+#dance-text,
+#dance-hover-text {
+    left: -0.1vw;
+}
+
+#low-impact-text,
+#low-impact-hover-text {
+    left: -1.3vw;
+}
+
+#muscle-building-button,
+#muscle-building-hover-button {
+    left: 1.5vw;
+}
+
+#slim-tone-button,
+#slim-tone-hover-button {
+    left: 0.5vw;
+}
+
+#dance-button,
+#dance-hover-button {
+    left: 1.5vw;
+}
+
+#low-impact-button,
+#low-impact-hover-button {
+    left: 0.5vw;
+}
+
+.hero-card-type-info-button,
+.hero-card-type-info-title,
+.hero-card-type-info-icon,
+.hero-card-type-info-hover-button,
+.hero-card-type-info-hover-title,
+.hero-card-type-info-hover-icon {
+    pointer-events: none;
+}
+
+.hero-card-type-info-hover-button,
+.hero-card-type-info-hover-title,
+.hero-card-type-info-hover-icon {
+    opacity: 0;
+}
+
+.hero-card-time-container,
+.hero-card-time-controls-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.timer-digits,
+.timer-minutes {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    z-index: 0;
+}
+
+.timer-digits {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    font-size: 4.5vw;
+    font-weight: 900;
+    color: rgba(23, 122, 241, 1);
+    top: 3.3vw;
+    left: 0;
+    z-index: 350;
+}
+
+.timer-minutes {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    top: 7.4vw;
+    font-size: 1.7vw;
+    left: 0;
+    z-index: 350;
+}
+
+.timer-bg {
+    width: 10vw;
+    border-radius: 50%;
+    height: 10vw;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    top: 1.25vw;
+    left: 1.25vw;
+    z-index: 300;
+}
+
+.hero-card-time-module-timer {
+    width: 12.5vw;
+    height: 12.5vw;
+    /*    background-color: rgba(0,0,0,0.1);*/
+    border-radius: 50%;
+    pointer-events: none;
+    top: 6.6vw;
+    left: 6.6vw;
+    position: absolute;
+    z-index: 10;
+}
+
+.hero-card-time-control {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.time-control-left-bg,
+.time-control-left-bg-hover,
+.time-control-right-bg,
+.time-control-right-bg-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+/*
+.time-control-left-bg-hover {
+    box-shadow:inset -5.5vw 0.5vw 6.8vw -2.5vw rgba(0,0,0,1);
+}
+
+.time-control-right-bg-hover {
+    box-shadow:inset 5.5vw 0.5vw 6.8vw -2.5vw rgba(0,0,0,1);
+}
+*/
+
+.time-control-left-bg {
+    background-color: rgba(0, 0, 0, 0.1);
+    right: 0;
+}
+
+.time-control-right-bg {
+    background-color: rgba(0, 0, 0, 0.1);
+    left: 0;
+}
+
+.time-control-left-arrow,
+.time-control-left-arrow-hover,
+.time-control-right-arrow,
+.time-control-right-arrow-hover {
+    width: 2.2vw;
+    height: auto;
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.time-control-left-arrow,
+.time-control-left-arrow-hover {
+    left: 3vw;
+}
+
+.time-control-right-arrow,
+.time-control-right-arrow-hover {
+    right: 3vw;
+}
+
+.hero-card-time-module-track-bar,
+.hero-card-time-module-track-bar-bg,
+.hero-card-time-module-progress-bar {}
+
+.hero-card-time-module-track-bar {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero-card-time-module-track-bar-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-card-time-module-progress-bar {
+    width: 0.5vw;
+    height: 3vw;
+    border-radius: 50%;
+    background: rgb(35, 213, 219);
+    background: -moz-linear-gradient(45deg, rgba(35, 213, 219, 1) 0%, rgba(23, 122, 241, 1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(35, 213, 219, 1) 0%, rgba(23, 122, 241, 1) 100%);
+    background: linear-gradient(45deg, rgba(35, 213, 219, 1) 0%, rgba(23, 122, 241, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#23d5db', endColorstr='#177af1', GradientType=1);
+    position: absolute;
+    top: -1vw;
+    display: none;
+    left: 50%;
+}
+
+#timer-circle {
+    width: 12.5vw !important;
+    height: 12.5vw !important;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 110;
+}
+
+#myTimer {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#blue-halo {
+    stroke: rgba(23, 122, 241, 1) !important;
+    stroke-width: 0.3vw !important;
+}
+
+#gold-halo {
+    stroke: rgba(237, 166, 14, 1) !important;
+    stroke-width: 0.3vw !important;
+}
+
+#results-quick {
+    width: calc(75% - 10vw);
+    height: 50%;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0 5vw;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.results-quick-section {
+    width: auto;
+    margin: 0 4vw 2vw 0;
+    height: auto;
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+}
+
+.results-quick-section:first-child {
+    margin-left: 0;
+}
+
+.results-quick-section:last-child {}
+
+.results-quick-section h3 {
+    color: rgba(0, 0, 0, 1);
+    line-height: 1em;
+    text-align: left;
+    font-size: 1.5vw;
+    font-weight: 300;
+    text-align: right;
+    width: 100%;
+    position: relative;
+    padding-right: 1vw;
+    float: left;
+}
+
+.results-quick-section p {
+    color: rgba(0, 0, 0, 1);
+    line-height: 1em;
+    text-align: left;
+    font-size: 1.5vw;
+    width: 50%;
+    float: left;
+    position: relative;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2vw;
+}
+
+#password-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#password-input {
+    width: 50vw;
+    height: 10vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 2.5vw;
+    line-height: 10vw;
+    text-align: center;
+    padding: 0 5vw;
+    border: 0.01vw solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 25vw;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+.left-column > .hero-card-options-hover-bg {
+    width:100% !important;
+    left:0 !important;
+}
+
+/*
+.right-column > .hero-card-options-hover-bg {
+    left: -1px;
+}
+*/
+
+#get-toned-hover-bg, #get-fit-hover-bg, #get-stronger-hover-bg, #performance-hover-bg {
+    height:calc(100% + 2px);
+}
+
+#lose-weight-hover-bg, #get-toned-hover-bg, #get-stronger-hover-bg {
+    width:100% !important;
+    left:0 !important;
+}
+
+#get-toned-hover-bg, #get-fit-hover-bg {
+    top:-1px;
+}
+
+#get-stronger-hover-bg, #performance-hover-bg {
+    top:-2px;
+}

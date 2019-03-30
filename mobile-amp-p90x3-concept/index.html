@@ -1,0 +1,1294 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My AMP Page</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800italic,800|Exo:400,100,100italic,200,300,200italic,300italic,400italic,600italic,700,700italic,800,800italic,900,900italic,600,500,500italic' rel='stylesheet' type='text/css'>
+    <script type="application/ld+json">
+        { "@context": "http://schema.org", "@type": "NewsArticle", "headline": "Open-source framework for publishing content", "datePublished": "2015-10-07T12:02:41Z", "image": [ "logo.jpg" ] }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-custom>
+        /* any custom style goes here */
+        
+        body {
+            background-color: black;
+            font-family: 'Open Sans', sans-serif;
+            overflow: hidden;
+        }
+        
+        amp-img {
+            /*            background-color: gray;*/
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        li {
+            margin: 0;
+        }
+        
+        p {
+            font-size: 4.5vw;
+        }
+        
+        h1 {
+            font-size: 7.75vw;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1em;
+        }
+        
+        #header {
+            width: 100%;
+            height: 20vw;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+100 */
+            background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+            position: fixed;
+            z-index: 100;
+        }
+        
+        #beachbody-logo-container {
+            width: 50vw;
+            height: 4vw;
+            position: absolute;
+            background-image: url(images/beachbody-logo.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            top: 8vw;
+            left: 10vw;
+        }
+        
+        #background {
+            width: 100vw;
+            height: 160vw;
+            position: fixed;
+            background-image: url(images/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        #tagline {
+            width: calc(100% - 10vw);
+            height: 36vw;
+            padding: 31vw 0 0 10vw;
+            position: relative;
+            float: left;
+        }
+        
+        #tagline-text,
+        #tagline-subtext {
+            width: 100%;
+            height: auto;
+            position: relative;
+            float: left;
+            font-style: italic;
+            text-transform: uppercase;
+            line-height: 1em;
+            margin: 0;
+        }
+        
+        #tagline-text {
+            color: #ffffff;
+            font-size: 10vw;
+        }
+        
+        #tagline-subtext {
+            color: #f5832c;
+            margin-top: 2vw;
+            font-size: 5.2vw;
+        }
+        
+        .signature {
+            font-size: 3.5vw;
+        }
+        
+        #hero {
+            width: 100%;
+            min-height: 50vw;
+            position: relative;
+            float: left;
+        }
+        
+        #hero-fade {
+            width: 100%;
+            height: 22vw;
+            position: relative;
+            float: left;
+        }
+        
+        #hero-text {
+            width: 100%;
+            height: 50vw;
+            color: white;
+            position: relative;
+            background-color: rgba(0, 0, 0, 1);
+            margin: 0;
+            float: left;
+        }
+        
+        #p90x3-logo-container {
+            width: 80vw;
+            height: 20vw;
+            position: absolute;
+            background-image: url(images/p90x3-logo.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            top: 5vw;
+            left: 10vw;
+            z-index: 10;
+        }
+        
+        #tony-victory-container {
+            width: 100vw;
+            height: 94vw;
+            position: absolute;
+            background-image: url(images/tony-lifting.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            opacity: 1;
+            top: 2vw;
+            right: -10vw;
+        }
+        
+        #heres-why-container {
+            width: 54vw;
+            height: 35vw;
+            position: relative;
+            background-image: url(images/why-created-stacked.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            margin: 24vw 2vw 6vw 8vw;
+        }
+        
+        .heres-why-explained {
+            width: calc(100% - 20vw);
+            height: auto;
+            color: white;
+            position: relative;
+            font-weight: 100;
+            text-shadow: 0.25vw 0.25vw rgba(0,0,0,1);
+            margin: 0;
+            font-size: 4.5vw;
+            padding: 0 10vw;
+            float: left;
+        }
+        
+        .heres-why-explained-bold {
+            width: calc(100% - 20vw);
+            height: auto;
+            color: #f5832c;
+            font-weight: 900;
+            font-size: 4.5vw;
+        }
+        
+        #logo > img {
+            margin: 0 auto;
+        }
+        
+        #hero-bottom {
+            width: 100%;
+            min-height: 78vw;
+            position: relative;
+/*            background-color: rgba(0, 0, 0, 1);*/
+            float: left;
+        }
+        
+        #hero-bottom-bg {
+            width: 100%;
+            height: 145vw;
+            position: absolute;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+35,000000+100&0+0,1+35,1+100 */
+            background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 35%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 35%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+            top: 21vw;
+            left: 0;
+            z-index: 0;
+        }
+        
+        #total-breakthrough-container {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: 4vw;
+            float: left;
+        }
+        
+        #total-breakthrough-background-image {
+            width: 100vw;
+            height: 84vw;
+            position: absolute;
+            z-index: 0;
+            top: -20vw;
+            left: -1vw;
+            opacity: 0.1;
+            background-image: url(images/tony-victory.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        
+        #total-breakthrough-edge {
+            width: 150vw;
+            height: 20vw;
+            position: relative;
+            background-color: #f5832c;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            margin-left: -25vw;
+            margin-bottom: -10vw;
+            float: left;
+        }
+        
+        #total-breakthrough-edge-bottom {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #f5832c;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            bottom: -4vw;
+            left: -25vw;
+        }
+        
+        #total-breakthrough-body {
+            width: 100%;
+            min-height: 58vw;
+            position: relative;
+            background-color: #f5832c;
+            z-index: 10;
+            float: left;
+        }
+        
+        #total-breakthrough-text {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            position: absolute;
+            top: 5vw;
+            font-style: italic;
+            font-size: 6.5vw;
+            text-align: center;
+        }
+        
+        #total-breakthrough-header-text {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            font-style: italic;
+            line-height: 1.5em;
+            font-size: 6.5vw;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+        
+        #total-breakthrough-body-text {
+            width: calc(100% - 20vw);
+            height: auto;
+            margin: 2.5vw 0;
+            padding: 0 10vw;
+            font-weight: 400;
+            text-align: left;
+            font-style: normal;
+            position: relative;
+            float: left;
+        }
+        
+        #results-container {
+            width: 100%;
+            height: auto;
+            min-height: 30vw;
+            position: relative;
+            float: left;
+        }
+        
+        #results-header {
+            width: calc(100% - 20vw);
+            height: auto;
+            color: white;
+            text-transform: uppercase;
+            font-size: 7.75vw;
+            padding: 15vw 10vw 2.5vw;
+            position: relative;
+            float: left;
+        }
+        
+        #results-description {
+            width: calc(100% - 20vw);
+            height: auto;
+            color: white;
+            font-weight: 100;
+            padding: 2.5vw 10vw 15vw;
+            position: relative;
+            float: left;
+        }
+        
+        .orange-emphasis {
+            color: #f5832c;
+        }
+        
+        .white-emphasis {
+            color: #ffffff;
+        }
+        
+        #results-image-container {
+            width: 100vw;
+            height: 175vw;
+            position: relative;
+            background-color: #3b3b3b;
+            margin-top:5vw;
+            float: left;
+        }
+        
+        #results-edge {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #3b3b3b;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            top: -8vw;
+            left: -25vw;
+        }
+        
+        #results-bottom {
+            width: 100%;
+            height: 21vw;
+            position: absolute;
+            background-color: rgba(0,0,0,1);
+            bottom: 0vw;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .result-first {
+            width: 100%;
+            height: auto;
+            position: relative;
+            float: left;
+        }
+        
+        .result {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: 23vw;
+            float: left;
+        }
+        
+        .result-info-first {
+            width: 100%;
+            height: auto;
+            position: relative;
+            background-color: #676767;
+            float: left;
+        }
+        
+        .result-info {
+            width: 100%;
+            height: auto;
+            position: relative;
+            background-color: #676767;
+            float: left;
+            z-index: 1;
+        }
+        
+        .result-info-edge-bottom {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #676767;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            bottom: -15vw;
+            left: -25vw;
+        }
+        
+        .result-info-edge-bottom-last {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #676767;
+            bottom: -15vw;
+            left: -25vw;
+        }
+        
+        .result-info-edge-bottom-light {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #ffffff;
+            -webkit-transform: rotateZ(4deg);
+            -ms-transform: rotateZ(4deg);
+            -moz-transform: rotateZ(4deg);
+            -o-transform: rotateZ(4deg);
+            transform: rotateZ(4deg);
+            bottom: -35vw;
+            left: -25vw;
+            z-index: 5;
+        }
+        
+        .result-info-edge-bottom-light2 {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #ffffff;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            bottom: -35vw;
+            left: -25vw;
+            z-index: 5;
+        }
+        
+        .result-weight-lost {
+            width: 100%;
+            height: 10vw;
+            line-height: 7vw;
+            position: absolute;
+            font-size: 4.5vw;
+            font-weight: 100;
+            top: -7vw;
+            left: 0;
+            z-index: 1;
+            text-align: center;
+            color: #f5832c;
+            text-transform: uppercase;
+        }
+        
+        .loss-amount {
+            width: 100%;
+            font-size: 10vw;
+            font-weight: 900;
+            position: absolute;
+            top: 6.5vw;
+            left: 0;
+        }
+        
+        .ba-image-container {
+            width: 50vw;
+            height: 65vw;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+        
+        .b-image {
+            float: left;
+            background-position: center;
+        }
+        
+        .a-image {
+            float: right;
+            background-position: center;
+        }
+        
+        #man-before1 {
+            background-image: url(images/man-before1.png);
+            margin-top: -15vw;
+        }
+        
+        #man-after1 {
+            background-image: url(images/man-after1.png);
+            margin-top: -15vw;
+        }
+        
+        #man-before2 {
+            background-image: url(images/man-before2.jpg);
+            margin-top: -15vw;
+        }
+        
+        #man-after2 {
+            background-image: url(images/man-after2.jpg);
+            margin-top: -15vw;
+        }
+        
+        #man-before3 {
+            background-image: url(images/man-before3.png);
+            margin-top: -15vw;
+            background-size: 100% auto;
+            background-position: -6vw 9vw;
+        }
+        
+        #man-after3 {
+            background-image: url(images/man-after3.png);
+            margin-top: -15vw;
+            width: 80vw;
+            position: absolute;
+            right: -17vw;
+        }
+        
+        #woman-before1 {
+            background-image: url(images/woman-before1.png);
+            margin-top: -15vw;
+        }
+        
+        #woman-after1 {
+            background-image: url(images/woman-after1.png);
+            margin-top: -15vw;
+        }
+        
+        #woman-before2 {
+            background-image: url(images/woman-before2.jpg);
+            margin-top: -15vw;
+        }
+        
+        #woman-after2 {
+            background-image: url(images/woman-after2.jpg);
+            margin-top: -15vw;
+        }
+        
+        .ba-text-container {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 10;
+            float: left;
+        }
+        
+        .ba-text {
+            width: 50%;
+            height: 16vw;
+            line-height: 16vw;
+            font-size: 4vw;
+            letter-spacing: 0.2em;
+            font-weight: 100;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+        
+        .ba-quote {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            padding: 0 10vw;
+            font-weight: 100;
+            text-align: center;
+            font-style: italic;
+            z-index: 10;
+            float: left;
+            color: white;
+        }
+        
+        #up-your-game-container {
+            width: 100%;
+            height: auto;
+            min-height: 50vw;
+            margin-top: 63vw;
+            position: relative;
+            background-color: rgba(255,255,255,1);
+            float: left;
+            z-index: 50;
+        }
+        
+        #up-your-game-intro {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            line-height: 1.5em;
+            padding: 0 10vw;
+            font-size: 4.5vw;
+            font-weight: 100;
+            float: left;
+            z-index: 50;
+        }
+        
+        .game-result {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: 23vw;
+            float: left;
+        }
+        
+        .game-result-info {
+            width: 100%;
+            height: auto;
+            position: relative;
+            background-color: rgba(0,0,0,0.1);
+            padding-bottom: 20vw;
+            float: left;
+            z-index: 1;
+        }
+        
+        .game-ba-text {
+            width: 50%;
+            height: 16vw;
+            line-height: 16vw;
+            font-size: 4vw;
+            letter-spacing: 0.2em;
+            font-weight: 100;
+            color: black;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+        
+        .game-ba-quote {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            padding: 0 10vw;
+            font-weight: 100;
+            text-align: center;
+            font-style: italic;
+            z-index: 10;
+            float: black;
+        }
+        
+        #werent-alone-container {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: -10vw;
+            z-index: 60;
+            float: left;
+        }
+        
+        #werent-alone-background-image {
+            width: 140vw;
+            height: 92vw;
+            position: absolute;
+            z-index: 0;
+            top: -11.3vw;
+            left: -1vw;
+            opacity: 0.3;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            background-image: url(images/video-thumbnail.png);
+            background-repeat: no-repeat;
+            background-size: auto 160%;
+            background-position: -12vw -38vw;
+        }
+        
+        #werent-alone-edge {
+            width: 150vw;
+            height: 20vw;
+            position: relative;
+            background-color: #f5832c;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            margin-left: -25vw;
+            margin-bottom: -10vw;
+            float: left;
+        }
+        
+        #werent-alone-edge-bottom {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #f5832c;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            bottom: -4vw;
+            left: -25vw;
+        }
+        
+        #werent-alone-body {
+            width: 100%;
+            min-height: 58vw;
+            position: relative;
+            background-color: #f5832c;
+            z-index: 10;
+            float: left;
+        }
+        
+        #werent-alone-text {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            position: relative;
+            float: left;
+            font-style: italic;
+            font-size: 6.5vw;
+            text-align: center;
+        }
+        
+        #werent-alone-header-text {
+            width: 80vw;
+            height: 43vw;
+            position: relative;
+            z-index: 0;
+            margin: 0 auto;
+            background-image: url(images/werent-alone-text.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        
+        #werent-alone-body-text {
+            width: calc(100% - 20vw);
+            height: auto;
+            margin: 2.5vw 0;
+            padding: 0 10vw;
+            font-weight: 400;
+            text-align: left;
+            font-style: normal;
+            position: relative;
+            float: left;
+        }
+        
+        #half-workout-container {
+            width: 100%;
+            height: auto;
+            position: relative;
+            background-color: rgba(0,0,0,1);
+            padding: 16vw 0 0;
+            float: left;
+        }
+        
+        #half-workout-header {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 7.75vw;
+            padding: 0 10vw;
+            color: #f5832c;
+            float: left;
+        }
+        
+        #half-workout-chart {
+            width: 100vw;
+            height: 106vw;
+            position: relative;
+            z-index: 0;
+            float: left;
+            background-image: url(images/p90x3-v2-muscle-acceleration.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        
+        #half-workout-body {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            padding: 5vw 10vw 11vw;
+            color: #f5832c;
+            float: left;
+        }
+        
+        #half-workout-quote {
+            color: white;
+            font-style: italic;
+            font-size: 6vw;
+            text-transform: uppercase;
+            margin: 5vw 0;
+            position: relative;
+            float: left;
+        }
+        
+        #katie-container {
+            width: 100%;
+            height: auto;
+            min-height: 50vw;
+            position: relative;
+            background-color: rgba(255,255,255,1);
+            float: left;
+            z-index: 50;
+        }
+        
+        .katie-up-arrow {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #ffffff;
+            -webkit-transform: rotateZ(4deg);
+            -ms-transform: rotateZ(4deg);
+            -moz-transform: rotateZ(4deg);
+            -o-transform: rotateZ(4deg);
+            transform: rotateZ(4deg);
+            top: 0;
+            left: -25vw;
+            z-index: 5;
+        }
+        
+        .katie-up-arrow2 {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #ffffff;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            top: 0;
+            left: -25vw;
+            z-index: 5;
+        }
+        
+        #katie-intro {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            line-height: 1.5em;
+            margin-top: 8vw;
+            padding: 0 10vw;
+            font-size: 4.5vw;
+            font-weight: 100;
+            float: left;
+            z-index: 50;
+        }
+        
+        .katie-result {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: 23vw;
+            float: left;
+        }
+        
+        .katie-result-info {
+            width: 100%;
+            height: auto;
+            position: relative;
+            background-color: rgba(0,0,0,0.1);
+            padding-bottom: 10vw;
+            float: left;
+            z-index: 1;
+        }
+        
+        .game-result {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: 23vw;
+            float: left;
+        }
+        
+        .game-result-info {
+            width: 100%;
+            height: auto;
+            position: relative;
+            background-color: rgba(0,0,0,0.1);
+            padding-bottom: 20vw;
+            float: left;
+            z-index: 1;
+        }
+        
+        .game-ba-text {
+            width: 50%;
+            height: 16vw;
+            line-height: 16vw;
+            font-size: 4vw;
+            letter-spacing: 0.2em;
+            font-weight: 100;
+            color: black;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+        
+        .game-ba-quote {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            padding: 0 10vw;
+            font-weight: 100;
+            text-align: center;
+            font-style: italic;
+            z-index: 10;
+            float: black;
+        }
+        
+        #different-approaches-container {
+            width: 100%;
+            height: auto;
+            position: relative;
+/*            background-color: rgba(0,0,0,1);*/
+            padding: 10vw 0;
+            float: left;
+            z-index: 70;
+        }
+        
+        #different-approaches-header {
+            width: calc(100% - 20vw);
+            height: auto;
+            min-height: 10vw;
+            padding: 5vw 10vw;
+            text-transform: uppercase;
+            position: relative;
+            text-align: right;
+            line-height: 1.5em;
+            font-size: 4.5vw;
+            float: left;
+        }
+        
+        .different-approaches-header-emphasis {
+            font-size: 11vw;
+            line-height: 1em;
+        }
+        
+        #different-approaches-image {
+            width: 103vw;
+            height: 200vw;
+            position: absolute;
+            top: -5vw;
+            left: -22vw;
+            background-image: url(images/p90x3-pullup.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        
+        #different-approaches-text {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            padding: 5vw 10vw;
+            float: left;
+        }
+        
+        #different-approaches-text-header {
+            line-height: 1.5em;
+            font-size: 5vw;
+            font-weight: 700;
+        }
+        
+        #different-approaches-text-body {
+            line-height: 1.5em;
+            margin: 2.5vw 0 0;
+        }
+        
+        #approach-items {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            padding: 5vw 10vw;
+            float: left;
+        }
+        
+        .approach-item {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-bottom: 5vw;
+            color: white;
+            float: left;
+        }
+        
+        .approach-item-number {
+            width: 16vw;
+            height: 16vw;
+            position: relative;
+            line-height: 16vw;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #f5832c;
+            font-size: 4.5vw;
+            font-weight: 900;
+            float: right;
+        }
+        
+        .approach-item-text-header {
+            font-size: 9vw;
+            font-weight: 100;
+        }
+        
+        .approach-item-text {
+            width: 59vw;
+            height: auto;
+            position: relative;
+            line-height: 1.5em;
+            margin: 1vw 5vw 0 0;
+            font-size: 4.5vw;
+            font-weight: 100;
+            text-align: right;
+            float: right;
+        }
+        
+        #ed-container {
+            width: 100%;
+            height: auto;
+            min-height: 50vw;
+            position: relative;
+            background-color: rgba(255,255,255,1);
+            float: left;
+            z-index: 50;
+        }
+        
+        .ed-up-arrow {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #ffffff;
+            -webkit-transform: rotateZ(4deg);
+            -ms-transform: rotateZ(4deg);
+            -moz-transform: rotateZ(4deg);
+            -o-transform: rotateZ(4deg);
+            transform: rotateZ(4deg);
+            top: 0;
+            left: -25vw;
+            z-index: 5;
+        }
+        
+        .ed-up-arrow2 {
+            width: 150vw;
+            height: 20vw;
+            position: absolute;
+            background-color: #ffffff;
+            -webkit-transform: rotateZ(-4deg);
+            -ms-transform: rotateZ(-4deg);
+            -moz-transform: rotateZ(-4deg);
+            -o-transform: rotateZ(-4deg);
+            transform: rotateZ(-4deg);
+            top: 0;
+            left: -25vw;
+            z-index: 5;
+        }
+        
+        #ed-intro {
+            width: calc(100% - 20vw);
+            height: auto;
+            position: relative;
+            line-height: 1.5em;
+            margin-top: 8vw;
+            padding: 0 10vw;
+            font-size: 6vw;
+            text-align: center;
+            font-weight: 100;
+            float: left;
+            z-index: 50;
+        }
+        
+        .ed-result {
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: 23vw;
+            float: left;
+        }
+        
+        .ed-result-info {
+            width: 100%;
+            height: auto;
+            position: relative;
+            background-color: rgba(0,0,0,0.1);
+            padding-bottom: 10vw;
+            float: left;
+            z-index: 1;
+        }
+        
+        .no-overflow {
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="header" class="no-overflow">
+        <div id="beachbody-logo-container"></div>
+    </div>
+    <div id="tagline" class="no-overflow">
+        <h1 id="tagline-text">Got 30 minutes<br>a Day?</h1>
+        <h4 id="tagline-subtext">I will get you totally ripped.<br><span class="signature">&mdash;Tony Horton</span></h4>
+    </div>
+    <div id="background" class="no-overflow"></div>
+    <!--      <amp-img id="this" layout="fixed" src="images/bg.jpg" alt="Welcome" height="594" width="375"></amp-img>-->
+    <div id="hero" class="no-overflow">
+        <div id="hero-fade"></div>
+        <!--        <h1 id="hero-text">Testing.</h1>-->
+        <div id="p90x3-logo-container"></div>
+        <div id="hero-bottom">
+            <div id="hero-bottom-bg"></div>
+            <div id="tony-victory-container"></div>
+            <div id="heres-why-container"></div>
+            <p class="heres-why-explained">
+Hour-long workouts aren't for everyone. I get it...you've got commitments. You've got a life. You don't live in a gym. So working out for an hour every day? Well, for a lot of people...that just ain't gonna happen. <b class="heres-why-explained-bold">But what if you could work out for just 30 minutes a day,</b> and still get the kind of extreme results like the ones you see below. Sound good to you?</p>
+            <div id="total-breakthrough-container">
+                <div id="total-breakthrough-edge"></div>
+                <div id="total-breakthrough-body">
+                <div id="total-breakthrough-background-image"></div>
+                    <div id="total-breakthrough-text">
+                    <h3 id="total-breakthrough-header-text">X3 is a total breakthrough.</h3>
+                    <p id="total-breakthrough-body-text">It's not a sequel to P90X (or anything else). It's an all-new program of super-efficient workouts, each one packed with 30 minutes of concentrated intensity.</p>
+                    </div>
+                </div>
+                <div id="total-breakthrough-edge-bottom"></div>
+            </div>
+            <div id="results-container">
+                <h1 id="results-header">The Results We Saw <span class="orange-emphasis">Blew Us Away</span></h1>
+                <p id="results-description">These incredible Success Stories come from ordinary customers who purchased the P90X3 program, completed the 90 days, and got extraordinary results.</p>
+                <div id="results-image-container">
+                <div id="results-edge"></div>
+                    <div class="result-first">
+                        <h3 class="result-weight-lost">Lost<br><span class="loss-amount">15</span><br>lbs.</h3>
+                        <div id="man-before1" class="ba-image-container b-image"></div>
+                        <div id="man-after1" class="ba-image-container a-image"></div>
+                    </div>
+                    <div class="result-info-first">
+                        <div class="ba-text-container">
+                            <h4 class="ba-text before-text">Before</h4>
+                            <h4 class="ba-text after-text">After</h4>
+                        </div>
+                        <p class="ba-quote">"I went from an average guy to bodybuilder-style ripped. It's crazy what you can do in 30 minutes a day."<br><span class="signature">&mdash;John H., Age: 30</span></p>
+                        <div class="result-info-edge-bottom"></div>
+                    </div>
+                    <div class="result">
+                        <h3 class="result-weight-lost">Lost<br><span class="loss-amount">25</span><br>lbs.</h3>
+                        <div id="woman-before1" class="ba-image-container b-image"></div>
+                        <div id="woman-after1" class="ba-image-container a-image"></div>
+                    </div>
+                    <div class="result-info">
+                        <div class="ba-text-container">
+                            <h4 class="ba-text before-text">Before</h4>
+                            <h4 class="ba-text after-text">After</h4>
+                        </div>
+                        <p class="ba-quote">"I never thought 30 minutes a day would get me to where I am now. Every time I pushed play, I felt like my stomach was getting smaller and smaller and smaller!"<br><span class="signature">&mdash;Christina L., Age: 31</span></p>
+                        <div class="result-info-edge-bottom-last"></div>
+                        <div class="result-info-edge-bottom-light"></div>
+                        <div class="result-info-edge-bottom-light2"></div>
+                    </div>
+                </div>
+<!--                <div id="results-bottom"></div>-->
+            </div>
+            <div id="up-your-game-container">
+                <h3 id="up-your-game-intro">P90X3 can also up your game. Athlete Jason L. wanted to achieve his peak performance—and P90X3 delivered.</h3>
+                    <div class="game-result">
+                        <h3 class="result-weight-lost">Lost<br><span class="loss-amount">30</span><br>lbs.</h3>
+                        <div id="man-before2" class="ba-image-container b-image"></div>
+                        <div id="man-after2" class="ba-image-container a-image"></div>
+                    </div>
+                    <div class="game-result-info">
+                        <div class="ba-text-container">
+                            <h4 class="game-ba-text before-text">Before</h4>
+                            <h4 class="game-ba-text after-text">After</h4>
+                        </div>
+                        <p class="game-ba-quote">"I'm an athlete and P90X3 has all the things it takes to be an athlete—you have to lift weights, you have to do cardio, you have to stretch. You have to take care of your body and
+
+P90X3 has it all!"<br><span class="signature">&mdash;Jason L., Age: 38</span></p>
+                    </div>
+            </div>
+            <div id="werent-alone-container">
+                <div id="werent-alone-edge"></div>
+                <div id="werent-alone-body">
+                <div id="werent-alone-background-image"></div>
+                    <div id="werent-alone-text">
+                    <div id="werent-alone-header-text"></div>
+                    <p id="werent-alone-body-text">AFTER 90 days of P90X3, the entire test group lost an average of over 34% of their body fat. That's solid proof that you can get ripped in 30 minutes a day.</p>
+                    </div>
+                </div>
+                <div id="werent-alone-edge-bottom"></div>
+            </div>
+            <div id="half-workout-container">
+                <h1 id="half-workout-header">"P90X3 isn't half a workout... It's a <i>whole</i> workout in <i>half</i> the time."</h1>
+                <div id="half-workout-chart"></div>
+                <p id="half-workout-body">"P90X3 gets you the best possible results from 30 minutes of exercise."
+"I used to think...the longer you work out, the better results you'll get. Turns out, it doesn't work that way. In fact, the latest science says that most of your progress happens in the first 30 minutes of your workout. After that, your body responds to the exercise less and less. So the trick is to get the absolute most out of that 30‑minute 'window of change.'<br>
+                    <b id="half-workout-quote">"P90X3 gets you the best possible results from 30 minutes of exercise."</b>
+                    That's where P90X3 kicks in. Its Muscle Acceleration system maximizes those first 30 minutes with a concentrated blast of variety and intensity. You won't get off easy...but you will finish faster. And believe me, after 90 days, you will be ripped."</p>
+            </div>
+            <div id="katie-container">
+                <div class="katie-up-arrow"></div>
+                <div class="katie-up-arrow2"></div>
+                <h3 id="katie-intro">Check out Katie—she stuck with P90X3 and got great results.</h3>
+                    <div class="katie-result">
+                        <h3 class="result-weight-lost">Lost<br><span class="loss-amount">32</span><br>lbs.</h3>
+                        <div id="woman-before2" class="ba-image-container b-image"></div>
+                        <div id="woman-after2" class="ba-image-container a-image"></div>
+                    </div>
+                    <div class="katie-result-info">
+                        <div class="ba-text-container">
+                            <h4 class="game-ba-text before-text">Before</h4>
+                            <h4 class="game-ba-text after-text">After</h4>
+                        </div>
+                        <p class="game-ba-quote">"I didn't think it was going to work for me, but if you stick to the plan, you WILL lose the weight and you'll be happy!"<br><span class="signature">&mdash;Katie P., Age: 32</span></p>
+                    </div>
+            </div>
+            <div id="different-approaches-container">
+                <h1 id="different-approaches-header" class="orange-emphasis">There are<br><b class="different-approaches-header-emphasis white-emphasis">three</b><br>different<br>approaches<br>in <b class="different-approaches-header-emphasis">P90X3:</b></h1>
+                <div id="different-approaches-image"></div>
+                <div id="approach-items">
+                    <div class="approach-item">
+                        <div class="approach-item-number">1</div>
+                        <div class="approach-item-text"><b class="approach-item-text-header">Classic</b><br>get ripped and strong</div>
+                    </div>
+                    <div class="approach-item">
+                        <div class="approach-item-number">2</div>
+                        <div class="approach-item-text"><b class="approach-item-text-header">Lean</b><br>tone without adding bulk</div>
+                    </div>
+                    <div class="approach-item">
+                        <div class="approach-item-number">3</div>
+                        <div class="approach-item-text"><b class="approach-item-text-header">Mass</b><br>increase muscle mass</div>
+                    </div>
+                </div>
+                <div id="different-approaches-text">
+                    <h3 id="different-approaches-text-header" class="white-emphasis">No dull cardio. No standing around in the gym waiting for the exercise machine.</h3>
+                    <p id="different-approaches-text-body" class="white-emphasis">With P90X3, you can jump right in and rock and roll for 30 minutes straight—whether or not you've completed any other exercise program. One day, you're doing total-body resistance, then Pilates, plyometrics, yoga, agility, mobility, mixed martial arts. That's variety. That's how you keep the Muscle Acceleration going. That's how you get extreme results in 30 minutes a day.</p>
+                </div>
+            </div>
+            </div>
+            <div id="ed-container">
+                <div class="ed-up-arrow"></div>
+                <div class="ed-up-arrow2"></div>
+                <h3 id="ed-intro">Not sure if P90X3 is for you?</h3>
+                    <div class="ed-result">
+                        <h3 class="result-weight-lost">Lost<br><span class="loss-amount">68</span><br>lbs.</h3>
+                        <div id="man-before3" class="ba-image-container b-image"></div>
+                        <div id="man-after3" class="ba-image-container a-image"></div>
+                    </div>
+                    <div class="ed-result-info">
+                        <div class="ba-text-container">
+                            <h4 class="game-ba-text before-text">Before</h4>
+                            <h4 class="game-ba-text after-text">After</h4>
+                        </div>
+                        <p class="game-ba-quote">"When I started the program, I was 240 lbs. I always knew I had to do something to make a change in my life. 30-minute workouts really work for me because in my head it's not such a big task. After 90 days, I lost 43 lbs. I did a second round of P90X3 and wound up losing another 25 lbs. THE X3 EXPERIENCE HAS BEEN TRANSFORMATIONAL FOR ME—INSIDE AND OUT."<br><span class="signature">&mdash;Ed M., Age: 36</span></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

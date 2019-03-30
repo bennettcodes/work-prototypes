@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Purchase Flow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../purchase-flow-links/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../purchase-flow-links/css/style-mobile.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <script src="http://bennettcodes.com/js/imagesloaded.pkgd.min.js"></script>
+    <script language=javascript>
+        switch (true) {
+            //        MOBILE REDIR
+        case (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) && (!(/iPad/i.test(navigator.userAgent))):
+            //            location.replace("../mobile/index.php#");
+            break;
+            //        TABLET REDIR
+        case (!(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) && (/iPad/i.test(navigator.userAgent)):
+            //            location.replace("../tablet");
+            break;
+            //        DESKTOP REDIR
+        default:
+            //            location.replace("../index.php#");
+            break;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header-bg"></div>
+    <div id="container">
+        <div id="facebook-modal">
+            <div id="facebook-modal-bg"></div>
+            <div id="facebook-modal-white-strip" class="mobile"></div>
+            <img id="facebook-modal-fpo" src="../purchase-flow-links/images/fpos/facebook-modal-fpo.jpg">
+        </div>
+        <!--            <img id="fpo" src="../purchase-flow-links/images/fpo.png">-->
+        <div id="header">
+            <img id="logo" class="header-item" src="../purchase-flow-links/images/logo.png">
+            <div id="sign-in" class="header-item">Sign In</div>
+        </div>
+        <div id="content">
+            <div id="trail">
+                <div id="trail-items">
+                    <div id="trail-progress"></div>
+                    <div class="trail-item active-trail-item">
+                        <div class="trail-item-bubble-tap-region link"></div>
+                        <div class="trail-item-bubble">
+                            <div class="trail-item-bubble-bg"></div>
+                        </div>
+                        <div class="trail-item-label">Account Info</div>
+                    </div>
+                    <div class="trail-item">
+                        <div class="trail-item-bubble-tap-region link"></div>
+                        <div class="trail-item-bubble">
+                            <div class="trail-item-bubble-bg"></div>
+                        </div>
+                        <div class="trail-item-label">Card Info</div>
+                    </div>
+                    <div class="trail-item">
+                        <div class="trail-item-bubble-tap-region link"></div>
+                        <div class="trail-item-bubble">
+                            <div class="trail-item-bubble-bg"></div>
+                        </div>
+                        <div class="trail-item-label">Address</div>
+                    </div>
+                    <div class="trail-item">
+                        <div class="trail-item-bubble-tap-region link"></div>
+                        <div class="trail-item-bubble">
+                            <div class="trail-item-bubble-bg"></div>
+                        </div>
+                        <div class="trail-item-label">Review</div>
+                    </div>
+                </div>
+            </div>
+            <div id="steps">
+                <div id="account-info-step" class="step active-step">
+                    <div class="login-container">
+                        <div class="logins">
+                            <div class="facebook-login login-item">
+                                <div class="facebook-login-button link">
+                                    <img class="facebook-login-button-loader" src="../purchase-flow-links/images/load-weight-blue.gif">
+                                    <svg class="facebook-login-button-checkmark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 91.4 71.4" style="enable-background:new 0 0 91.4 71.4;" xml:space="preserve">
+                                        <g id="gOS63x.tif">
+                                            <g>
+                                                <path d="M35.3,40.8C49.2,26.8,62.7,13.3,76,0c5.3,5.3,10.6,10.6,15.4,15.4c-18.7,18.7-37.4,37.4-56,56C23.6,59.7,11.7,47.8,0,36.1
+			c4.9-4.9,10.2-10.2,15.3-15.3C21.7,27.1,28.3,33.8,35.3,40.8z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <div class="facebook-login-button-icon-container">
+                                        <svg class="facebook-login-button-icon button-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+                                            <path d="M0,0v1000h536c0-22.2,0.1-44.3,0.1-66.5c0-101,0-202,0-303c0-5.2,0-10.3-0.2-15.5c-0.1-3-1.4-4.9-5-4.8
+	c-8.7,0.3-17.3,0.4-26,0.4c-31.8,0.1-63.7,0.1-95.5,0.3c-3.2,0-5-0.6-4.9-4.4c0.3-15.2,0.6-30.3,0.6-45.5c0.1-28.8,0-57.7-0.1-86.5
+	c0-10.7-0.1-10.7,10.9-10.7c37.3,0,74.7,0,112,0c7.5,0,8-0.3,8-7.9c0.1-38-0.3-76,0.4-114c0.2-13.2,2.3-26.5,4.6-39.5
+	c2-11.2,4.7-22.5,8.4-33.2c5.1-14.8,12.4-28.6,20.9-41.9c8.4-13,19.3-23.5,30.6-33.4c8.1-7.1,18.2-12.1,27.7-17.4
+	c7-3.9,14.3-7.7,22-10.1c11.7-3.7,23.6-6.7,35.6-9c37.7-7.4,75.7-3.2,113.6-1.7c12.8,0.5,25.5,1.9,38.3,2.9c4.2,0.3,5,2.9,5,6.5
+	c-0.1,38.2-0.2,76.3-0.2,114.5c0,2.5,0.3,5,0.4,7.5c0.2,2.9-1.2,4.2-4.2,4.1c-28.5-0.2-57-0.7-85.5-0.1c-17.6,0.4-34.9,4-48.1,17.1
+	c-8.6,8.5-13.1,19.1-14.8,31.2c-5.5,39.2-1.3,78.5-2.6,117.8c-0.2,5.4,1.4,6.7,7.5,6.7c18.3,0.1,36.7,0,55,0c27,0,54,0,81-0.1
+	c4,0,5.7,0.9,5,5.5c-2.2,15.6-3.7,31.4-5.7,47c-1.5,11.7-3.2,23.4-4.9,35.1c-2.4,17-4.8,33.9-7,50.9c-1.1,8.6-1,8.5-9.6,8.5
+	c-38.7-0.1-77.3-0.1-116-0.2c-3.7,0-5.2,1.5-5.3,5c0,5.5-0.1,11-0.1,16.5c0,122,0,244,0,365.9c0,0.7-0.1,1.3-0.1,2h312V0H0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="facebook-login-button-text-container">
+                                        <div class="facebook-login-button-text">Continue with Facebook</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="step1-or-break" class="or-break login-item">
+                                <div class="or-break-bar"></div>
+                                <div class="or-break-text">OR</div>
+                                <div class="or-break-bar"></div>
+                            </div>
+                            <div class="standard-login login-item">
+                                <div class="field-row">
+                                    <input class="first-name-field field field-50" name="First Name" type="text" placeholder="First Name" />
+                                    <input class="last-name-field field field-50 field-50-last" name="Last Name" type="text" placeholder="Last Name" />
+                                </div>
+                                <div class="field-row">
+                                    <input class="email-field field field-50" name="Email" type="text" placeholder="Email" />
+                                    <input class="password-field field field-50 field-50-last" name="Password" type="password" placeholder="Password" />
+                                </div>
+                                <div class="referred-row">
+                                    <div class="referred-row-text">Were you referred by a Beachbody Coach?</div>
+                                    <div class="referred-row-options">
+                                        <div class="yes-option referred-row-option link">
+                                            <div class="referred-row-option-bubble-container">
+                                                <div class="referred-row-option-bubble">
+                                                    <div class="referred-row-option-bubble-bg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="referred-row-option-text">Yes</div>
+                                        </div>
+                                        <div class="no-option referred-row-option link">
+                                            <div class="referred-row-option-bubble-container">
+                                                <div class="referred-row-option-bubble">
+                                                    <div class="referred-row-option-bubble-bg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="referred-row-option-text">No</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="coach-row" class="field-row">
+                                    <input class="coach-field field field-50" name="Email" type="text" placeholder="Coach ID" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step1-next-container" class="next-container">
+                            <div id="step1-next-button" class="next-button link">Next</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-info-step" class="step">
+                    <div class="login-container">
+                        <!--                            <img class="fpo" src="../purchase-flow-links/images/fpos/card-info-fpo.jpg">-->
+                        <div class="logins">
+                            <div class="scan-card-container">
+                                <div class="scan-card-disclaimer login-item">Remember, this is a 30 day free trial. You won't be charged anything until X.X.XX.
+                                    <br class="desktop">Cancel anytime before then and be charged nothing.</div>
+                                <div class="scan-card login-item">
+                                    <div class="scan-card-button link">
+                                        <img class="scan-card-button-loader" src="../purchase-flow-links/images/load-weight-blue.gif">
+                                        <svg class="scan-card-button-checkmark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 91.4 71.4" style="enable-background:new 0 0 91.4 71.4;" xml:space="preserve">
+                                            <g id="gOS63x.tif">
+                                                <g>
+                                                    <path d="M35.3,40.8C49.2,26.8,62.7,13.3,76,0c5.3,5.3,10.6,10.6,15.4,15.4c-18.7,18.7-37.4,37.4-56,56C23.6,59.7,11.7,47.8,0,36.1
+			c4.9-4.9,10.2-10.2,15.3-15.3C21.7,27.1,28.3,33.8,35.3,40.8z" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <div class="scan-card-button-icon-container">
+                                            <svg class="scan-card-button-icon button-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 1250.3" style="enable-background:new 0 0 2000 1250.3;" xml:space="preserve">
+                                                <g>
+                                                    <path d="M0,1150.1c0-350,0-700,0-1050c1-1.4,2.5-2.7,3-4.3c1.6-4.5,2.7-9.3,4.2-13.8c6.3-19.3,17.6-35.4,32.3-49
+		C52.5,21,67.2,11.8,84.2,6.5C95.3,3,106.1,0,118,0c585.6,0.2,1171.3,0.2,1756.9,0c14.6,0,28.5,2,42.3,6.9c22.7,8,41.1,21.5,56.1,40
+		c11.5,14.2,19.4,30.1,23.4,48c0.4,1.9,2.1,3.5,3.2,5.2c0,350,0,700,0,1050c-1.2,2.2-2.7,4.3-3.6,6.7c-3.5,9-6,18.4-10.3,26.9
+		c-9.4,18.4-22.7,33.6-40.1,45c-19.6,12.9-40.5,21.4-64.6,21.4c-585.5-0.1-1170.9-0.1-1756.4,0.1c-14.6,0-28.5-2-42.3-6.9
+		c-22.7-8-41.1-21.5-56.1-40c-11.5-14.2-19.4-30.1-23.4-48C2.8,1153.5,1.1,1151.9,0,1150.1z M999.5,1125.1c288.2,0,576.3,0,864.5,0
+		c1.7,0,3.3-0.1,5,0c4.5,0.4,6.2-1.4,6.2-6c-0.1-203-0.1-406-0.1-609c0-10,0-10-10-10c-576.6,0-1153.3,0-1729.9,0
+		c-1.3,0-2.7,0.1-4,0c-4.5-0.4-6.2,1.4-6.2,6c0.1,124.3,0.1,248.7,0.1,373c0,80,0,160-0.1,240c0,4.6,1.7,6.4,6.1,6
+		c1.7-0.1,3.3,0,5,0C423.8,1125.1,711.7,1125.1,999.5,1125.1z M999.5,250.1c288.2,0,576.3,0,864.5,0c1.7,0,3.3-0.1,5,0
+		c4.9,0.5,6.2-1.8,6.2-6.5c-0.2-36.2-0.1-72.3-0.1-108.5c0-10,0-10-10-10c-576.6,0-1153.3,0-1729.9,0c-1.7,0-3.3,0.1-5,0
+		c-3.6-0.2-5.2,1.3-5.2,5c0,38.3,0,76.7,0,115c0,3.6,1.5,5.2,5.1,5c1.8-0.1,3.7,0,5.5,0C423.5,250.1,711.5,250.1,999.5,250.1z" />
+                                                    <path d="M375,1000.1c-39.3,0-78.6,0-118,0c-6.8,0-7.1-0.3-7.1-7c0-37,0-74,0-111c0-6.7,0.3-7,7.1-7c78.6,0,157.3,0,235.9,0
+		c6.8,0,7.1,0.3,7.1,7c0,37,0,74,0,111c0,6.7-0.3,7-7.1,7C453.6,1000.1,414.3,1000.1,375,1000.1z" />
+                                                    <path d="M750,1000.1c-39.3,0-78.6,0-118,0c-6.8,0-7.1-0.4-7.1-7c0-37,0-74,0-111c0-6.7,0.2-7,7-7c78.6,0,157.3,0,235.9,0
+		c6.8,0,7.1,0.4,7.1,7c0,37,0,74,0,111c0,6.7-0.2,7-7,7C828.7,1000.1,789.3,1000.1,750,1000.1z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="scan-card-button-text-container">
+                                            <div class="scan-card-button-text">Scan Card</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="step2-or-break" class="or-break login-item">
+                                <div class="or-break-bar"></div>
+                                <div class="or-break-text">OR</div>
+                                <div class="or-break-bar"></div>
+                            </div>
+                            <div class="standard-login login-item">
+                                <div class="field-row">
+                                    <input class="first-name-on-card-field field field-50" name="First Name on Card" type="text" placeholder="First Name on Card" />
+                                    <input class="last-name-on-card-field field field-50 field-50-last" name="Last Name on Card" type="text" placeholder="Last Name on Card" />
+                                </div>
+                                <div class="field-row">
+                                    <input class="card-number-field field field-80" name="Card Number" type="text" placeholder="Card Number" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                    <input class="cvc-field field field-20 field-20-last" name="CVC" type="password" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                </div>
+                                <div class="field-row">
+                                    <input class="expiration-field field field-50" name="Expiration" type="text" placeholder="Expiration" maxlength="5" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                    <input class="phone-field field field-50 field-50-last" name="Phone" type="text" placeholder="Phone" maxlength="12" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="next-container">
+                            <div id="step2-next-button" class="next-button link">Next</div>
+                            <div id="step2-back-button" class="back-button link">Back</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="address-step" class="step">
+                    <div class="login-container">
+                        <!--                            <img class="fpo" src="../purchase-flow-links/images/fpos/address-fpo.jpg">-->
+                        <div class="logins">
+                            <div class="standard-login login-item">
+                                <div class="field-row">
+                                    <input class="street-name-field field field-50" name="Street Name and Apt Number" type="text" placeholder="Street Name and Apt Number" />
+                                    <input class="additional-street-info-field field field-50 field-50-last not-required" name="Additional Street Info" type="text" placeholder="Additional Street Info" />
+                                </div>
+                                <div class="field-row">
+                                    <div class="down-arrow"></div>
+                                    <input class="city-field field field-50" name="City" type="text" placeholder="City" />
+                                    <select class="state-field select-field select-field-25" name="State" type="text" placeholder="State" value="CA">
+                                        <option value="State" default>State</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AK">AK</option>
+                                        <option value="AZ">AZ</option>
+                                        <option value="AR">AR</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CO">CO</option>
+                                        <option value="CT">CT</option>
+                                        <option value="DE">DE</option>
+                                        <option value="DC">DC</option>
+                                        <option value="FL">FL</option>
+                                        <option value="GA">GA</option>
+                                        <option value="HI">HI</option>
+                                        <option value="ID">ID</option>
+                                        <option value="IL">IL</option>
+                                        <option value="IN">IN</option>
+                                        <option value="IA">IA</option>
+                                        <option value="KS">KS</option>
+                                        <option value="KY">KY</option>
+                                        <option value="LA">LA</option>
+                                        <option value="ME">ME</option>
+                                        <option value="MD">MD</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MI">MI</option>
+                                        <option value="MN">MN</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MO">MO</option>
+                                        <option value="MT">MT</option>
+                                        <option value="NE">NE</option>
+                                        <option value="NV">NV</option>
+                                        <option value="NH">NH</option>
+                                        <option value="NJ">NJ</option>
+                                        <option value="NM">NM</option>
+                                        <option value="NY">NY</option>
+                                        <option value="NC">NC</option>
+                                        <option value="ND">ND</option>
+                                        <option value="OH">OH</option>
+                                        <option value="OK">OK</option>
+                                        <option value="OR">OR</option>
+                                        <option value="PA">PA</option>
+                                        <option value="RI">RI</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SD">SD</option>
+                                        <option value="TN">TN</option>
+                                        <option value="TX">TX</option>
+                                        <option value="UT">UT</option>
+                                        <option value="VT">VT</option>
+                                        <option value="VA">VA</option>
+                                        <option value="WA">WA</option>
+                                        <option value="WV">WV</option>
+                                        <option value="WI">WI</option>
+                                        <option value="WY">WY</option>
+                                    </select>
+                                    <input class="zip-field field field-25 field-25-last" name="Zip" type="text" placeholder="Zip" maxlength="5" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                </div>
+                                <div class="shipping-row">
+                                    <div class="shipping-row-option-container">
+                                        <div class="shipping-row-option">
+                                            <div class="shipping-row-option-tap-region link"></div>
+                                            <div class="shipping-row-option-bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="shipping-row-text">My shipping address is different from my billing address</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="next-container">
+                            <div id="step3-next-button" class="next-button link">Next</div>
+                            <div id="step3-back-button" class="back-button link">Back</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="review" class="step">
+                    <div id="review-container">
+                        <!--                            <img id="review-fpo" class="fpo" src="../purchase-flow-links/images/fpos/review-fpo.jpg">-->
+                        <div id="review-blocks-container">
+                            <div id="review-step-blocks" class="review-blocks">
+                                <div id="account-info-block" class="review-step-block review-block">
+                                    <div id="account-info-block-header" class="review-block-header link">
+                                        <div class="review-block-header-label review-block-header-item">Account Info</div>
+                                        <div class="review-block-header-info review-block-header-item"><span class="review-block-first-name">Jane</span> <span class="review-block-last-name">Rogers</span> \ Coach: <span class="review-block-coach">Emily Johnson</span></div>
+                                        <div class="review-block-header-edit review-block-header-item">edit</div>
+                                    </div>
+                                    <div class="review-block-content">
+                                        <div class="review-block-content-entries">
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="first-name-field field field-50 field-50-last" name="First Name" type="text" placeholder="First Name" value="Jane" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="last-name-field field field-50 field-50-last" name="Last Name" type="text" placeholder="Last Name" value="Rogers" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="email-field field field-50 field-50-last" name="Email" type="text" placeholder="Email" value="jrogers@beachbody.com" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="password-field field field-50 field-50-last" name="Password" type="password" placeholder="Password" value="12345" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">Coach</div><span class="review-block-coach review-block-span field-50 field-50-last">Emily Johnson</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="card-info-block" class="review-step-block review-block">
+                                    <div id="card-info-block-header" class="review-block-header link">
+                                        <div class="review-block-header-label review-block-header-item">Card Info</div>
+                                        <div class="review-block-header-info review-block-header-item">Visa ending in <span class="review-block-card-number">2222</span></div>
+                                        <div class="review-block-header-edit review-block-header-item">edit</div>
+                                    </div>
+                                    <div class="review-block-content">
+                                        <div class="review-block-content-entries">
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="first-name-on-card-field field field-50 field-50-last" name="First Name On Card" type="text" placeholder="First Name On Card" value="Jane" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="last-name-on-card-field field field-50 field-50-last" name="Last Name On Card" type="text" placeholder="Last Name On Card" value="Rogers" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="card-number-field field field-50 field-50-last" name="Card Number" type="text" placeholder="Card Number" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="1234-5678-1111-2222" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="cvc-field field field-50 field-50-last" name="CVC" type="password" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="123" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="expiration-field field field-50 field-50-last" name="Expiration" type="text" placeholder="Expiration" maxlength="5" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="05/20" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="phone-field field field-50 field-50-last" name="Phone" type="text" placeholder="Phone" maxlength="12" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="818-123-4567" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="address-block" class="review-step-block review-block">
+                                    <div id="address-block-header" class="review-block-header link">
+                                        <div class="review-block-header-label review-block-header-item">Address</div>
+                                        <div class="review-block-header-info review-block-header-item">Billing &amp; Shipping: <span class="review-block-street-name">123 Maple Dr.</span>, <span class="review-block-city">Los Angeles</span>, <span class="review-block-state">CA</span> <span class="review-block-zip">90210</span></div>
+                                        <div class="review-block-header-edit review-block-header-item">edit</div>
+                                    </div>
+                                    <div class="review-block-content">
+                                        <div class="review-block-content-entries">
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="street-name-field field field-50 field-50-last" name="Street Name" type="text" placeholder="Street Name" value="123 Maple Dr." />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="additional-street-info-field field field-50 field-50-last not-required" name="Additional Street Info" type="text" placeholder="None" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="city-field field field-50 field-50-last" name="City" type="text" placeholder="City" value="Los Angeles" />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">State</div>
+                                                <select class="state-field select-field no-border select-field-50 select-field-50-last" name="State" type="text" placeholder="AL" value="CA">
+                                                    <option value="State">State</option>
+                                                    <option value="AL">AL</option>
+                                                    <option value="AK">AK</option>
+                                                    <option value="AZ">AZ</option>
+                                                    <option value="AR">AR</option>
+                                                    <option value="CA" selected>CA</option>
+                                                    <option value="CO">CO</option>
+                                                    <option value="CT">CT</option>
+                                                    <option value="DE">DE</option>
+                                                    <option value="DC">DC</option>
+                                                    <option value="FL">FL</option>
+                                                    <option value="GA">GA</option>
+                                                    <option value="HI">HI</option>
+                                                    <option value="ID">ID</option>
+                                                    <option value="IL">IL</option>
+                                                    <option value="IN">IN</option>
+                                                    <option value="IA">IA</option>
+                                                    <option value="KS">KS</option>
+                                                    <option value="KY">KY</option>
+                                                    <option value="LA">LA</option>
+                                                    <option value="ME">ME</option>
+                                                    <option value="MD">MD</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="MI">MI</option>
+                                                    <option value="MN">MN</option>
+                                                    <option value="MS">MS</option>
+                                                    <option value="MO">MO</option>
+                                                    <option value="MT">MT</option>
+                                                    <option value="NE">NE</option>
+                                                    <option value="NV">NV</option>
+                                                    <option value="NH">NH</option>
+                                                    <option value="NJ">NJ</option>
+                                                    <option value="NM">NM</option>
+                                                    <option value="NY">NY</option>
+                                                    <option value="NC">NC</option>
+                                                    <option value="ND">ND</option>
+                                                    <option value="OH">OH</option>
+                                                    <option value="OK">OK</option>
+                                                    <option value="OR">OR</option>
+                                                    <option value="PA">PA</option>
+                                                    <option value="RI">RI</option>
+                                                    <option value="SC">SC</option>
+                                                    <option value="SD">SD</option>
+                                                    <option value="TN">TN</option>
+                                                    <option value="TX">TX</option>
+                                                    <option value="UT">UT</option>
+                                                    <option value="VT">VT</option>
+                                                    <option value="VA">VA</option>
+                                                    <option value="WA">WA</option>
+                                                    <option value="WV">WV</option>
+                                                    <option value="WI">WI</option>
+                                                    <option value="WY">WY</option>
+                                                </select>
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">First</div>
+                                                <input class="zip-field field field-50 field-50-last" name="Zip" type="text" placeholder="Zip" value="90210" maxlength="5" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                            </div>
+                                            <div class="review-block-content-entry">
+                                                <div class="review-block-content-entry-title">Shipping/Billing addresses the same</div><span class="review-block-shipping review-block-span">Yes</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="upsell-block" class="review-step-block review-block link">
+                                    <div id="upsell-block-header">
+                                        <div id="upsell-block-header-label">Challenge Pack Upsell</div>
+                                    </div>
+                                    <div id="upsell-block-info">
+                                        <div id="upsell-block-info-title" class="upsell-block-info-item">Club and Shakeology Challenge Pack</div>
+                                        <div id="upsell-block-info-description" class="upsell-block-info-item">Short descriptive text of product or service. Short descriptive text of product or service. Short descriptive text of product or service.</div>
+                                        <div id="upsell-block-info-price" class="upsell-block-info-item">$<span class="upsell-block-info-price-number">140.00</span></div>
+                                    </div>
+                                    <div id="upsell-block-flavor">
+                                        <div id="upsell-block-flavor-button" class="upsell-block-flavor-item">Select Flavor</div>
+                                        <div id="upsell-block-flavor-more-info" class="upsell-block-flavor-item">More Info</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="review-total-blocks" class="review-blocks">
+                                <div id="review-total-blocks-title">Your order total:</div>
+                                <div class="review-total-block">
+                                    <div class="review-total-block-bar review-total-block-item"></div>
+                                    <div class="review-total-block-title review-total-block-item">
+                                        <div class="review-total-block-title-text">BOD 3 Month Plan</div>
+                                    </div>
+                                    <div class="review-total-block-price review-total-block-item">
+                                        <div class="review-total-block-price-text">$<span class="review-total-block-price-number">0.00</span></div>
+                                    </div>
+                                    <div class="review-total-block-close review-total-block-item"></div>
+                                </div>
+                                <div class="review-total-block">
+                                    <div class="review-total-block-bar review-total-block-item"></div>
+                                    <div class="review-total-block-title review-total-block-item">
+                                        <div class="review-total-block-title-text">Product Title</div>
+                                    </div>
+                                    <div class="review-total-block-price review-total-block-item">
+                                        <div class="review-total-block-price-text">$<span class="review-total-block-price-number">XX.XX</span></div>
+                                    </div>
+                                    <div class="review-total-block-close review-total-block-item"></div>
+                                </div>
+                                <div id="review-total-cost-breakdowns">
+                                    <div class="review-total-cost-breakdown">
+                                        <div class="review-total-cost-breakdown-title">Sales tax</div>
+                                        <div class="review-total-cost-breakdown-price">$<span class="review-total-cost-breakdown-price-number">X.XX</span></div>
+                                    </div>
+                                    <div class="review-total-cost-breakdown">
+                                        <div class="review-total-cost-breakdown-title">Cost today</div>
+                                        <div class="review-total-cost-breakdown-price">$<span class="review-total-cost-breakdown-price-number">XX.XX</span></div>
+                                    </div>
+                                    <div class="review-total-cost-breakdown">
+                                        <div class="review-total-cost-breakdown-title">Cost on 3.10.17</div>
+                                        <div class="review-total-cost-breakdown-price">$<span class="review-total-cost-breakdown-price-number">38.87</span></div>
+                                    </div>
+                                </div>
+                                <div id="review-total-cost-terms">
+                                    <div class="review-total-cost-term">
+                                        <div class="review-total-cost-term-option-container">
+                                            <div class="review-total-cost-term-option">
+                                                <div class="review-total-cost-term-option-tap-region link"></div>
+                                                <div class="review-total-cost-term-option-bg"></div>
+                                            </div>
+                                        </div>
+                                        <div class="review-total-cost-term-description">By checking the box and clicking ‘Get Moving’ I agree that: I have read, understand, and agree with the Team Beachbody Terms &amp; Conditions and Privacy Policy; and I will automatically continue my membership after the 30 day free trial for only $2.99 a week, billed $38.87 quarterly in advance to the credit card I provide today. I can cancel anytime by calling 1 (800) 470-7870. Plus, my own Personal Coach may contact me to provide guidance and support.</div>
+                                    </div>
+                                    <div class="review-total-cost-term">
+                                        <div class="review-total-cost-term-option-container">
+                                            <div class="review-total-cost-term-option">
+                                                <div class="review-total-cost-term-option-tap-region link"></div>
+                                                <div class="review-total-cost-term-option-bg"></div>
+                                            </div>
+                                        </div>
+                                        <div class="review-total-cost-term-description">I am over 13-years-old.</div>
+                                    </div>
+                                    <div class="review-total-cost-term">
+                                        <div class="review-total-cost-term-option-container">
+                                            <div class="review-total-cost-term-option">
+                                                <div class="review-total-cost-term-option-tap-region link"></div>
+                                                <div class="review-total-cost-term-option-bg"></div>
+                                            </div>
+                                        </div>
+                                        <div class="review-total-cost-term-description">I would like to receive emails about discounts and new programs and services.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-container">
+                            <div id="step4-submit-button" class="submit-button link">Get Moving</div>
+                            <div id="step4-back-button" class="back-button link">Back</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-bg"></div>
+    </div>
+    <script src="../purchase-flow-links/js/functions.js"></script>
+    <script src="../purchase-flow-links/js/variables.js"></script>
+    <script src="../purchase-flow-links/js/app.js"></script>
+</body>
+
+</html>

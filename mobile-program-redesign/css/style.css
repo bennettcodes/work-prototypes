@@ -1,0 +1,469 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i';
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    /*    background: black;*/
+/*    overflow-x: hidden;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body > div.ui-loader.ui-corner-all.ui-body-a.ui-loader-default {
+    display: none !important;
+}
+
+/*
+body > div.ui-page.ui-page-theme-a.ui-page-active {
+    pointer-events: none !important;
+}
+*/
+
+.hidden {
+    display: none;
+}
+
+#cached-images {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 300vw;
+    z-index: 0;
+}
+
+
+/*
+.cached-image {
+    opacity: 1;
+}
+*/
+
+#top-count {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    pointer-events: none;
+    font-size: 5vw;
+    font-weight: 200;
+    color: white;
+    text-transform: uppercase;
+}
+
+#container {
+    width: 100%;
+    /*    min-height: 500vh;*/
+    position: relative;
+    overflow: hidden;
+    float: left;
+    opacity: 0;
+}
+
+#container-bgs {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+#nav {
+    position: fixed;
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+}
+
+#bottom-fade {
+    width: 100%;
+    height: 20vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    pointer-events: none;
+}
+
+#nav-line {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: calc(50% - 0.5px);
+    left: 0;
+    background-color: white;
+    z-index: -1;
+}
+
+.nav-item-container {
+    width: 6vw;
+    height: 6vw;
+    position: relative;
+    margin: 0 1vw 0 0;
+    float: left;
+}
+
+.nav-item-container:first-child {
+    margin: 0 1vw;
+}
+
+.nav-item {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+}
+
+.container-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
+}
+
+.active-container-bg {
+    z-index: 1;
+}
+
+#be-container-bg {
+    background-color: #456221;
+    /*    background-image: url('../images/be-bg.png');*/
+}
+
+#p90x-container-bg {
+    background-color: #000000;
+    /*    background-image: url('../images/p90x-bg.png');*/
+}
+
+#piyo-container-bg {
+    background-color: #000000;
+    /*    background-image: url('../images/p90x-bg.png');*/
+}
+
+#t25-container-bg {
+    background-color: #f9c52d;
+    /*    background-image: url('../images/be-bg.png');*/
+}
+
+#tdf-container-bg {
+    background-color: #926daf;
+    /*    background-image: url('../images/be-bg.png');*/
+}
+
+.container-bg-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+#be-container-bg-overlay {
+    background-image: url('../images/be-bg-overlay.jpg');
+}
+
+#p90x-container-bg-overlay {
+    background-image: url('../images/p90x-bg-overlay.jpg');
+}
+
+#piyo-container-bg-overlay {
+    background-image: url('../images/piyo-bg-overlay.jpg');
+}
+
+#t25-container-bg-overlay {
+    background-image: url('../images/t25-bg-overlay.jpg');
+}
+
+#tdf-container-bg-overlay {
+    background-image: url('../images/tdf-bg-overlay.jpg');
+}
+
+.slogan {
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 800;
+}
+
+.slogan-inner {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slogan-item {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.slogan-text {
+    width: auto;
+    height: 0.9em;
+    position: relative;
+    float: left;
+    text-align: left;
+    line-height: 0.9em;
+    font-size: 10vw;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: white;
+}
+
+.program {
+/*    position: relative;*/
+    z-index: 1;
+    opacity: 1;
+/*    pointer-events: none;*/
+}
+
+#c {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+#bg-scroll-containers {}
+
+.bg-scroll-container {
+    width: 100vw;
+    position: fixed;
+    pointer-events: none;
+    /*    background-color: #002100;*/
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bg-scroll {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg-scroll-item {
+    width: 200vw;
+    height: auto;
+    position: relative;
+    opacity: 0;
+    float: left;
+}
+
+.bg-overlay-top {
+    width: 400vw;
+    position: fixed;
+    pointer-events: none;
+    left: -150vw;
+    opacity: 0;
+    /*    overflow: hidden;*/
+    z-index: 2;
+}
+
+.bg-overlay {
+    width: 400%;
+    height:150%;
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+    left: -200%;
+    background-color: transparent;
+    /*    overflow: hidden;*/
+    z-index: 100;
+}
+
+#black-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 98%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 98%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 98%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 98%);
+    background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 98%);
+    bottom: -1vw;
+    left: 0;
+    /*    overflow: hidden;*/
+    z-index: 1;
+}
+
+#be-bg-overlay {
+    background-color: #456221;
+}
+
+#p90x-bg-overlay {
+    background-color: #000000;
+}
+
+#piyo-bg-overlay {
+    background-color: #000000;
+}
+
+#t25-bg-overlay {
+    background-color: #f9c52d;
+}
+
+#tdf-bg-overlay {
+    background-color: #926daf;
+}
+
+#scroller {
+    width: 100%;
+    /*    height: 400vh;*/
+    position: relative;
+    float: left;
+}
+
+.logo-container {
+    width: 75vw;
+    height: 50vh;
+    position: fixed;
+    -webkit-filter: blur(30px);
+    -ms-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    filter: blur(30px);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 301;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+#be-logo {}
+
+.content {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+/*    pointer-events: none;*/
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    color: red;
+    float: left;
+    opacity: 0;
+    z-index: 300;
+/*    display: none;*/
+}
+
+.content-inner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+.content-intro,
+.content-body,
+.content-p-alt-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+.content-body {
+    overflow: hidden;
+}
+
+.content-h1,
+.content-p {
+    width: 80%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+.content-h1 {
+    padding: 0 10vw;
+    font-size: 5vw;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+.no-emph {
+    font-weight: 400; 
+}
+
+.content-p {
+    line-height: 1.5em;
+    font-size: 4vw;
+    font-weight: 300;
+    padding: 0 10vw 2em;
+}
+
+.content-p-alt-container {
+    margin-bottom: 2em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#p90x-content-p-alt-container {
+/*    background-image: url(../images/p90x-alt-bg.jpg);*/
+}
+
+.content-p-alt-container .content-p {
+    padding: 0 10vw 2em;
+    font-weight: 400;
+}
+
+.content-p-alt-container .content-p:first-child {
+    padding: 2em 10vw
+}
+
+.content-stagger {
+    opacity: 0;
+}

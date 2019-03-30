@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>BB Parallax</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <script src="http://bennettcodes.com/js/imagesloaded.pkgd.min.js"></script>
+    <script language=javascript>
+        switch (true) {
+            //        MOBILE REDIR
+        case (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) && (!(/iPad/i.test(navigator.userAgent))):
+            //            location.replace("../mobile/index.php#");
+            break;
+            //        TABLET REDIR
+        case (!(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) && (/iPad/i.test(navigator.userAgent)):
+            //            location.replace("../tablet");
+            break;
+            //        DESKTOP REDIR
+        default:
+            //            location.replace("../index.php#");
+            break;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="top-count"></div>
+    <div id="container">
+        <div id="nav">
+            <div id="nav-line"></div>
+        </div>
+        <div id="bottom-fade"></div>
+        <div id="be-container-bg" class="container-bg">
+            <div id="be-container-bg-overlay" class="container-bg-overlay"></div>
+        </div>
+        <div id="p90x-container-bg" class="container-bg">
+            <div id="p90x-container-bg-overlay" class="container-bg-overlay"></div>
+        </div>
+        <div id="piyo-container-bg" class="container-bg">
+            <div id="piyo-container-bg-overlay" class="container-bg-overlay"></div>
+        </div>
+        <div id="t25-container-bg" class="container-bg">
+            <div id="t25-container-bg-overlay" class="container-bg-overlay"></div>
+        </div>
+        <div id="tdf-container-bg" class="container-bg">
+            <div id="tdf-container-bg-overlay" class="container-bg-overlay"></div>
+        </div>
+        <div class="bg-overlay-top"></div>
+        <div class="bg-overlay-top"></div>
+        <!--        <div class="bg-overlay-top"></div>-->
+        <div id="be-slogan" class="slogan">
+            <div id="be-slogan-inner" class="slogan-inner">
+                <!-- BIG -->
+                <div id="be-slogan-item-big" class="be-slogan-item slogan-item">
+                    <h1 id="be-slogan-text-big" class="be-slogan-text slogan-text">Big</h1>
+                </div>
+                <!-- WORKOUT -->
+                <div id="be-slogan-item-workout" class="be-slogan-item slogan-item">
+                    <h1 id="be-slogan-text-workout" class="be-slogan-text slogan-text">Workout</h1>
+                </div>
+                <!-- RESULTS -->
+                <div id="be-slogan-item-results" class="be-slogan-item slogan-item">
+                    <h1 id="be-slogan-text-results" class="be-slogan-text slogan-text">Results.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="p90x-slogan" class="slogan">
+            <div id="p90x-slogan-inner" class="slogan-inner">
+                <!-- EXTREME -->
+                <div id="p90x-slogan-item-extreme" class="p90x-slogan-item slogan-item">
+                    <h1 id="p90x-slogan-text-extreme" class="p90x-slogan-text slogan-text">Extreme</h1>
+                </div>
+                <!-- HOME -->
+                <div id="p90x-slogan-item-home" class="p90x-slogan-item slogan-item">
+                    <h1 id="p90x-slogan-text-home" class="p90x-slogan-text slogan-text">Home</h1>
+                </div>
+                <!-- FITNESS -->
+                <div id="p90x-slogan-item-fitness" class="p90x-slogan-item slogan-item">
+                    <h1 id="p90x-slogan-text-fitness" class="p90x-slogan-text slogan-text">Fitness.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="piyo-slogan" class="slogan">
+            <div id="piyo-slogan-inner" class="slogan-inner">
+                <!-- DEFINE -->
+                <div id="piyo-slogan-item-define" class="piyo-slogan-item slogan-item">
+                    <h1 id="piyo-slogan-text-define" class="piyo-slogan-text slogan-text">Define</h1>
+                </div>
+                <!-- YOURSELF -->
+                <div id="piyo-slogan-item-yourself" class="piyo-slogan-item slogan-item">
+                    <h1 id="piyo-slogan-text-yourself" class="piyo-slogan-text slogan-text">Yourself.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="t25-slogan" class="slogan">
+            <div id="t25-slogan-inner" class="slogan-inner">
+                <!-- IT'S -->
+                <div id="t25-slogan-item-its" class="t25-slogan-item slogan-item">
+                    <h1 id="t25-slogan-text-its" class="t25-slogan-text slogan-text">It's</h1>
+                </div>
+                <!-- ABOUT -->
+                <div id="t25-slogan-item-about" class="t25-slogan-item slogan-item">
+                    <h1 id="t25-slogan-text-about" class="t25-slogan-text slogan-text">About</h1>
+                </div>
+                <!-- TIME -->
+                <div id="t25-slogan-item-time" class="t25-slogan-item slogan-item">
+                    <h1 id="t25-slogan-text-time" class="t25-slogan-text slogan-text">Time.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="tdf-slogan" class="slogan">
+            <div id="tdf-slogan-inner" class="slogan-inner">
+                <!-- SIMPLE -->
+                <div id="tdf-slogan-item-simple" class="tdf-slogan-item slogan-item">
+                    <h1 id="tdf-slogan-text-simple" class="tdf-slogan-text slogan-text">Simple</h1>
+                </div>
+                <!-- FAST -->
+                <div id="tdf-slogan-item-fast" class="tdf-slogan-item slogan-item">
+                    <h1 id="tdf-slogan-text-fast" class="tdf-slogan-text slogan-text">Fast</h1>
+                </div>
+                <!-- RESULTS -->
+                <div id="tdf-slogan-item-results" class="tdf-slogan-item slogan-item">
+                    <h1 id="tdf-slogan-text-results" class="tdf-slogan-text slogan-text">Results.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="be" class="program">
+            <div id="be-logo-container" class="logo-container">
+                <img id="be-logo" class="logo" src="images/logos/be-logo-green-white.png">
+            </div>
+            <div id="be-bg-scroll-container" class="bg-scroll-container">
+                <div id="be-bg-overlay" class="bg-overlay"></div>
+                <div id="be-bg-scroll" class="bg-scroll">
+                    <img id="be-1" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/1.jpg">
+                    <img id="be-2" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/2.jpg">
+                    <img id="be-3" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/3.jpg">
+                    <img id="be-4" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/4.jpg">
+                    <img id="be-5" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/5.jpg">
+                    <img id="be-6" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/6.jpg">
+                    <img id="be-7" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/7.jpg">
+                    <img id="be-8" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/8.jpg">
+                    <img id="be-9" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/9.jpg">
+                    <img id="be-10" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/10.jpg">
+                    <img id="be-11" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/11.jpg">
+                    <img id="be-12" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/12.jpg">
+                    <img id="be-13" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/13.jpg">
+                    <img id="be-14" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/14.jpg">
+                    <img id="be-15" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/15.jpg">
+                    <img id="be-16" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/16.jpg">
+                    <img id="be-17" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/17.jpg">
+                    <img id="be-18" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/18.jpg">
+                    <img id="be-19" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/19.jpg">
+                    <img id="be-20" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/20.jpg">
+                    <img id="be-21" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/21.jpg">
+                    <img id="be-22" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/22.jpg">
+                    <img id="be-23" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/23.jpg">
+                    <img id="be-24" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/24.jpg">
+                    <img id="be-25" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/25.jpg">
+                    <img id="be-26" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/26.jpg">
+                    <img id="be-27" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/27.jpg">
+                    <img id="be-28" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/28.jpg">
+                    <img id="be-29" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/29.jpg">
+                    <img id="be-30" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/30.jpg">
+                    <img id="be-31" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/31.jpg">
+                    <img id="be-32" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/32.jpg">
+                    <img id="be-33" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/33.jpg">
+                    <img id="be-34" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/34.jpg">
+                    <img id="be-35" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/35.jpg">
+                    <img id="be-36" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/36.jpg">
+                    <img id="be-37" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/37.jpg">
+                    <img id="be-38" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/38.jpg">
+                    <img id="be-39" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/39.jpg">
+                    <img id="be-40" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/40.jpg">
+                    <img id="be-41" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/41.jpg">
+                    <img id="be-42" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/42.jpg">
+                    <img id="be-43" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/43.jpg">
+                    <img id="be-44" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/44.jpg">
+                    <img id="be-45" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/45.jpg">
+                    <img id="be-46" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/46.jpg">
+                    <img id="be-47" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/47.jpg">
+                    <img id="be-48" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/48.jpg">
+                    <img id="be-49" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/49.jpg">
+                    <img id="be-50" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/50.jpg">
+                    <img id="be-51" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/51.jpg">
+                    <img id="be-52" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/52.jpg">
+                    <img id="be-53" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/53.jpg">
+                    <img id="be-54" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/54.jpg">
+                    <img id="be-55" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/55.jpg">
+                    <img id="be-56" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/56.jpg">
+                    <img id="be-57" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/57.jpg">
+                    <img id="be-58" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/58.jpg">
+                    <img id="be-59" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/59.jpg">
+                    <img id="be-60" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/60.jpg">
+                    <img id="be-61" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/61.jpg">
+                    <img id="be-62" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/62.jpg">
+                    <img id="be-63" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/63.jpg">
+                    <img id="be-64" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/64.jpg">
+                    <img id="be-65" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/65.jpg">
+                    <img id="be-66" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/66.jpg">
+                    <img id="be-67" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/67.jpg">
+                    <img id="be-68" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/68.jpg">
+                    <img id="be-69" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/69.jpg">
+                    <img id="be-70" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/70.jpg">
+                    <img id="be-71" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/71.jpg">
+                    <img id="be-72" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/72.jpg">
+                    <img id="be-73" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/73.jpg">
+                    <img id="be-74" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/74.jpg">
+                    <img id="be-75" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/75.jpg">
+                    <img id="be-76" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/76.jpg">
+                    <img id="be-77" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/77.jpg">
+                    <img id="be-78" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/78.jpg">
+                    <img id="be-79" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/79.jpg">
+                    <img id="be-80" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/80.jpg">
+                    <img id="be-81" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/81.jpg">
+                    <img id="be-82" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/82.jpg">
+                    <img id="be-83" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/83.jpg">
+                    <img id="be-84" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/84.jpg">
+                    <img id="be-85" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/85.jpg">
+                    <img id="be-86" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/86.jpg">
+                    <img id="be-87" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/87.jpg">
+                    <img id="be-88" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/88.jpg">
+                    <img id="be-89" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/89.jpg">
+                    <img id="be-90" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/90.jpg">
+                    <img id="be-91" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/91.jpg">
+                    <img id="be-92" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/92.jpg">
+                    <img id="be-93" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/93.jpg">
+                    <img id="be-94" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/94.jpg">
+                    <img id="be-95" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/95.jpg">
+                    <img id="be-96" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/96.jpg">
+                    <img id="be-97" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/97.jpg">
+                    <img id="be-98" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/98.jpg">
+                    <img id="be-99" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/99.jpg">
+                    <img id="be-100" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/100.jpg">
+                    <img id="be-101" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/101.jpg">
+                    <img id="be-102" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/102.jpg">
+                    <img id="be-103" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/103.jpg">
+                    <img id="be-104" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/104.jpg">
+                    <img id="be-105" class="pls-load be-bg-scroll-item bg-scroll-item" data-src="images/stills/be/105.jpg"></div>
+            </div>
+            <div id="be-content" class="content">
+                <div id="be-content-inner" class="content-inner">
+                    <div id="be-content-intro" class="content-intro">
+                        <h1 class="be-content-h1 content-h1 content-stagger">Big Workout Results Inside and Out.</h1>
+                    </div>
+                    <div id="be-content-body" class="content-body">
+
+                        <p class="be-content-p content-p content-stagger">We’ve cracked the code for how to dial in the lean, chiseled physique everybody wants. And you can get it in 90 days, in as little as 30 minutes a day. Bottom line? You can do this.</p>
+
+                        <p class="be-content-p content-p content-stagger">Forget everything you know about weight training. Body Beast has cracked the code for how to dial in the lean, chiseled physique everybody wants. And you can get it in 90 days, at home, with just a few dumbbells, in as little as 30 minutes a day, for less than fifty bucks.</p>
+
+                        <p class="be-content-p content-p content-stagger">Body Beast takes body transformation to the level of pure science. Things have changed since the days when "pumping iron" just meant doing repetitive sets, one body part at a time, with heavy weights.</p>
+
+                        <div id="be-content-p-alt-container" class="content-p-alt-container content-stagger">
+                            <p class="be-content-p content-p">Whenever someone gets serious about getting really BUILT, they turn to Sagi Kalev. He's the go-to guy for anyone who needs to burn fat and build muscle. Professional physique models, actors, and bodybuilders pay thousands to get results from his proven body-transforming training method. But you won't have to pay thousands. Because we put it in a box, so you can get built like a beast at home.</p>
+                        </div>
+                        <p class="be-content-p content-p content-stagger">Body Beast takes all the guesswork out of getting built! With custom meal plans, proven recipes, and easy-to-make power shakes that build lean muscle and burn fat fast, you can forget the calorie-counting and concentrate on taking your physique to a whole new level of awesome.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="p90x" class="program">
+            <div id="p90x-logo-container" class="logo-container">
+
+                <img id="p90x-logo" class="logo" src="images/logos/p90x-logo-silver.png">
+            </div>
+            <div id="p90x-bg-scroll-container" class="bg-scroll-container">
+                <div id="p90x-bg-overlay" class="bg-overlay"></div>
+                <div id="p90x-bg-scroll" class="bg-scroll">
+                    <img id="p90x-1" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/1.jpg">
+                    <img id="p90x-2" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/2.jpg">
+                    <img id="p90x-3" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/3.jpg">
+                    <img id="p90x-4" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/4.jpg">
+                    <img id="p90x-5" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/5.jpg">
+                    <img id="p90x-6" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/6.jpg">
+                    <img id="p90x-7" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/7.jpg">
+                    <img id="p90x-8" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/8.jpg">
+                    <img id="p90x-9" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/9.jpg">
+                    <img id="p90x-10" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/10.jpg">
+                    <img id="p90x-11" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/11.jpg">
+                    <img id="p90x-12" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/12.jpg">
+                    <img id="p90x-13" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/13.jpg">
+                    <img id="p90x-14" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/14.jpg">
+                    <img id="p90x-15" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/15.jpg">
+                    <img id="p90x-16" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/16.jpg">
+                    <img id="p90x-17" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/17.jpg">
+                    <img id="p90x-18" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/18.jpg">
+                    <img id="p90x-19" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/19.jpg">
+                    <img id="p90x-20" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/20.jpg">
+                    <img id="p90x-21" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/21.jpg">
+                    <img id="p90x-22" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/22.jpg">
+                    <img id="p90x-23" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/23.jpg">
+                    <img id="p90x-24" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/24.jpg">
+                    <img id="p90x-25" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/25.jpg">
+                    <img id="p90x-26" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/26.jpg">
+                    <img id="p90x-27" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/27.jpg">
+                    <img id="p90x-28" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/28.jpg">
+                    <img id="p90x-29" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/29.jpg">
+                    <img id="p90x-30" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/30.jpg">
+                    <img id="p90x-31" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/31.jpg">
+                    <img id="p90x-32" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/32.jpg">
+                    <img id="p90x-33" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/33.jpg">
+                    <img id="p90x-34" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/34.jpg">
+                    <img id="p90x-35" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/35.jpg">
+                    <img id="p90x-36" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/36.jpg">
+                    <img id="p90x-37" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/37.jpg">
+                    <img id="p90x-38" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/38.jpg">
+                    <img id="p90x-39" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/39.jpg">
+                    <img id="p90x-40" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/40.jpg">
+                    <img id="p90x-41" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/41.jpg">
+                    <img id="p90x-42" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/42.jpg">
+                    <img id="p90x-43" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/43.jpg">
+                    <img id="p90x-44" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/44.jpg">
+                    <img id="p90x-45" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/45.jpg">
+                    <img id="p90x-46" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/46.jpg">
+                    <img id="p90x-47" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/47.jpg">
+                    <img id="p90x-48" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/48.jpg">
+                    <img id="p90x-49" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/49.jpg">
+                    <img id="p90x-50" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/50.jpg">
+                    <img id="p90x-51" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/51.jpg">
+                    <img id="p90x-52" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/52.jpg">
+                    <img id="p90x-53" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/53.jpg">
+                    <img id="p90x-54" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/54.jpg">
+                    <img id="p90x-55" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/55.jpg">
+                    <img id="p90x-56" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/56.jpg">
+                    <img id="p90x-57" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/57.jpg">
+                    <img id="p90x-58" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/58.jpg">
+                    <img id="p90x-59" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/59.jpg">
+                    <img id="p90x-60" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/60.jpg">
+                    <img id="p90x-61" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/61.jpg">
+                    <img id="p90x-62" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/62.jpg">
+                    <img id="p90x-63" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/63.jpg">
+                    <img id="p90x-64" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/64.jpg">
+                    <img id="p90x-65" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/65.jpg">
+                    <img id="p90x-66" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/66.jpg">
+                    <img id="p90x-67" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/67.jpg">
+                    <img id="p90x-68" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/68.jpg">
+                    <img id="p90x-69" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/69.jpg">
+                    <img id="p90x-70" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/70.jpg">
+                    <img id="p90x-71" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/71.jpg">
+                    <img id="p90x-72" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/72.jpg">
+                    <img id="p90x-73" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/73.jpg">
+                    <img id="p90x-74" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/74.jpg">
+                    <img id="p90x-75" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/75.jpg">
+                    <img id="p90x-76" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/76.jpg">
+                    <img id="p90x-77" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/77.jpg">
+                    <img id="p90x-78" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/78.jpg">
+                    <img id="p90x-79" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/79.jpg">
+                    <img id="p90x-80" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/80.jpg">
+                    <img id="p90x-81" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/81.jpg">
+                    <img id="p90x-82" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/82.jpg">
+                    <img id="p90x-83" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/83.jpg">
+                    <img id="p90x-84" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/84.jpg">
+                    <img id="p90x-85" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/85.jpg">
+                    <img id="p90x-86" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/86.jpg">
+                    <img id="p90x-87" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/87.jpg">
+                    <img id="p90x-88" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/88.jpg">
+                    <img id="p90x-89" class="pls-load p90x-bg-scroll-item bg-scroll-item" data-src="images/stills/p90x/89.jpg">
+                </div>
+            </div>
+            <div id="p90x-content" class="content">
+                <div id="p90x-content-inner" class="content-inner">
+                    <div id="p90x-content-intro" class="content-intro">
+                        <h1 class="p90x-content-h1 content-h1 content-stagger">Extreme Home Fitness.</h1>
+                    </div>
+                    <div id="p90x-content-body" class="content-body">
+
+                        <p class="p90x-content-p content-p content-stagger">Transform your body in 90 days with the original extreme home fitness program. With 4 million+ sold, it’s changed more bodies than just about any fitness program in history. Now it’s your turn to get absolutely ripped!</p>
+                        <p class="p90x-content-p content-p content-stagger">P90X will shatter your concept of home fitness. Using the advanced science of Muscle Confusion, P90X is a well-organized training system that shows you how and when to change your routine for maximum results. So your body keeps changing throughout the 90 days and beyond.</p>
+
+                        <p class="p90x-content-p content-p content-stagger">Here's the true secret of how P90X works: Muscle Confusion. P90X uses targeted training phases so your body keeps adapting and growing. You'll never "plateau"—which means your body will never get used to the routines, making improvements slow down or even stop.</p>
+
+                        <div id="p90x-content-p-alt-container" class="content-p-alt-container content-stagger">
+                            <p class="p90x-content-p content-p">Over the past 25 years, elite trainer Tony Horton has revolutionized the fitness world by helping millions of people get ripped and get healthy through his world-renowned total-body workouts. These groundbreaking programs are among the most popular home workouts ever, selling a combined total of more than 7 million copies and counting!</p>
+                        </div>
+                        <p class="p90x-content-p content-p content-stagger">Always on the cutting edge of sports science and nutrition, he's a trainer who knows how to get results. Today, people all over the world from—athletes and movie stars to members of the military and Congress—can credit their improved stamina, strength, and extreme body transformations to Tony Horton.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="piyo" class="program">
+            <div id="piyo-logo-container" class="logo-container">
+                <img id="piyo-logo" class="logo" src="images/logos/piyo-logo-silver.png">
+            </div>
+            <div id="piyo-bg-scroll-container" class="bg-scroll-container">
+                <div id="piyo-bg-overlay" class="bg-overlay"></div>
+                <div id="piyo-bg-scroll" class="bg-scroll">
+                    <img id="piyo-1" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/1.jpg">
+                    <img id="piyo-2" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/2.jpg">
+                    <img id="piyo-3" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/3.jpg">
+                    <img id="piyo-4" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/4.jpg">
+                    <img id="piyo-5" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/5.jpg">
+                    <img id="piyo-6" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/6.jpg">
+                    <img id="piyo-7" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/7.jpg">
+                    <img id="piyo-8" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/8.jpg">
+                    <img id="piyo-9" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/9.jpg">
+                    <img id="piyo-10" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/10.jpg">
+                    <img id="piyo-11" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/11.jpg">
+                    <img id="piyo-12" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/12.jpg">
+                    <img id="piyo-13" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/13.jpg">
+                    <img id="piyo-14" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/14.jpg">
+                    <img id="piyo-15" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/15.jpg">
+                    <img id="piyo-16" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/16.jpg">
+                    <img id="piyo-17" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/17.jpg">
+                    <img id="piyo-18" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/18.jpg">
+                    <img id="piyo-19" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/19.jpg">
+                    <img id="piyo-20" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/20.jpg">
+                    <img id="piyo-21" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/21.jpg">
+                    <img id="piyo-22" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/22.jpg">
+                    <img id="piyo-23" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/23.jpg">
+                    <img id="piyo-24" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/24.jpg">
+                    <img id="piyo-25" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/25.jpg">
+                    <img id="piyo-26" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/26.jpg">
+                    <img id="piyo-27" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/27.jpg">
+                    <img id="piyo-28" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/28.jpg">
+                    <img id="piyo-29" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/29.jpg">
+                    <img id="piyo-30" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/30.jpg">
+                    <img id="piyo-31" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/31.jpg">
+                    <img id="piyo-32" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/32.jpg">
+                    <img id="piyo-33" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/33.jpg">
+                    <img id="piyo-34" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/34.jpg">
+                    <img id="piyo-35" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/35.jpg">
+                    <img id="piyo-36" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/36.jpg">
+                    <img id="piyo-37" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/37.jpg">
+                    <img id="piyo-38" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/38.jpg">
+                    <img id="piyo-39" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/39.jpg">
+                    <img id="piyo-40" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/40.jpg">
+                    <img id="piyo-41" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/41.jpg">
+                    <img id="piyo-42" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/42.jpg">
+                    <img id="piyo-43" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/43.jpg">
+                    <img id="piyo-44" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/44.jpg">
+                    <img id="piyo-45" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/45.jpg">
+                    <img id="piyo-46" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/46.jpg">
+                    <img id="piyo-47" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/47.jpg">
+                    <img id="piyo-48" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/48.jpg">
+                    <img id="piyo-49" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/49.jpg">
+                    <img id="piyo-50" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/50.jpg">
+                    <img id="piyo-51" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/51.jpg">
+                    <img id="piyo-52" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/52.jpg">
+                    <img id="piyo-53" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/53.jpg">
+                    <img id="piyo-54" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/54.jpg">
+                    <img id="piyo-55" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/55.jpg">
+                    <img id="piyo-56" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/56.jpg">
+                    <img id="piyo-57" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/57.jpg">
+                    <img id="piyo-58" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/58.jpg">
+                    <img id="piyo-59" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/59.jpg">
+                    <img id="piyo-60" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/60.jpg">
+                    <img id="piyo-61" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/61.jpg">
+                    <img id="piyo-62" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/62.jpg">
+                    <img id="piyo-63" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/63.jpg">
+                    <img id="piyo-64" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/64.jpg">
+                    <img id="piyo-65" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/65.jpg">
+                    <img id="piyo-66" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/66.jpg">
+                    <img id="piyo-67" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/67.jpg">
+                    <img id="piyo-68" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/68.jpg">
+                    <img id="piyo-69" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/69.jpg">
+                    <img id="piyo-70" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/70.jpg">
+                    <img id="piyo-71" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/71.jpg">
+                    <img id="piyo-72" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/72.jpg">
+                    <img id="piyo-73" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/73.jpg">
+                    <img id="piyo-74" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/74.jpg">
+                    <img id="piyo-75" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/75.jpg">
+                    <img id="piyo-76" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/76.jpg">
+                    <img id="piyo-77" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/77.jpg">
+                    <img id="piyo-78" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/78.jpg">
+                    <img id="piyo-79" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/79.jpg">
+                    <img id="piyo-80" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/80.jpg">
+                    <img id="piyo-81" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/81.jpg">
+                    <img id="piyo-82" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/82.jpg">
+                    <img id="piyo-83" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/83.jpg">
+                    <img id="piyo-84" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/84.jpg">
+                    <img id="piyo-85" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/85.jpg">
+                    <img id="piyo-86" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/86.jpg">
+                    <img id="piyo-87" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/87.jpg">
+                    <img id="piyo-88" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/88.jpg">
+                    <img id="piyo-89" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/89.jpg">
+                    <img id="piyo-90" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/90.jpg">
+                    <img id="piyo-91" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/91.jpg">
+                    <img id="piyo-92" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/92.jpg">
+                    <img id="piyo-93" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/93.jpg">
+                    <img id="piyo-94" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/94.jpg">
+                    <img id="piyo-95" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/95.jpg">
+                    <img id="piyo-96" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/96.jpg">
+                    <img id="piyo-97" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/97.jpg">
+                    <img id="piyo-98" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/98.jpg">
+                    <img id="piyo-99" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/99.jpg">
+                    <img id="piyo-100" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/100.jpg">
+                    <img id="piyo-101" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/101.jpg">
+                    <img id="piyo-102" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/102.jpg">
+                    <img id="piyo-103" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/103.jpg">
+                    <img id="piyo-104" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/104.jpg">
+                    <img id="piyo-105" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/105.jpg">
+                    <img id="piyo-106" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/106.jpg">
+                    <img id="piyo-107" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/107.jpg">
+                    <img id="piyo-108" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/108.jpg">
+                    <img id="piyo-109" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/109.jpg">
+                    <img id="piyo-110" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/110.jpg">
+                    <img id="piyo-111" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/111.jpg">
+                    <img id="piyo-112" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/112.jpg">
+                    <img id="piyo-113" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/113.jpg">
+                    <img id="piyo-114" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/114.jpg">
+                    <img id="piyo-115" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/115.jpg">
+                    <img id="piyo-116" class="pls-load piyo-bg-scroll-item bg-scroll-item" data-src="images/stills/piyo/116.jpg">
+                </div>
+            </div>
+            <div id="piyo-content" class="content">
+                <div id="piyo-content-inner" class="content-inner">
+                    <div id="piyo-content-intro" class="content-intro">
+                        <h1 class="piyo-content-h1 content-h1 content-stagger">Define Yourself.</h1>
+                    </div>
+                    <div id="piyo-content-body" class="content-body">
+
+                        <p class="piyo-content-p content-p content-stagger">Who says you have to punish your body to get results from your workout? It’s time for you to define yourself with a low-impact workout that will leave you stronger, longer, and leaner.</p>
+
+                        <p class="piyo-content-p content-p content-stagger">High-energy celebrity fitness trainer, mother of two, and New York Times best-selling author Chalene Johnson has revolutionized the fitness industry by turning her lifelong love of health and fitness into exciting, challenging workouts that scorch calories and burn fat.</p>
+
+                        <p class="piyo-content-p content-p content-stagger">PiYo isn't like standard Pilates and yoga classes that make you hold long, intense poses, or lead you through dozens of repetitive, microscopic core movements. PiYo speeds everything up—including your results—by introducing you to dynamic, flowing sequences that can burn serious calories at the same time as they lengthen and tone your muscles and increase your flexibility.</p>
+
+                        <div id="piyo-content-p-alt-container" class="content-p-alt-container content-stagger">
+                            <p class="piyo-content-p content-p">With every action-packed PiYo session, you can burn excess fat and sculpt and define your whole body, as you minimize the aches and pains that can come along with high-impact workouts. No matter your age, no matter your body type, PiYo will help give you dramatically visible, incredibly beautiful results.</p>
+                        </div>
+                        <p class="piyo-content-p content-p content-stagger">PiYo takes you through low-impact stretching, strengthening, and bodyweight resistance-based exercises that promote lean muscle development. But, the fast, flowing pace increases the intensity so you're not just sculpting and defining every muscle—you're burning major calories and fat!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="t25" class="program">
+            <div id="t25-logo-container" class="logo-container">
+
+                <img id="t25-logo" class="logo" src="images/logos/t25-logo-grayscale.png">
+            </div>
+            <div id="t25-bg-scroll-container" class="bg-scroll-container">
+                <div id="t25-bg-overlay" class="bg-overlay"></div>
+                <div id="t25-bg-scroll" class="bg-scroll">
+                    <img id="t25-1" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/1.jpg">
+                    <img id="t25-2" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/2.jpg">
+                    <img id="t25-3" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/3.jpg">
+                    <img id="t25-4" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/4.jpg">
+                    <img id="t25-5" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/5.jpg">
+                    <img id="t25-6" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/6.jpg">
+                    <img id="t25-7" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/7.jpg">
+                    <img id="t25-8" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/8.jpg">
+                    <img id="t25-9" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/9.jpg">
+                    <img id="t25-10" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/10.jpg">
+                    <img id="t25-11" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/11.jpg">
+                    <img id="t25-12" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/12.jpg">
+                    <img id="t25-13" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/13.jpg">
+                    <img id="t25-14" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/14.jpg">
+                    <img id="t25-15" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/15.jpg">
+                    <img id="t25-16" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/16.jpg">
+                    <img id="t25-17" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/17.jpg">
+                    <img id="t25-18" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/18.jpg">
+                    <img id="t25-19" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/19.jpg">
+                    <img id="t25-20" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/20.jpg">
+                    <img id="t25-21" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/21.jpg">
+                    <img id="t25-22" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/22.jpg">
+                    <img id="t25-23" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/23.jpg">
+                    <img id="t25-24" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/24.jpg">
+                    <img id="t25-25" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/25.jpg">
+                    <img id="t25-26" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/26.jpg">
+                    <img id="t25-27" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/27.jpg">
+                    <img id="t25-28" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/28.jpg">
+                    <img id="t25-29" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/29.jpg">
+                    <img id="t25-30" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/30.jpg">
+                    <img id="t25-31" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/31.jpg">
+                    <img id="t25-32" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/32.jpg">
+                    <img id="t25-33" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/33.jpg">
+                    <img id="t25-34" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/34.jpg">
+                    <img id="t25-35" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/35.jpg">
+                    <img id="t25-36" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/36.jpg">
+                    <img id="t25-37" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/37.jpg">
+                    <img id="t25-38" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/38.jpg">
+                    <img id="t25-39" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/39.jpg">
+                    <img id="t25-40" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/40.jpg">
+                    <img id="t25-41" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/41.jpg">
+                    <img id="t25-42" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/42.jpg">
+                    <img id="t25-43" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/43.jpg">
+                    <img id="t25-44" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/44.jpg">
+                    <img id="t25-45" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/45.jpg">
+                    <img id="t25-46" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/46.jpg">
+                    <img id="t25-47" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/47.jpg">
+                    <img id="t25-48" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/48.jpg">
+                    <img id="t25-49" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/49.jpg">
+                    <img id="t25-50" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/50.jpg">
+                    <img id="t25-51" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/51.jpg">
+                    <img id="t25-52" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/52.jpg">
+                    <img id="t25-53" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/53.jpg">
+                    <img id="t25-54" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/54.jpg">
+                    <img id="t25-55" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/55.jpg">
+                    <img id="t25-56" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/56.jpg">
+                    <img id="t25-57" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/57.jpg">
+                    <img id="t25-58" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/58.jpg">
+                    <img id="t25-59" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/59.jpg">
+                    <img id="t25-60" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/60.jpg">
+                    <img id="t25-61" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/61.jpg">
+                    <img id="t25-62" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/62.jpg">
+                    <img id="t25-63" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/63.jpg">
+                    <img id="t25-64" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/64.jpg">
+                    <img id="t25-65" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/65.jpg">
+                    <img id="t25-66" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/66.jpg">
+                    <img id="t25-67" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/67.jpg">
+                    <img id="t25-68" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/68.jpg">
+                    <img id="t25-69" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/69.jpg">
+                    <img id="t25-70" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/70.jpg">
+                    <img id="t25-71" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/71.jpg">
+                    <img id="t25-72" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/72.jpg">
+                    <img id="t25-73" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/73.jpg">
+                    <img id="t25-74" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/74.jpg">
+                    <img id="t25-75" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/75.jpg">
+                    <img id="t25-76" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/76.jpg">
+                    <img id="t25-77" class="pls-load t25-bg-scroll-item bg-scroll-item" data-src="images/stills/t25/77.jpg">
+                </div>
+            </div>
+            <div id="t25-content" class="content">
+                <div id="t25-content-inner" class="content-inner">
+                    <div id="t25-content-intro" class="content-intro">
+                        <h1 class="t25-content-h1 content-h1 content-stagger">It's About Time.</h1>
+                    </div>
+                    <div id="t25-content-body" class="content-body">
+
+                        <p class="t25-content-p content-p content-stagger">No time to work out? Shaun T’s going to get you an hour’s worth of results in just 25 minutes. With FOCUS T25®, that’s all it takes to look better, feel better, change your life.</p>
+
+                        <p class="t25-content-p content-p content-stagger">Ready for a shock? Turns out longer workouts don't always deliver better results. In fact, major studies show that the first 30 minutes of exercise can be every bit as effective at burning fat as workouts that are twice as long.</p>
+
+                        <p class="t25-content-p content-p content-stagger">So when you do a FOCUS T25 workout, you can get an hour's worth of results...but you'll be getting it done in only 25 minutes—so you stay within that optimal, fat-burning zone. It's a full-body workout in 25 minutes. With zero rest. Focus Interval Training works every muscle group in your body—one after the other—then it works it again. It's short. It's sweaty. But after 25 minutes, it's done. No BS...just amazing results.</p>
+
+                        <div id="t25-content-p-alt-container" class="content-p-alt-container content-stagger">
+                            <p class="t25-content-p content-p">By the time you finish FOCUS T25...you're going to be a superhero. But to help you get with the program on Day 1, every workout includes a modified version you can follow until you're ready to stay with me. So anyone...at any age...at any fitness level can do these workouts.</p>
+                        </div>
+                        <p class="t25-content-p content-p content-stagger">We've never seen a product sell as fast as FOCUS T25. Not P90X®. Not INSANITY. We've already gone out of stock 3 times! So if you don't want to risk getting stuck waiting for new inventory, you need to order right now.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tdf" class="program">
+            <div id="tdf-logo-container" class="logo-container">
+
+                <img id="tdf-logo" class="logo" src="images/logos/tdf-logo-grayscale.png">
+            </div>
+            <div id="tdf-bg-scroll-container" class="bg-scroll-container">
+                <div id="tdf-bg-overlay" class="bg-overlay"></div>
+                <div id="tdf-bg-scroll" class="bg-scroll">
+                    <img id="tdf-1" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/1.jpg">
+                    <img id="tdf-2" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/2.jpg">
+                    <img id="tdf-3" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/3.jpg">
+                    <img id="tdf-4" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/4.jpg">
+                    <img id="tdf-5" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/5.jpg">
+                    <img id="tdf-6" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/6.jpg">
+                    <img id="tdf-7" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/7.jpg">
+                    <img id="tdf-8" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/8.jpg">
+                    <img id="tdf-9" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/9.jpg">
+                    <img id="tdf-10" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/10.jpg">
+                    <img id="tdf-11" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/11.jpg">
+                    <img id="tdf-12" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/12.jpg">
+                    <img id="tdf-13" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/13.jpg">
+                    <img id="tdf-14" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/14.jpg">
+                    <img id="tdf-15" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/15.jpg">
+                    <img id="tdf-16" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/16.jpg">
+                    <img id="tdf-17" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/17.jpg">
+                    <img id="tdf-18" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/18.jpg">
+                    <img id="tdf-19" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/19.jpg">
+                    <img id="tdf-20" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/20.jpg">
+                    <img id="tdf-21" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/21.jpg">
+                    <img id="tdf-22" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/22.jpg">
+                    <img id="tdf-23" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/23.jpg">
+                    <img id="tdf-24" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/24.jpg">
+                    <img id="tdf-25" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/25.jpg">
+                    <img id="tdf-26" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/26.jpg">
+                    <img id="tdf-27" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/27.jpg">
+                    <img id="tdf-28" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/28.jpg">
+                    <img id="tdf-29" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/29.jpg">
+                    <img id="tdf-30" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/30.jpg">
+                    <img id="tdf-31" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/31.jpg">
+                    <img id="tdf-32" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/32.jpg">
+                    <img id="tdf-33" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/33.jpg">
+                    <img id="tdf-34" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/34.jpg">
+                    <img id="tdf-35" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/35.jpg">
+                    <img id="tdf-36" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/36.jpg">
+                    <img id="tdf-37" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/37.jpg">
+                    <img id="tdf-38" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/38.jpg">
+                    <img id="tdf-39" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/39.jpg">
+                    <img id="tdf-40" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/40.jpg">
+                    <img id="tdf-41" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/41.jpg">
+                    <img id="tdf-42" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/42.jpg">
+                    <img id="tdf-43" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/43.jpg">
+                    <img id="tdf-44" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/44.jpg">
+                    <img id="tdf-45" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/45.jpg">
+                    <img id="tdf-46" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/46.jpg">
+                    <img id="tdf-47" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/47.jpg">
+                    <img id="tdf-48" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/48.jpg">
+                    <img id="tdf-49" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/49.jpg">
+                    <img id="tdf-50" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/50.jpg">
+                    <img id="tdf-51" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/51.jpg">
+                    <img id="tdf-52" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/52.jpg">
+                    <img id="tdf-53" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/53.jpg">
+                    <img id="tdf-54" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/54.jpg">
+                    <img id="tdf-55" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/55.jpg">
+                    <img id="tdf-56" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/56.jpg">
+                    <img id="tdf-57" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/57.jpg">
+                    <img id="tdf-58" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/58.jpg">
+                    <img id="tdf-59" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/59.jpg">
+                    <img id="tdf-60" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/60.jpg">
+                    <img id="tdf-61" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/61.jpg">
+                    <img id="tdf-62" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/62.jpg">
+                    <img id="tdf-63" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/63.jpg">
+                    <img id="tdf-64" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/64.jpg">
+                    <img id="tdf-65" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/65.jpg">
+                    <img id="tdf-66" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/66.jpg">
+                    <img id="tdf-67" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/67.jpg">
+                    <img id="tdf-68" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/68.jpg">
+                    <img id="tdf-69" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/69.jpg">
+                    <img id="tdf-70" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/70.jpg">
+                    <img id="tdf-71" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/71.jpg">
+                    <img id="tdf-72" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/72.jpg">
+                    <img id="tdf-73" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/73.jpg">
+                    <img id="tdf-74" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/74.jpg">
+                    <img id="tdf-75" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/75.jpg">
+                    <img id="tdf-76" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/76.jpg">
+                    <img id="tdf-77" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/77.jpg">
+                    <img id="tdf-78" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/78.jpg">
+                    <img id="tdf-79" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/79.jpg">
+                    <img id="tdf-80" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/80.jpg">
+                    <img id="tdf-81" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/81.jpg">
+                    <img id="tdf-82" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/82.jpg">
+                    <img id="tdf-83" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/83.jpg">
+                    <img id="tdf-84" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/84.jpg">
+                    <img id="tdf-85" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/85.jpg">
+                    <img id="tdf-86" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/86.jpg">
+                    <img id="tdf-87" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/87.jpg">
+                    <img id="tdf-88" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/88.jpg">
+                    <img id="tdf-89" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/89.jpg">
+                    <img id="tdf-90" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/90.jpg">
+                    <img id="tdf-91" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/91.jpg">
+                    <img id="tdf-92" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/92.jpg">
+                    <img id="tdf-93" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/93.jpg">
+                    <img id="tdf-94" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/94.jpg">
+                    <img id="tdf-95" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/95.jpg">
+                    <img id="tdf-96" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/96.jpg">
+                    <img id="tdf-97" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/97.jpg">
+                    <img id="tdf-98" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/98.jpg">
+                    <img id="tdf-99" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/99.jpg">
+                    <img id="tdf-100" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/100.jpg">
+                    <img id="tdf-101" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/101.jpg">
+                    <img id="tdf-102" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/102.jpg">
+                    <img id="tdf-103" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/103.jpg">
+                    <img id="tdf-104" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/104.jpg">
+                    <img id="tdf-105" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/105.jpg">
+                    <img id="tdf-106" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/106.jpg">
+                    <img id="tdf-107" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/107.jpg">
+                    <img id="tdf-108" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/108.jpg">
+                    <img id="tdf-109" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/109.jpg">
+                    <img id="tdf-110" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/110.jpg">
+                    <img id="tdf-111" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/111.jpg">
+                    <img id="tdf-112" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/112.jpg">
+                    <img id="tdf-113" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/113.jpg">
+                    <img id="tdf-114" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/114.jpg">
+                    <img id="tdf-115" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/115.jpg">
+                    <img id="tdf-116" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/116.jpg">
+                    <img id="tdf-117" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/117.jpg">
+                    <img id="tdf-118" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/118.jpg">
+                    <img id="tdf-119" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/119.jpg">
+                    <img id="tdf-120" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/120.jpg">
+                    <img id="tdf-121" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/121.jpg">
+                    <img id="tdf-122" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/122.jpg">
+                    <img id="tdf-123" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/123.jpg">
+                    <img id="tdf-124" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/124.jpg">
+                    <img id="tdf-125" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/125.jpg">
+                    <img id="tdf-126" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/126.jpg">
+                    <img id="tdf-127" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/127.jpg">
+                    <img id="tdf-128" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/128.jpg">
+                    <img id="tdf-129" class="pls-load tdf-bg-scroll-item bg-scroll-item" data-src="images/stills/tdf/129.jpg">
+                </div>
+            </div>
+            <div id="tdf-content" class="content">
+                <div id="tdf-content-inner" class="content-inner">
+                    <div id="tdf-content-intro" class="content-intro">
+                        <h1 class="tdf-content-h1 content-h1 content-stagger"><span class="no-emph">Simple Fitness. Simple Eating.</span> Fast Results.</h1>
+                    </div>
+                    <div id="tdf-content-body" class="content-body">
+
+                        <p class="tdf-content-p content-p content-stagger">In 21 days, you can be beach-ready for a vacation, look drop-dead great at your reunion, and be well on your way to losing serious weight. Simple fitness and eating gets fast results.</p>
+
+                        <p class="tdf-content-p content-p content-stagger">It's not another diet. In fact, it's EXACTLY the opposite. 21 Day Fix lets you EAT! Only in just the right portions, so you don't feel miserable and deprived—but you CAN finally start losing weight.</p>
+
+                        <p class="tdf-content-p content-p content-stagger">What's the secret? Our seven exclusive containers. Each one is color-coded for a different kind of food, and pre-measured for the precise portion. You'll never have to "eyeball" your measurements again—if it fits in the container, you can eat it! Combine this eating plan with one 30-minute workout a day. That's all. It's that simple!</p>
+
+                        <div id="tdf-content-p-alt-container" class="content-p-alt-container content-stagger">
+                            <p class="tdf-content-p content-p">Forget about counting, cups, and calories. When it comes to losing weight, simplicity equals success. These seven color-coded containers and Shakeology® shaker cup deliver exactly the right portions every time, so you never eat too much or (too little). Fill them up as directed in the Eating Plan - and you will lose the weight!</p>
+                        </div>
+                        <p class="tdf-content-p content-p content-stagger">Still not sure if it'll work for you? Let us make it even simpler. We're going to let you try the entire program—the full 21 days—and if you don't get the results you want, simply send it back within 30 days for a full refund of the purchase price (less s&amp;h). Think about that. You don't have to wonder if 21 Day Fix is going to work. You get to finish the program and then decide if you want to keep it. That's how convinced we are that you're going to love your results. So go ahead and try it for yourself.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scroller"></div>
+        <canvas id="c">Sorry, your browser does not support canvas.</canvas>
+    </div>
+    <script src="js/functions.js"></script>
+    <script src="js/app.js"></script>
+    <script src="../../js/plsload.js"></script>
+    <script type="text/javascript">
+        cl(programs[startingProgram].program)
+        plsLoad({
+
+            isActive: true,
+            testImages: false,
+            fakeImageLoad: false,
+
+            beforeEndLoadFunctions: function () {
+
+                if (!loadingDone) {
+                    TweenMax.set(programs[startingProgram].containerBackground, {
+                        opacity: 1
+                    });
+                    loadingDone = true;
+                }
+                initIntro();
+                initBlur();
+                initNav();
+                setProgramColors();
+            },
+
+            afterEndLoadFunctions: function () {
+                imagesCached = true;
+            },
+
+            barWidth: window.innerWidth * 0.8,
+
+            imagesToLoad: '.test-img',
+            barTextFontSize: window.innerWidth * 0.1,
+            barTextFontWeight: 300,
+
+            barGradientDirection: 'bottom left',
+            barGradientColorStart: '#7e7bf1',
+            barGradientColorEnd: '#5553a5',
+
+            barProgressGradientDirection: 'left',
+            barProgressGradientColorStart: 'rgba(204, 227, 248, 1)',
+            barProgressGradientColorEnd: 'rgba(0, 117, 222, 1)',
+
+            barBackground: '#efefef',
+            barProgressBackground: programColors[programs[startingProgram].id].bgAlt,
+            barTextBelowColor: '#000000',
+            barTextAboveColor: '#ffffff'
+        });
+    </script>
+</body>
+
+</html>

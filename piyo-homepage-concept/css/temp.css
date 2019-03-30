@@ -1,0 +1,152 @@
+.section-circles-bg {
+    width: 100%;
+    height: auto;
+    min-height: 10vw;
+    position: absolute;
+    top: 20vw;
+    left: 0;
+    z-index: 50;
+}
+#bod-community-section .section-circles-bg {
+    /*       */
+}
+.section-circles-bg-inner {
+    /*    */
+}
+.section-circle-bg {
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    background: black;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    opacity: 0;
+}
+.section-circle-bg:nth-child(1) {
+    width: 9.75vw;
+    height: 9.75vw;
+    top: 21vw;
+    left: 8.5vw;
+    z-index: 101;
+}
+.section-circle-bg:nth-child(2) {
+    width: 12vw;
+    height: 12vw;
+    top: 19.4vw;
+    left: 18.3vw;
+    z-index: 102;
+}
+.section-circle-bg:nth-child(3) {
+    width: 14.5vw;
+    height: 14.5vw;
+    top: 17.6vw;
+    left: 30.8vw;
+    z-index: 103;
+}
+.section-circle-bg:nth-child(4) {
+    width: 11.9vw;
+    height: 11.9vw;
+    top: 1vw;
+    left: 38.6vw;
+    z-index: 96;
+}
+.section-circle-bg:nth-child(5) {
+    width: 7.3vw;
+    height: 7.3vw;
+    top: 12.8vw;
+    left: 41.5vw;
+    z-index: 94;
+}
+.section-circle-bg:nth-child(6) {
+    width: 15.4vw;
+    height: 15.4vw;
+    top: 3.8vw;
+    left: 46.8vw;
+    z-index: 90;
+}
+.section-circle-bg:nth-child(7) {
+    width: 13.5vw;
+    height: 13.5vw;
+    top: 17.5vw;
+    left: 45vw;
+    z-index: 98;
+}
+.section-circle-bg:nth-child(8) {
+    width: 9.6vw;
+    height: 9.6vw;
+    top: 28.5vw;
+    left: 41.5vw;
+    z-index: 110;
+}
+.section-circle-bg:nth-child(9) {
+    width: 18vw;
+    height: 18vw;
+    top: 15.7vw;
+    left: 59.2vw;
+    z-index: 100;
+}
+.section-circle-bg:nth-child(10) {
+    width: 13.25vw;
+    height: 13.25vw;
+    top: 33vw;
+    left: 57.76vw;
+    z-index: 106;
+}
+.section-circle-bg:nth-child(11) {
+    width: 11.6vw;
+    height: 11.6vw;
+    top: 4.8vw;
+    left: 63vw;
+    z-index: 110;
+}
+.section-circle-bg:nth-child(12) {
+    width: 11.2vw;
+    height: 11.2vw;
+    top: 9.5vw;
+    left: 73.5vw;
+    z-index: 110;
+}
+.section-circle-bg:nth-child(13) {
+    width: 9.25vw;
+    height: 9.25vw;
+    top: 4vw;
+    left: 83.2vw;
+    z-index: 92;
+}
+.section-circle-bg:nth-child(14) {
+    width: 14.25vw;
+    height: 14.25vw;
+    top: 17.75vw;
+    left: 78vw;
+    z-index: 101;
+}
+.section-circle-bg:nth-child(15) {
+    width: 14.25vw;
+    height: 14.25vw;
+    top: 31vw;
+    left: 76vw;
+    z-index: 110;
+}
+.section-circle-bg:nth-child(16) {
+    width: 9.4vw;
+    height: 9.4vw;
+    top: 10.75vw;
+    left: 90.5vw;
+    z-index: 90;
+}
+.section-circle-bg:nth-child(17) {
+    width: 13.5vw;
+    height: 13.5vw;
+    top: 18.3vw;
+    left: 92vw;
+    z-index: 103;
+}
+.section-circle-bg-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: none;
+    float: left;
+}

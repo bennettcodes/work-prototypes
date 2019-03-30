@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!--320-->
+    <title>BOD Android: Squares</title>
+    <script src="../mobile-bb17-links/js/jquery-2.2.1.min.js"></script>
+    <script src="../mobile-bb17-links/js/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="../mobile-android-links/css/bb17-style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800italic,800|Exo:400,100,100italic,200,300,200italic,300italic,400italic,600italic,700,700italic,800,800italic,900,900italic,600,500,500italic|Josefin+Sans:100,300,400' rel='stylesheet' type='text/css'> </head>
+
+<body> <img class="load-cache" src="../mobile-android-links/images/load-weight-light.gif">
+    <div id="debug">Hello</div>
+    <div id="mobile-alert"> Please view from your mobile device. </div>
+    <!-- OUTER CONTAINER -->
+    <div id="header">
+        <div id="back-icon" class="add-back-arrow"></div>
+        <div id="video-back-icon" class="add-back-arrow"></div>
+        <img id="logo" src="../mobile-bb17-links/images/logo.png">
+        <div id="nav">
+            <div id="nav-items">
+                <div id="move-nav-item" class="nav-item">Fitness
+                    <div class="nav-item-highlight"></div>
+                </div>
+                <div id="eat-nav-item" class="nav-item">Nutrition
+                    <div class="nav-item-highlight"></div>
+                </div>
+                <div id="connect-nav-item" class="nav-item">Community
+                    <div class="nav-item-highlight"></div>
+                </div>
+            </div>
+            <div id="notifications-bg"></div>
+            <div id="notifications">
+                <div id="notifications-label">2</div>
+            </div>
+            <div id="menu-icon-tap-region"></div>
+            <div id="menu-icon">
+                <div id="menu-icon-bars">
+                    <div class="menu-icon-bar"></div>
+                    <div class="menu-icon-bar"></div>
+                    <div class="menu-icon-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu-overlay">
+        <div id="menu-items">
+            <div id="profile-menu-item" class="menu-item">Profile</div>
+            <div id="stats-menu-item" class="menu-item">Stats</div>
+        </div>
+    </div>
+    <div id="outer-container">
+        <!-- MAIN CONTAINER -->
+        <div id="content-bg" class="bb-blue-linear-gradient-to-bottom">
+            <div id="content-bg-img"></div>
+        </div>
+        <div id="container">
+            <div id="profile-overlay" class="overlay">
+                <div id="profile-overlay-inner">
+                    <div id="profile-hero">
+                        <img id="profile-hero-fpo" src="../mobile-bb17-links/images/fpos/profile-hero-fpo.jpg">
+                    </div>
+                    <div id="profile-tabs" class="tabs">
+                        <div id="profile-posts-tab" class="tab">Posts
+                            <div class="tab-highlight"></div>
+                        </div>
+                        <div id="profile-about-tab" class="tab">About
+                            <div class="tab-highlight inactive"></div>
+                        </div>
+                    </div>
+                    <div id="profile-content">
+                        <div id="profile-posts-section" class="section-content">
+                            <img class="profile-content-fpo" src="../mobile-bb17-links/images/fpos/profile-content-posts-fpo.jpg">
+                        </div>
+                        <div id="profile-about-section" class="section-content">
+                            <img class="profile-content-fpo" src="../mobile-bb17-links/images/fpos/profile-content-about-fpo.jpg">
+                        </div>
+                        <div id="bottom-padding"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="stats-overlay" class="overlay">
+                <div id="stats-overlay-inner">
+                    <img id="stats-fpo" src="../mobile-bb17-links/images/fpos/stats-fpo.jpg">
+                    <div id="bottom-padding"></div>
+                </div>
+            </div>
+            <div id="coach-overlay" class="overlay">
+                <div id="coach-overlay-inner">
+                    <div id="coach-hero">
+                        <img id="coach-hero-fpo" src="../mobile-bb17-links/images/fpos/coach-hero-fpo.jpg">
+                    </div>
+                    <div id="coach-tabs" class="tabs">
+                        <div id="coach-posts-tab" class="tab">Posts
+                            <div class="tab-highlight"></div>
+                        </div>
+                        <div id="coach-about-tab" class="tab">About
+                            <div class="tab-highlight inactive"></div>
+                        </div>
+                    </div>
+                    <div id="coach-content">
+                        <div id="coach-posts-section" class="section-content">
+                            <img class="coach-content-fpo" src="../mobile-bb17-links/images/fpos/coach-content-posts-fpo.jpg">
+                        </div>
+                        <div id="coach-about-section" class="section-content">
+                            <img class="coach-content-fpo" src="../mobile-bb17-links/images/fpos/coach-content-about-fpo.jpg">
+                        </div>
+                        <div id="bottom-padding"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="share-overlay">
+                <div id="share-overlay-inner"> <img id="share-fpo" src="../mobile-bb17-links/images/fpos/share-fpo.jpg">
+                    <div id="bottom-padding"></div>
+                </div>
+            </div>
+            <div id="finished-overlay">
+                <div id="finished-overlay-inner">
+                    <!--                                    <img id="workout-summary-fpo" src="../mobile-bb17-links/images/fpos/2-workout-summary.png">-->
+                    <div id="slay-container">
+                        <div id="slay-checkmark">
+                            <div class="slay-checkmark-circle"></div>
+                            <div class="slay-checkmark-circle"></div>
+                            <div id="slay-checkmark-lines">
+                                <div id="slay-checkmark-line-short" class="slay-checkmark-line"></div>
+                                <div id="slay-checkmark-line-long" class="slay-checkmark-line"></div>
+                            </div>
+                        </div>
+                        <div id="slay-label">Workout Complete!</div>
+                    </div>
+                    <div id="stats-container">
+                        <div class="stats-row">
+                            <div class="stats-number">
+                                <div class="stats-number-text">3<sup>rd</sup></div>
+                            </div>
+                            <div class="stats-label">
+                                <div class="stats-label-text">workout this week</div>
+                            </div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stats-number">
+                                <div class="stats-number-text">57<sup>%</sup></div>
+                            </div>
+                            <div class="stats-label">
+                                <div class="stats-label-text">program completed</div>
+                            </div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stats-number">
+                                <div class="stats-number-text">328</div>
+                            </div>
+                            <div class="stats-label">
+                                <div class="stats-label-text">calories burned</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="share-container">
+                        <div id="home-label">Home</div>
+                        <div id="share-button">Share</div>
+                    </div>
+                    <div id="bottom-padding"></div>
+                </div>
+            </div>
+            <div id="video-overlay">
+                <div id="finish-button-container">
+                    <div id="finish-button">Tap to finish</div>
+                </div> <img id="video-still" src="../mobile-bb17-links/images/total-body-cardio-fix-screenshot.jpg"> <img id="play-controls" src="../mobile-bb17-links/images/play-controls.jpg">
+            </div>
+            <div id="main-content"> <img id="home-profile-fpo" src="../mobile-bb17-links/images/fpos/home-profile-fpo.jpg">
+                <div id="greeting">Good Evening, <span id="greeting-name">Jane</span></div>
+                <div id="avatar-container">
+                    <div id="avatar"> <img id="avatar-img" src="../mobile-bb17-links/images/avatar2.jpg"> </div>
+                </div>
+                <div id="day" class="section-title">Day <span id="day-number">12</span></div>
+                <div id="torch-challenge-group-label">The Torch Challenge Group</div>
+                <div id="camera-button">
+                    <svg id="camera-button-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 513.7 397.7" style="enable-background:new 0 0 513.7 397.7;" xml:space="preserve">
+                        <g>
+                            <path d="M0,159.7c0.1-0.1,0.3-0.2,0.4-0.3c8.4-24.4,19.9-32.6,45.9-32.6c16,0,32-0.1,48,0.1c3.3,0,5-1.1,6.6-3.9
+		c9.4-16.6,19.1-33.1,28.5-49.8c1.5-2.7,3.3-3.5,6.3-3.5c35.3,0.1,70.6,0.1,105.9,0c2.9,0,4.4,0.9,5.8,3.4
+		c9.4,16.7,19.1,33.2,28.4,49.9c1.6,2.8,3.3,3.9,6.6,3.9c17.8-0.2,35.7-0.1,53.5-0.1c22.7,0.1,40.1,17.5,40.1,40.3
+		c0,63.1,0,126.3,0,189.4c0,20.2-11.6,35.1-31.3,40.3c-0.6,0.2-1.1,0.6-1.7,0.9c-103.3,0-206.7,0-310,0c-6.4-3.3-13.3-5.9-19.2-10
+		C6,382.3,2.7,373.6,0,364.7C0,296.4,0,228.1,0,159.7z M188.1,387c48.8,0,97.7,0.1,146.5,0c18.6,0,30.6-12.2,30.6-30.7
+		c0-62.8,0-125.7,0-188.5c0-2.6-0.1-5.4-0.8-7.9c-3.5-14-14.5-22.3-29.8-22.3c-39.2-0.1-78.3,0-117.5,0c-58.3,0-116.7,0.3-175-0.2
+		c-18.9-0.1-31.7,14.8-31.5,31.7c0.5,62,0.2,124,0.2,186c0,3.1,0.1,6.4,0.7,9.4c2.3,11.4,13.3,22.8,30.6,22.7
+		C90.8,386.7,139.5,387,188.1,387z M111.1,126.4c51.7,0,102.7,0,154.3,0c-8.6-15-16.8-29.4-25.2-43.7c-0.6-1.1-2.6-1.9-4-1.9
+		c-32-0.1-63.9-0.1-95.9,0c-1.4,0-3.3,0.9-4,2C128,97.1,119.7,111.5,111.1,126.4z" />
+                            <path d="M450.2,63.6c-18.5,0-36.1,0-53.9,0c0-3.6,0-6.9,0-10.7c17.7,0,35.4,0,53.7,0c0-17.9,0-35.3,0-52.9c3.8,0,7.1,0,10.9,0
+		c0,17.4,0,34.8,0,52.7c17.9,0,35.3,0,52.9,0c0,3.8,0,7.1,0,10.9c-17.4,0-34.8,0-52.7,0c0,18.2,0,36,0,53.9c-3.8,0-7.1,0-10.9,0
+		C450.2,99.8,450.2,82,450.2,63.6z" />
+                            <path d="M189,360.7c-54.9,0-99-44.1-99-99c0-54.9,44.1-99,99-99c54.7,0,99,44.1,99,98.5C288,316.6,244.1,360.7,189,360.7z
+		 M277.2,261.5c-0.1-48.9-39.4-88.1-88.4-88c-48.9,0.1-88.1,39.4-88,88.4c0.1,48.9,39.4,88.1,88.4,88
+		C238.1,349.9,277.3,310.5,277.2,261.5z" />
+                            <path d="M319.8,164.8c10.7-0.1,19.1,8.2,19.2,18.8c0.1,10.7-8.2,19.1-18.8,19.2c-10.7,0.1-19.1-8.2-19.2-18.8
+		C301,173.2,309.2,164.8,319.8,164.8z M328.2,183.8c0-4.8-3.3-8.2-8.1-8.3c-4.8,0-8.2,3.3-8.3,8.1c0,4.8,3.3,8.2,8.1,8.3
+		C324.7,191.9,328.1,188.6,328.2,183.8z" />
+                            <path d="M244,261.8c0,30.6-24.5,54.9-55.3,54.9c-30.3-0.1-54.6-24.6-54.6-55.1c0-30.6,24.5-54.9,55.3-54.9
+		C219.7,206.8,244,231.3,244,261.8z M189.2,305.9c24.9-0.2,44.1-19.8,44-44.7c-0.1-24.6-19.9-43.8-44.9-43.7
+		c-24.3,0.1-43.6,20-43.5,44.7C145,286.7,164.7,306.1,189.2,305.9z" /> </g>
+                    </svg>
+                    <div id="camera-button-more">&bull;&bull;&bull;</div>
+                </div>
+                <div id="home-content">
+<!--                    <img id="play-button-fpo" src="../mobile-bb17-links/images/fpos/play-button-fpo.jpg">-->
+                    <div id="torch-challenge-group-items">
+                        <div id="play-item" class="torch-challenge-group-item">
+                            <div class="torch-challenge-group-item-inner">
+                                <div id="play-item-bg" class="torch-challenge-group-item-bg"></div>
+                                <div class="torch-challenge-group-item-text">
+                                    <div class="torch-challenge-group-item-text-title">Total Body
+                                        <br>Cardio Fix</div>
+                                    <div class="torch-challenge-group-item-text-description">21 Day Fix</div>
+                                </div>
+                                <div class="torch-challenge-group-item-icon-container">
+                                    <div id="play-icon" class="torch-challenge-group-item-icon">
+                                        <!--
+                                        <div class="torch-challenge-group-item-icon-bg1"></div>
+                                        <div class="torch-challenge-group-item-icon-bg2"></div>
+-->
+                                        <svg id="checkmark" class="torch-challenge-group-item-icon-symbol" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 91.4 71.4" style="enable-background:new 0 0 91.4 71.4;" xml:space="preserve">
+                                            <g id="gOS63x.tif">
+                                                <g>
+                                                    <path d="M35.3,40.8C49.2,26.8,62.7,13.3,76,0c5.3,5.3,10.6,10.6,15.4,15.4c-18.7,18.7-37.4,37.4-56,56C23.6,59.7,11.7,47.8,0,36.1
+			c4.9-4.9,10.2-10.2,15.3-15.3C21.7,27.1,28.3,33.8,35.3,40.8z" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <svg id="arrow" class="torch-challenge-group-item-icon-symbol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 198.4 229.1" style="enable-background:new 0 0 198.4 229.1;" xml:space="preserve">
+                                            <polygon points="198.4,114.5 0,0 0,229.1 " /> </svg>
+                                    </div>
+                                </div>
+                                <div class="torch-challenge-group-item-text-more">&bull;&bull;&bull;</div>
+                            </div>
+                        </div>
+                        <div id="shakeology-item" class="torch-challenge-group-item">
+                            <div class="torch-challenge-group-item-inner">
+                                <div class="torch-challenge-group-item-text">
+                                    <div class="torch-challenge-group-item-text-title">Shakeology</div>
+                                    <div class="torch-challenge-group-item-text-description"></div>
+                                </div>
+                                <div class="torch-challenge-group-item-icon-container">
+                                    <div class="torch-challenge-group-item-icon">
+                                        <!--
+                                        <div class="torch-challenge-group-item-icon-bg1"></div>
+                                        <div class="torch-challenge-group-item-icon-bg2"></div>
+-->
+                                        <svg class="torch-challenge-group-item-icon-symbol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 127.6 127.7" style="enable-background:new 0 0 127.6 127.7;" xml:space="preserve">
+                                            <g id="sf16bE.tif">
+                                                <g>
+                                                    <path d="M127.6,67.7c-19.7,0-39.4,0-60,0c0,20.6,0,40.3,0,60c-2.7,0-5.3,0-8,0c0-19.6,0-39.3,0-59.5c-20.1,0-39.7,0-59.6,0
+			c0-3.1,0-5.6,0-8.8c19.7,0,39.2,0,59.4,0c0-20.1,0-39.7,0-59.5c3,0,5.4,0,8.4,0c0,19.7,0,39.3,0,59.7c20.3,0,40.1,0,59.8,0
+			C127.6,62.4,127.6,65.1,127.6,67.7z" /> </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="torch-challenge-group-item-text-more">&bull;&bull;&bull;</div>
+                            </div>
+                        </div>
+                        <div id="meal-tracking-group-item" class="torch-challenge-group-item">
+                            <div class="torch-challenge-group-item-inner">
+                                <div class="torch-challenge-group-item-text">
+                                    <div class="torch-challenge-group-item-text-title">Meal Tracking</div>
+                                    <div class="torch-challenge-group-item-text-description"></div>
+                                </div>
+                                <div class="torch-challenge-group-item-icon-container">
+                                    <div class="torch-challenge-group-item-icon">
+                                        <!--
+                                        <div class="torch-challenge-group-item-icon-bg1"></div>
+                                        <div class="torch-challenge-group-item-icon-bg2"></div>
+-->
+                                        <svg class="torch-challenge-group-item-icon-symbol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 127.6 127.7" style="enable-background:new 0 0 127.6 127.7;" xml:space="preserve">
+                                            <g id="sf16bE.tif">
+                                                <g>
+                                                    <path d="M127.6,67.7c-19.7,0-39.4,0-60,0c0,20.6,0,40.3,0,60c-2.7,0-5.3,0-8,0c0-19.6,0-39.3,0-59.5c-20.1,0-39.7,0-59.6,0
+			c0-3.1,0-5.6,0-8.8c19.7,0,39.2,0,59.4,0c0-20.1,0-39.7,0-59.5c3,0,5.4,0,8.4,0c0,19.7,0,39.3,0,59.7c20.3,0,40.1,0,59.8,0
+			C127.6,62.4,127.6,65.1,127.6,67.7z" /> </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="torch-challenge-group-item-text-more">&bull;&bull;&bull;</div>
+                            </div>
+                        </div>
+                    </div> <img id="home-content-fpo" src="../mobile-bb17-links/images/fpos/home-fpo.png">
+                    <div id="stats-button">See All Stats</div>
+                    <div id="bottom-padding"></div>
+                </div>
+            </div>
+            <!-- PROGRAM CONTAINER -->
+            <div id="program-container">
+                <div id="twenty-two-minute-hard-corps-program" class="program">
+                    <div class="program-details-tap-region"></div>
+                    <div class="program-hero"> <img id="ttmhc-logo" class="program-hero-logo" src="../mobile-android-links/images/programs/22-minute-hard-corps/22mhc-logo.png"> <img class="program-hero-bg" src="../mobile-android-links/images/programs/22-minute-hard-corps/hero/22mhc-hero.jpg">
+                        <div class="program-hero-description">
+                            <p class="program-hero-description-text">Get epic results in 22 minutes a day in this military-inspired, 8-week boot camp program.</p>
+                        </div>
+                    </div>
+                    <div class="program-chapters">
+                        <div class="program-chapter">
+                            <div class="program-chapter-header"> <img class="program-chapter-header-arrow" src="../mobile-android-links/images/icons/program-arrow-icon-gray.png">
+                                <h3 class="program-chapter-header-title">Lean Set</h3> </div>
+                            <div class="program-chapter-break"></div>
+                        </div>
+                        <div class="program-chapter-expanded">
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Total Body Cardio Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-remove-icon" src="../mobile-android-links/images/icons/offline-remove-icon-gray.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Upper Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Lower Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Pilates Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Cardio Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                        </div>
+                        <div class="program-chapter">
+                            <div class="program-chapter-header"> <img class="program-chapter-header-arrow" src="../mobile-android-links/images/icons/program-arrow-icon-gray.png">
+                                <h3 class="program-chapter-header-title">Bulk Set</h3> </div>
+                            <div class="program-chapter-break"></div>
+                        </div>
+                        <div class="program-chapter-expanded">
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Total Body Cardio Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Upper Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Lower Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Pilates Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                            </div>
+                            <div class="program-chapter-item">
+                                <h3 class="program-chapter-item-title">Cardio Fix</h3> <img class="program-chapter-item-play-icon" src="../mobile-android-links/images/icons/play-icon-blue.png"> <img class="program-chapter-item-time-icon" src="../mobile-android-links/images/icons/time-icon-gray.png">
+                                <div class="program-chapter-item-bottom-break"></div>
+                                <h5 class="program-chapter-item-time-text">30m</h5> <img class="program-chapter-item-offline-icon" src="../mobile-android-links/images/icons/offline-icon-blue.png"> </div>
+                        </div>
+                    </div>
+                    <div class="program-materials">
+                        <h3 class="program-materials-header">Program Materials</h3>
+                        <div class="program-material-row">
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/exclusive-toolkit-icon.png">
+                                <h4 class="program-material-title">Quick Start</h4>
+                                <p class="program-material-description">Be on your way to getting boot camp fit with these 4 steps.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/guia-de-nutricion-icon.png">
+                                <h4 class="program-material-title">Nutrition Guide</h4>
+                                <p class="program-material-description">Follow simple-to-prepare, delicious recipes and learn how to eat healthy portions.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/faq-icon.png">
+                                <h4 class="program-material-title">FAQ</h4>
+                                <p class="program-material-description">All the answers you need to get the results you want!</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/workout-calendar-icon.png">
+                                <h4 class="program-material-title">Workout Calendar</h4>
+                                <p class="program-material-description">Breaks down your workout for each day.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/hell-week-icon.png">
+                                <h4 class="program-material-title">Hell Week Challenge</h4>
+                                <p class="program-material-description">Two-a-day workouts to get you leaner, faster.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/tally-sheets-checked-icon.png">
+                                <h4 class="program-material-title">Tally Sheets</h4>
+                                <p class="program-material-description">Helps you keep a record as your performance improves.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/exclusive-toolkit-icon.png">
+                                <h4 class="program-material-title">Guide de D&eacute;marrage Rapide</h4>
+                                <p class="program-material-description">Suivez ces 4 etapes facilies pour creer votre proper chef-d'oeuvre physique</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/guia-de-nutricion-icon.png">
+                                <h4 class="program-material-title">Guide du Programme et de...</h4>
+                                <p class="program-material-description">Comprend votre plan de nutrition simple</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/workout-calendar-icon.png">
+                                <h4 class="program-material-title">Calendrier de 8 Semaines</h4>
+                                <p class="program-material-description">Planifie vos seances d'entrainement pour chaque journee.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/hell-week-icon.png">
+                                <h4 class="program-material-title">D&eacute;fi Hell Week</h4>
+                                <p class="program-material-description">Comprend votre plan de nutrition simple</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/tally-sheets-checked-icon.png">
+                                <h4 class="program-material-title">Feuille de Contr&ocirc;le</h4>
+                                <p class="program-material-description">Planifie vos seances d'entrainement pour chaque journee</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/guia-de-nutricion-icon.png">
+                                <h4 class="program-material-title">Gu&#237;a de Nutrici&#243;n</h4>
+                                <p class="program-material-description">Deux seances d'entrainement par jour pour maigrir plus rapidement</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/hell-week-icon.png">
+                                <h4 class="program-material-title">Reto 'Hell Week'</h4>
+                                <p class="program-material-description">Dos entrenamientos al dia para conseguir una figura mas delgada, mas rapido.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/tally-sheets-checked-icon.png">
+                                <h4 class="program-material-title">Hojas de control</h4>
+                                <p class="program-material-description">Te ayuda a mantener un registro de tu progreso</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                        <div class="program-material-row">
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/exclusive-toolkit-icon.png">
+                                <h4 class="program-material-title">Gu&iacute;a de inicio r&aacute;pido</h4>
+                                <p class="program-material-description">Estaras en el camino hacia un cuerpo delgado y fuerte con estos 4 pasos</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                            <div class="program-material"> <img class="program-material-icon" src="../mobile-android-links/images/programs/icons/workout-calendar-icon.png">
+                                <h4 class="program-material-title">Calendario de entrenamiento</h4>
+                                <p class="program-material-description">Te muestra tu rutina para cada dia.</p>
+                                <div class="program-material-download-button">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-break"></div>
+                </div>
+            </div>
+            <!-- SECTION CONTAINER -->
+            <div id="section-container">
+                <!-- SECTION 1 -->
+                <!-- WORKOUTS SECTION v1 -->
+                <div id="workouts-section1" class="section active-section">
+                    <div id="workout-tabs" class="tabs">
+                        <div id="workouts-tab" class="tab">Workouts
+                            <div class="tab-highlight"></div>
+                        </div>
+                        <div id="articles-tab" class="tab">Articles
+                            <div class="tab-highlight inactive"></div>
+                        </div>
+                    </div>
+                    <div class="workout-content">
+                        <div id="workouts-section" class="section-content">
+                            <div class="section-bg"></div>
+                            <div class="workouts-section-slider-container">
+                                <div id="workouts-section-slider-text">
+                                    <h3 id="workouts-section-slider-text-intro">Hello Travis!<br>Time to work out!</h3> </div>
+                            </div>
+                            <!-- POPULAR PROGRAMS LIST CONTAINER -->
+                            <div id="workouts-section-list-container" class="list-container">
+                                <div class="list-sign-in-container">
+                                    <div class="list-sign-in-button list-left-sign-in-button">Sign In</div>
+                                    <div class="list-sign-in-button list-right-sign-in-button">Start Trial</div>
+                                </div>
+                                <div id="list-members-counter-container"> </div>
+                                <div id="workouts-section-list" class="list">
+                                    <div id="workouts-section-list-item-container" class="list-item-container"> </div>
+                                </div>
+                            </div>
+                            <div class="section-break"></div>
+                        </div>
+                        <div id="articles-section" class="section-content">
+                            <div id="articles-section-list-container" class="list-container"> </div>
+                            <div id="articles-blog-items">
+                                <div class="blog-item newest-item ab-workouts-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/articles/valentines.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">Valentine's Day Partner Yoga with Tony Horton</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date">Posted <span class="serving-amount">2.14.2017</span></div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">4</span> Minute Read</div>
+                                            <div class="blog-item-comments"><span class="comments-count">0</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item newest-item ab-workouts-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/articles/5-yoga-poses.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">5 Yoga Poses for Core Strength</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date">Posted <span class="serving-amount">12.19.2016</span></div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">12</span> Minute Read</div>
+                                            <div class="blog-item-comments"><span class="comments-count">10</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item newest-item fitness-tips-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/articles/yoga-sane.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">Yoga to Keep You Sane Through the Holidays</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date">Posted <span class="serving-amount">12.9.2016</span></div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">14</span> Minute Read</div>
+                                            <div class="blog-item-comments"><span class="comments-count">0</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item newest-item fitness-tips-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/articles/home-gym.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">How to Build a Home Gym on a Budget</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date">Posted <span class="serving-amount">12.6.2016</span></div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">10</span> Minute Read</div>
+                                            <div class="blog-item-comments"><span class="comments-count">91</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECTION 2 -->
+                <div id="eat-section" class="tab-section inactive">
+                    <div id="food-tabs" class="tabs">
+                        <div id="recipes-tab" class="tab">Recipes
+                            <div class="tab-highlight"></div>
+                        </div>
+                        <div id="shows-tab" class="tab">Shows
+                            <div class="tab-highlight inactive"></div>
+                        </div>
+                        <div id="tips-tricks-tab" class="tab">Articles
+                            <div class="tab-highlight inactive"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div id="recipes-section" class="section-content">
+                            <div id="recipes-button">Search by Ingredients</div>
+                            <div id="recipes-section-list-container" class="list-container"> </div>
+                            <div id="recipes-blog-items">
+                                <div class="blog-item popular-item dinner-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/recipes/healthy-chicken-parmesan.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">Healthy Chicken Parmesan</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date"><span class="serving-amount">4</span> Servings</div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">110</span> Mins Total Time</div>
+                                            <div class="blog-item-comments"><span class="comments-count">12</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item popular-item lunch-item dinner-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/recipes/skinny-beef-stroganoff.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">Skinny Beef Stroganoff</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date"><span class="serving-amount">6</span> Servings</div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">56</span> Mins Total Time</div>
+                                            <div class="blog-item-comments"><span class="comments-count">101</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item popular-item under-30-item lunch-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/recipes/chicken-noodle-soup.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">Chicken Noodle Soup</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date"><span class="serving-amount">6</span> Servings</div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">51</span> Mins Total Time</div>
+                                            <div class="blog-item-comments"><span class="comments-count">9</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item popular-item under-30-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/recipes/healthy-red-velvet-cupcakes.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">Healthy Red Velvet Cupcakes</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date"><span class="serving-amount">6</span> Servings</div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">110</span> Mins Total Time</div>
+                                            <div class="blog-item-comments"><span class="comments-count">18</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="bottom-padding"></div>
+                        </div>
+                        <div id="shows-section" class="section-content">
+                            <div id="shows-section-list-container" class="list-container"> </div>
+                            <div id="FIX" data-min="4" data-max="16" class="recipes-item  beginner" style="background-color: rgba(0, 0, 0, 0);">
+                                <div class="recipes-item-thumb"> <img class="recipes-item-thumb-image" src="../mobile-android-links/images/tiles/BOD_FIX_ProgramTiles_AllTrainers.jpg" style="opacity: 1;"> </div>
+                                <div class="list-item-texts" style="z-index: 0; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 26);">
+                                    <div class="list-item-title list-item-text ">Fixate</div>
+                                    <div class="list-item-author list-item-text">Various Instructors</div>
+                                    <div class="list-item-style list-item-text">Cooking Show / Weight Loss</div>
+                                    <div class="list-item-saving list-item-text"></div>
+                                </div>
+                                <div class="list-item-duration list-item-text">4-16
+                                    <br><span class="list-item-minutes">mins</span></div> <img class="list-item-options" src="../mobile-android-links/images/dots-fpo.png">
+                                <div class="list-item-break"></div>
+                            </div>
+                            <div id="FIX" data-min="4" data-max="16" class="recipes-item  beginner" style="background-color: rgba(0, 0, 0, 0);">
+                                <div class="recipes-item-thumb"> <img class="recipes-item-thumb-image" src="../mobile-android-links/images/tiles/BOD_FIX_ProgramTiles_AllTrainers.jpg" style="opacity: 1;"> </div>
+                                <div class="list-item-texts" style="z-index: 0; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 26);">
+                                    <div class="list-item-title list-item-text ">Fixate</div>
+                                    <div class="list-item-author list-item-text">Various Instructors</div>
+                                    <div class="list-item-style list-item-text">Cooking Show / Weight Loss</div>
+                                    <div class="list-item-saving list-item-text"></div>
+                                </div>
+                                <div class="list-item-duration list-item-text">4-16
+                                    <br><span class="list-item-minutes">mins</span></div> <img class="list-item-options" src="../mobile-android-links/images/dots-fpo.png">
+                                <div class="list-item-break"></div>
+                            </div>
+                            <div id="FIX" data-min="4" data-max="16" class="recipes-item  beginner" style="background-color: rgba(0, 0, 0, 0);">
+                                <div class="recipes-item-thumb"> <img class="recipes-item-thumb-image" src="../mobile-android-links/images/tiles/BOD_FIX_ProgramTiles_AllTrainers.jpg" style="opacity: 1;"> </div>
+                                <div class="list-item-texts" style="z-index: 0; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 26);">
+                                    <div class="list-item-title list-item-text ">Fixate</div>
+                                    <div class="list-item-author list-item-text">Various Instructors</div>
+                                    <div class="list-item-style list-item-text">Cooking Show / Weight Loss</div>
+                                    <div class="list-item-saving list-item-text"></div>
+                                </div>
+                                <div class="list-item-duration list-item-text">4-16
+                                    <br><span class="list-item-minutes">mins</span></div> <img class="list-item-options" src="../mobile-android-links/images/dots-fpo.png">
+                                <div class="list-item-break"></div>
+                            </div>
+                            <div id="FIX" data-min="4" data-max="16" class="recipes-item  beginner" style="background-color: rgba(0, 0, 0, 0);">
+                                <div class="recipes-item-thumb"> <img class="recipes-item-thumb-image" src="../mobile-android-links/images/tiles/BOD_FIX_ProgramTiles_AllTrainers.jpg" style="opacity: 1;"> </div>
+                                <div class="list-item-texts" style="z-index: 0; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 26);">
+                                    <div class="list-item-title list-item-text ">Fixate</div>
+                                    <div class="list-item-author list-item-text">Various Instructors</div>
+                                    <div class="list-item-style list-item-text">Cooking Show / Weight Loss</div>
+                                    <div class="list-item-saving list-item-text"></div>
+                                </div>
+                                <div class="list-item-duration list-item-text">4-16
+                                    <br><span class="list-item-minutes">mins</span></div> <img class="list-item-options" src="../mobile-android-links/images/dots-fpo.png">
+                                <div class="list-item-break"></div>
+                            </div>
+                            <div id="FIX" data-min="4" data-max="16" class="recipes-item  beginner" style="background-color: rgba(0, 0, 0, 0);">
+                                <div class="recipes-item-thumb"> <img class="recipes-item-thumb-image" src="../mobile-android-links/images/tiles/BOD_FIX_ProgramTiles_AllTrainers.jpg" style="opacity: 1;"> </div>
+                                <div class="list-item-texts" style="z-index: 0; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 26);">
+                                    <div class="list-item-title list-item-text ">Fixate</div>
+                                    <div class="list-item-author list-item-text">Various Instructors</div>
+                                    <div class="list-item-style list-item-text">Cooking Show / Weight Loss</div>
+                                    <div class="list-item-saving list-item-text"></div>
+                                </div>
+                                <div class="list-item-duration list-item-text">4-16
+                                    <br><span class="list-item-minutes">mins</span></div> <img class="list-item-options" src="../mobile-android-links/images/dots-fpo.png">
+                                <div class="list-item-break"></div>
+                            </div>
+                            <div id="FIX" data-min="4" data-max="16" class="recipes-item  beginner" style="background-color: rgba(0, 0, 0, 0);">
+                                <div class="recipes-item-thumb"> <img class="recipes-item-thumb-image" src="../mobile-android-links/images/tiles/BOD_FIX_ProgramTiles_AllTrainers.jpg" style="opacity: 1;"> </div>
+                                <div class="list-item-texts" style="z-index: 0; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 26);">
+                                    <div class="list-item-title list-item-text ">Fixate</div>
+                                    <div class="list-item-author list-item-text">Various Instructors</div>
+                                    <div class="list-item-style list-item-text">Cooking Show / Weight Loss</div>
+                                    <div class="list-item-saving list-item-text"></div>
+                                </div>
+                                <div class="list-item-duration list-item-text">4-16
+                                    <br><span class="list-item-minutes">mins</span></div> <img class="list-item-options" src="../mobile-android-links/images/dots-fpo.png">
+                                <div class="list-item-break"></div>
+                            </div>
+                            <div id="FIX" data-min="4" data-max="16" class="recipes-item  beginner" style="background-color: rgba(0, 0, 0, 0);">
+                                <div class="recipes-item-thumb"> <img class="recipes-item-thumb-image" src="../mobile-android-links/images/tiles/BOD_FIX_ProgramTiles_AllTrainers.jpg" style="opacity: 1;"> </div>
+                                <div class="list-item-texts" style="z-index: 0; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 26);">
+                                    <div class="list-item-title list-item-text ">Fixate</div>
+                                    <div class="list-item-author list-item-text">Various Instructors</div>
+                                    <div class="list-item-style list-item-text">Cooking Show / Weight Loss</div>
+                                    <div class="list-item-saving list-item-text"></div>
+                                </div>
+                                <div class="list-item-duration list-item-text">4-16
+                                    <br><span class="list-item-minutes">mins</span></div> <img class="list-item-options" src="../mobile-android-links/images/dots-fpo.png">
+                                <div class="list-item-break"></div>
+                            </div>
+                            <div id="bottom-padding"></div>
+                        </div>
+                        <div id="tips-tricks-section" class="section-content">
+                            <div id="tips-tricks-section-list-container" class="list-container"> </div>
+                            <div id="tips-tricks-blog-items">
+                                <div class="blog-item newest-item cooking-tips-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/tips-tricks/alkaline-diet.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">What is the Alkaline Diet?</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date">Posted <span class="serving-amount">2.10.2017</span></div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">4</span> Minute Read</div>
+                                            <div class="blog-item-comments"><span class="comments-count">0</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item newest-item cheats-treats-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/tips-tricks/cleanse-vs-detox.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">Cleanse vs. Detox: What's the Difference</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date">Posted <span class="serving-amount">2.10.2017</span></div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">12</span> Minute Read</div>
+                                            <div class="blog-item-comments"><span class="comments-count">10</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item newest-item cheats-treats-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/tips-tricks/15-healthy-breakfast-ideas.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">15 Healthy Breakfast Ideas</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date">Posted <span class="serving-amount">2.3.2017</span></div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">14</span> Minute Read</div>
+                                            <div class="blog-item-comments"><span class="comments-count">2</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-item newest-item cooking-tips-item"> <img class="blog-item-thumb" src="../mobile-bb17-links/images/tips-tricks/4-tips-weekend.jpg">
+                                    <div class="blog-item-text">
+                                        <div class="blog-item-title">4 Tips to Help You Eat Healthy This Weekend</div>
+                                        <div class="blog-item-subtext">
+                                            <div class="blog-item-post-date">Posted <span class="serving-amount">2.3.2017</span></div>
+                                            <div class="blog-item-read-duration"><span class="read-duration">10</span> Minute Read</div>
+                                            <div class="blog-item-comments"><span class="comments-count">91</span> Comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECTION 3 -->
+                <div id="connect-section" class="tab-section inactive">
+                    <div id="connect-tabs" class="tabs">
+                        <div id="activity-tab" class="tab">Activity
+                            <div class="tab-highlight"></div>
+                        </div>
+                        <div id="boards-tab" class="tab">Boards
+                            <div class="tab-highlight inactive"></div>
+                        </div>
+                        <div id="motivation-tab" class="tab">Motivation
+                            <div class="tab-highlight inactive"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div id="activity-section" class="section-content"> <img class="section-fpo" src="../mobile-bb17-links/images/fpos/activity-fpo.jpg">
+                            <div id="bottom-padding"></div>
+                        </div>
+                        <div id="boards-section" class="section-content"> <img class="section-fpo" src="../mobile-bb17-links/images/fpos/boards-fpo.jpg">
+                            <div id="bottom-padding"></div>
+                        </div>
+                        <div id="motivation-section" class="section-content">
+                            <div class="coach-item"></div>
+                            <img class="section-fpo" src="../mobile-bb17-links/images/fpos/motivation-fpo.jpg">
+                            <div id="bottom-padding"></div>
+                        </div>
+                    </div>
+                    <!-- SECTION 4 -->
+                    <div id="more-section" class="tab-section">
+                        <div class="tabs inactive">
+                            <div class="tab">
+                                <div class="tab-highlight"></div>
+                            </div>
+                            <div class="tab">
+                                <div class="tab-highlight"></div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div id="greeting">More</div>
+                            <!--                    <div class="section-title">More</div>--></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../mobile-android-links/js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/variables.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/functions.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/bb17-app.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/bb17-programs.js"></script>
+    <script type="text/javascript" src="../mobile-android-links/js/bb17.js"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

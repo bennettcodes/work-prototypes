@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>New HMTL document by NewJect</title>
+
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800italic,800|Exo:400,100,100italic,200,300,200italic,300italic,400italic,600italic,700,700italic,800,800italic,900,900italic,600,500,500italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <canvas id=c></canvas>
+    <div id="container">
+        <div id="level-rotator-container">
+
+            <div class="level-rotator">
+
+                <div id="rotate-level-1" class="rotate-level"></div>
+
+            </div>
+
+            <div class="level-rotator">
+
+                <div id="rotate-level-2" class="rotate-level"></div>
+
+            </div>
+
+            <div class="level-rotator">
+                
+                <div id="rotate-level-3" class="rotate-level"></div>
+
+            </div>
+
+            <div class="level-rotator">
+                
+                <div id="rotate-level-4" class="rotate-level"></div>
+                
+            </div>
+
+            <div class="level-rotator">
+                
+                <div id="rotate-level-5" class="rotate-level"></div>
+
+            </div>
+
+        </div>
+        <div id="video-wrapper">
+            <div id="canvas-hover"></div>
+            <!--    <div id="clear-break"></div>-->
+            <div id="canvas-play-button"></div>
+            <div id="points-counter-container">
+                <div id="points-counter-container-border-top"></div>
+                <div id="points-counter-container-box-shadow-right"></div>
+                <div id="points-counter-container-box-shadow-bottom"></div>
+                <div id="points-counter">
+                    <div id="points-counter-inner">
+                        <h3>0</h3></div>
+                </div>
+                <div id="points-counter-trailing-verbiage">
+                    <p>Points Earned</p>
+                    <div id="trailing-verbiage-box-shadow-right"></div>
+                    <div id="trailing-verbiage-box-shadow-bottom"></div>
+                </div>
+            </div>
+            <div id="stats-container">
+
+                <div id="stat-small" class="stat">
+                    <div id="stat-reading2" class="stat-text">
+                        <p class="stat-small-title">Multiplier:</p>
+                        <h5 class="stat-small-level">1.5X</h5></div>
+                </div>
+
+                <div id="stat-big" class="stat">
+                    <div id="stat-big-bg-container">
+                        <div id="big-bg-1" class="stat-big-bg active-big-bg"></div>
+                        <div id="big-bg-2" class="stat-big-bg"></div>
+                        <div id="big-bg-3" class="stat-big-bg"></div>
+                        <div id="big-bg-4" class="stat-big-bg"></div>
+                        <div id="big-bg-5" class="stat-big-bg"></div>
+                    </div>
+                    <div id="stat-reading1" class="stat-text">
+                        <h6 class="stat-big-title">HR<br>Zone<h1 class="stat-big-level">1</h1></h6>
+                        <h6 class="stat-big-difficulty">Light</h6></div>
+                    <div id="stat-big-sub-bg"></div>
+                </div>
+
+            </div>
+            <div id="points-overlay-bg-container">
+                <div id="points-overlay-bg-1" class="points-overlay-bg points-overlay-bg-active"></div>
+                <div id="points-overlay-bg-2" class="points-overlay-bg"></div>
+                <div id="points-overlay-bg-3" class="points-overlay-bg"></div>
+                <div id="points-overlay-bg-4" class="points-overlay-bg"></div>
+                <div id="points-overlay-bg-5" class="points-overlay-bg"></div>
+            </div>
+            <video id="my-movie">
+                <source src="video/test-footage.ogv" />
+            </video>
+            <!--
+        <div id="points-overlay">
+
+        </div>
+-->
+            <div id="player-overlay">
+                <div id="play-button-container">
+                    <div id="play-button">
+
+                        <img class="video-btn" src="images/svg/play.svg">
+
+                    </div>
+                </div>
+                <div id="default-bar">
+                    <div id="progress-tracker"></div>
+                    <div id="progress-bar"></div>
+                </div>
+                <div id="mute-button-container">
+                    <div id="mute-button">
+
+                        <img class="video-btn" src="images/svg/unmute.svg">
+
+                    </div>
+                </div>
+                <div id="fullscreen-button-container">
+                    <div id="fullscreen-button">
+
+                        <img class="video-btn" src="images/svg/fullscreen.svg">
+
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

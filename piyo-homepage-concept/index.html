@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HPLO</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/arrows.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="http://momentjs.com/downloads/moment.js"></script>
+    <script language=javascript>
+        switch (true) {
+            //        MOBILE REDIR
+        case (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) && (!(/iPad/i.test(navigator.userAgent))):
+            location.replace("../bb-hplo-mobile/index.html#");
+            break;
+            //        TABLET REDIR
+        case (!(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) && (/iPad/i.test(navigator.userAgent)):
+            //            location.replace("../tablet");
+            break;
+            //        DESKTOP REDIR
+        default:
+            //            location.replace("../index.php#");
+            break;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="loading">Loading</div>
+    <div id="container">
+        <div id="header">
+            <img id="logo" src="images/bod-logo-white.png">
+            <div class="get-all-access-button-fixed">
+                <div class="get-all-access-button-fixed-text">Get All Access</div>
+            </div>
+            <!--
+            <img id="header-fpo" src="images/fpos/header-new-fpo.jpg">
+            <div id="header-top"></div>
+            <div id="header-bottom"></div>
+--></div>
+        <div id="content">
+            <div id="heroes-container">
+                <div id="heroes">
+                    <div class="hero">
+                        <div class="hero-bg-fade"></div>
+                        <div class="hero-bg">
+                            <div class="hero-bg-img piyo-bg"></div>
+                        </div>
+                        <svg class="hero-play-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2411 2410.9" style="enable-background:new 0 0 2411 2410.9;" xml:space="preserve">
+                            <g>
+                                <path d="M1205.8,2410.9C539.9,2411-0.3,1871.6,0,1205.8C0.3,533.4,546.3-0.4,1206.3,0C1865.8,0.4,2411.1,534.3,2411,1206.3
+		C2411,1871.9,1871.2,2410.7,1205.8,2410.9z M1848.6,1205.6c-330-191.7-658.7-382.5-987.3-573.3c-2.3-1.3-4.7-2.4-7.1-3.5
+		c-0.2-0.1-0.6,0.1-0.9,0.2c-0.3,0.1-0.6,0.3-0.9,0.5c-2.3,28.5-1.1,1145.5,1.5,1153.8C1185.1,1590.9,1516.2,1398.6,1848.6,1205.6z" /> </g>
+                        </svg>
+                        <div class="hero-content">
+                            <div class="hero-logo"></div>
+                            <div class="hero-text">
+                                <div class="hero-description">No weights. No jumps.
+                                    <br>Just hardcore results.</div>
+                                <div class="hero-cta">Sample a PiYo workout</div>
+                                <div class="hero-button">Get All Access</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sections">
+                
+                <!-- DEFINE YOURSELF SECTION - START -->
+                
+                <div id="define-yourself-section" class="section">
+                    <div class="section-bg">
+                        <div class="section-bg-img define-yourself-bg"></div>
+                    </div>
+                    <div class="section-content">
+                        <div class="section-header">Define Yourself</div>
+                        <div class="section-description">PiYo combines the muscle-sculpting, core-firming benefits of Pilates
+                            <br>with the strength and flexibility advantages of yoga.</div>
+                        <div id="define-section-points" class="section-points">
+                            <div class="section-point define-section-point">
+                                <div class="section-point-icon lines-icon">
+                                    <svg class="section-point-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2315.9 1008.7" style="enable-background:new 0 0 2315.9 1008.7;" xml:space="preserve">
+                                        <g>
+                                            <path d="M618.5,948.7c0-157.2,0-313,0-468c1-1.2,1.1-1.5,1.4-1.7c0.2-0.2,0.5-0.3,0.8-0.5c0.3-0.1,0.6-0.2,1-0.3
+		c0.3-0.1,0.7-0.1,1-0.1c0.3,0,0.7,0,1-0.1c0.3,0,0.7,0,1,0c0.3,0,0.7,0,1,0c0.7,0,1.3,0,2,0c175,0,350,0,525,0c0.3,0,0.7,0,1,0
+		c0.3,0,0.7,0,1,0c0.3,0,0.7,0,1,0c0.3,0,0.7-0.1,1-0.1c0.3-0.1,0.7-0.1,1-0.2c0.3-0.1,0.6-0.3,1.8-0.9c0-158,0-316.5,0-475.5
+		c3.1-0.5,5.2-1,7.4-1.1c2.7-0.2,5.3,0,8,0c367,0,734,0,1100.9,0c3.7,0,7.3-0.1,11,0.1c15.6,0.7,27.7,12.3,29,27.7
+		c1.2,14.4-9.1,28.1-24,31.2c-4.8,1-9.9,1-14.9,1c-322.3,0-644.6,0-966.9,0c-26,0-52,0-78,0c-3.6,0-7.2,0-11.7,0
+		c0,159.4,0,317.9,0,477.8c-26.5,0.3-52,0.1-77.5,0.2c-25.7,0-51.3,0-77,0s-51.3,0-77,0c-26,0-52,0-78,0c-25.7,0-51.3,0-77,0
+		s-51.3,0-77,0c-25.6,0-51.2,0-77.9,0c0,157,0,313.2,0,470c-3.9,0.3-6.8,0.7-9.6,0.7c-212,0-424,0-636,0c-4,0-8.1-0.1-11.9-1.1
+		C8.9,1004.2,0.2,992.5,0,979.4c-0.2-13.3,7.8-25.2,20.4-28.8c5.3-1.5,11.2-1.8,16.8-1.8c189-0.1,378-0.1,567-0.1
+		C608.5,948.7,612.8,948.7,618.5,948.7z" /> </g>
+                                    </svg>
+                                </div>
+                                <div class="section-point-label">Low Impact</div>
+                            </div>
+                            <div class="section-point define-section-point">
+                                <div class="section-point-icon bars-icon">
+                                    <svg class="section-point-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2225.1 1523.9" style="enable-background:new 0 0 2225.1 1523.9;" xml:space="preserve">
+                                        <g>
+                                            <path d="M581.2,1522.2c0-370.4,0-740.9,0-1112.1c159.8,0,319.3,0,479.4,0c0,370.7,0,741.2,0,1111.7
+		C1053.8,1523.9,593.2,1524.4,581.2,1522.2z M631,850.9c127.1,0,253.2,0,379.3,0c2.1-14.1,1.5-182.9-0.6-189.7
+		c-28.8-2-370.5-1-378.6,1.2C631,724.9,631,787.4,631,850.9z M631,1264.1c127.3,0,253.4,0,379.7,0c0-59.9,0-119.1,0-178.2
+		c-14-2.2-372.9-1.5-379.7,0.6C631,1145.5,631,1204.4,631,1264.1z M631.2,1472.3c12.1,2,372.4,1.6,379.4-0.3c0-58.8,0-117.6,0-176.5
+		c-126.8,0-252.9,0-379.4,0C631.2,1354.8,631.2,1413.6,631.2,1472.3z M1010.9,882.1c-127.2,0-253.3,0-379.3,0
+		c-1.9,13.3-1.3,164.8,0.6,172c126,0,252.1,0,378.7,0C1010.9,996.6,1010.9,939.7,1010.9,882.1z M631.3,460c0,56.9,0,113.4,0,170.3
+		c126.7,0,252.8,0,379.4,0c0-56.9,0-113.4,0-170.3C884,460,757.9,460,631.3,460z" />
+                                            <path d="M1744.1,0c160.1,0,319.6,0,479,0c2,7.7,2.9,1501.2,1,1521.7c-6.9,2.2-461.3,3.2-480,0.9
+		C1744.1,1015.6,1744.1,508.4,1744.1,0z M2174,1473c0-474.9,0-948.7,0-1422.4c-12.1-2-372.8-1.5-380.1,0.4c0,473.8,0,947.6,0,1421.9
+		C1920.8,1473,2047,1473,2174,1473z" />
+                                            <path d="M1159.4,208c159.8,0,319,0,478.1,0c0.3,0.3,0.6,0.5,0.9,0.7c0.2,0.2,0.5,0.5,0.5,0.8c0.2,435.6,0.4,871.3,0.5,1306.9
+		c0,1.9-0.2,3.9-0.4,6.4c-159.9,0-319.4,0-479.5,0C1159.4,1084.6,1159.4,646.6,1159.4,208z M1209.2,1472.8c127.1,0,253.2,0,379.5,0
+		c0-405.2,0-809.7,0-1214.8c-126.7,0-252.8,0-379.5,0C1209.2,663.1,1209.2,1067.6,1209.2,1472.8z" />
+                                            <path d="M480,1523c-160.3,0-319.8,0-480,0c0-297.2,0-593.9,0-890.6c7.3-1.9,466.8-2.5,480-0.6C480,928.4,480,1225.2,480,1523z
+		 M430,1264.3c0-60.4,0-119.6,0-178.6c-18.1-2.2-373.1-1.2-380.6,1.1c0,58.9,0,118.1,0,177.5C177,1264.3,303.2,1264.3,430,1264.3z
+		 M49.9,1472.9c127,0,253.3,0,380.2,0c0-59.4,0-118.2,0-177.4c-127,0-253.3,0-380.2,0C49.9,1354.8,49.9,1413.6,49.9,1472.9z
+		 M49.9,1054.2c127.4,0,253.6,0,380,0c0-57.7,0-114.8,0-171.7c-14.9-2-372.9-1.3-380,0.7C49.9,939.9,49.9,996.8,49.9,1054.2z
+		 M50,681.2c0,57.3,0,113.4,0,169.4c15.6,1.9,372.8,1.2,379.9-0.7c0-56.1,0-112.2,0-168.7C303.1,681.2,176.9,681.2,50,681.2z" /> </g>
+                                    </svg>
+                                </div>
+                                <div class="section-point-label">Beginner-Intermediate</div>
+                            </div>
+                            <div class="section-point define-section-point">
+                                <div class="section-point-icon calendar-icon">
+                                    <svg class="section-point-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2047.8 2258.4" style="enable-background:new 0 0 2047.8 2258.4;" xml:space="preserve">
+                                        <g>
+                                            <path d="M0,2258.4c0-678.6,0-1356.7,0-2036c155.6,0,310.8,0,467,0c1.1-25.3,0.4-49.4,0.5-73.6c0.1-24.7,0-49.3,0-74
+		c0-24.3,0-48.6,0-72.6c7.6-2.5,32.1-3,45-1c0,73,0,146.2,0,219.1c8.7,2.3,984,2.5,994.3,0.3c0-72.9,0-146.1,0-220.5
+		c8.2,0,15.4,0,22.7,0c6.9,0,13.9,0,21.8,0c0,74.1,0,147.3,0,222c55.9,0.1,110.8,0,165.6,0c54.7,0,109.3,0,164,0c55,0,110,0,164.8,0
+		c2.3,7.4,3.1,2019.1,1,2036.3C1364.6,2258.4,682.6,2258.4,0,2258.4z M2002.3,713.6c-652.6,0-1304.6,0-1957,0
+		c0,500.2,0,999.7,0,1499.8c652.5,0,1304.6,0,1957,0C2002.3,1713.2,2002.3,1213.7,2002.3,713.6z M2001.7,667.4
+		c2-13.2,1.4-393-0.5-399.9c-149.5,0-299.1,0-449.9,0c0,56.6,0,112.7,0,168.9c-15.4,0-29.6,0-44.5,0c0-14.5,0-28.5,0-42.4
+		c0-14,0-28,0-42c0-14.3,0-28.7,0-43c0-13.9-0.1-27.7-0.2-41.4c-331.9,0-662.4,0-993.8,0c0,14.5,0,28.4,0,42.4c0,14,0,28,0,42
+		c0,14.3,0,28.7,0,43c0,13.9-0.1,27.7-0.1,41.5c-15.7,0-29.9,0-45.4,0c0-56.6,0-112.7,0-168.9c-141.4,0-281.5,0-422.1,0
+		c0,133.5,0,266.4,0,399.8C697.7,667.4,1349.8,667.4,2001.7,667.4z" />
+                                            <path d="M1070.8,1120.7c0,194.9,0,389.1,0,584.3c4.6,0,8.2,0,11.8,0c37,0,74,0,111,0c3,0,6-0.1,9,0.1c11.9,1.1,20.5,10,20.9,21.6
+		c0.4,11.9-7.3,21.1-19.2,22.9c-3.3,0.5-6.6,0.5-10,0.5c-98.3,0-196.7,0-295,0c-3.7,0-7.4,0-10.9-0.7c-11.2-2-19.1-11.7-18.7-22.6
+		c0.4-11,8.9-20.2,20-21.6c3-0.4,6-0.2,9-0.2c38.3,0,76.7,0,115,0c3.6,0,7.2,0,11.4,0c0.2-3.7,0.5-6.6,0.5-9.5
+		c0-166.3,0-332.7,0-499c0-2,0.1-4-0.1-6c-1.1-11.3-11.3-16.7-21-11c-3.2,1.8-6,4.2-9,6.3c-32.7,24.2-65.4,48.4-98.1,72.5
+		c-15.1,11.1-34.1,4.5-37.3-13c-1.7-9.5,2.2-16.9,9.6-22.6c5.8-4.5,11.8-8.7,17.7-13c38.1-28.1,76.2-56.1,114.2-84.3
+		c4.8-3.6,9.5-5.4,15.6-5.3c14.3,0.3,28.7,0.1,43,0.1C1063.4,1120.2,1066.6,1120.5,1070.8,1120.7z" /> </g>
+                                    </svg>
+                                </div>
+                                <div class="section-point-label">60 Day Program</div>
+                            </div>
+                            <div class="section-point define-section-point">
+                                <div class="section-point-icon timer-icon">
+                                    <svg class="section-point-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1686.3 1944.2" style="enable-background:new 0 0 1686.3 1944.2;" xml:space="preserve">
+                                        <g>
+                                            <path d="M199.5,556c-51.2-51.2-101.7-101.6-151.1-151c50.4-50.9,100.2-101.3,150.9-152.6c52.6,52.6,105.5,105.5,158.8,158.8
+		c103-72.1,215.9-118.9,339.5-140.9c0-73.1,0-145.6,0-219.3c-45.7,0.6-90.9,1.2-135.9,1.8c-2.6-7.5-3.6-30.8-1.8-44.9
+		c184.9-2.7,370-5.3,556-8c0,15.2,0,29.6,0,44.9c-45.6,0.7-91,1.4-137.1,2.2c0,74.2,0,147.4,0,221.2c218,39,396.7,144.4,532.8,319.6
+		c94.5,121.7,150.4,260.1,168.5,413.1c18.8,159.7-5,313.2-74,458.6c-214,450.4-755.1,614-1178.1,375.1
+		c-147.3-83.2-259.6-201.1-336.4-351.8c-77-151.1-104.9-311.6-85.6-479.9C25.2,834.8,91.1,686.4,199.5,556z M842.5,1901.2
+		c441.4,0.4,799.5-357.4,800.5-798.9c1-442.4-358.8-801.4-799.9-801.3C402.2,301,43.2,658.4,43,1100.2
+		C42.7,1542.8,400.2,1900.2,842.5,1901.2z M932.4,47.6c-63.6,0.9-126,1.8-189,2.7c0,71.6,0,142,0,213.5c63.2-7.7,125.8-7.6,189-1.4
+		C932.4,190.6,932.4,119.8,932.4,47.6z M198.8,318.4c-28.1,28.1-56.9,57-85.1,85.2c38.4,38.4,77.6,77.6,116.5,116.5
+		c29.5-27,59.6-54.5,89-81.4C279.1,398.6,238.5,358,198.8,318.4z" />
+                                            <path d="M1294.2,612c11.2,11,21.3,21,31.9,31.4c-134.4,134.4-269.1,269.1-404.2,404.2c15.7,27.3,19.7,55.6,9.9,85
+		c-7.4,22.3-21.4,39.8-41.3,52.2c-39.9,25.1-92,18.3-124.4-16c-32.4-34.3-36-86.6-8.9-125.1c23.5-33.4,75-58.4,132.9-27.7
+		C1024.8,881.5,1159.7,746.6,1294.2,612z M782.2,1100.5c-0.2,31,24.5,56.3,55.3,56.6c30.5,0.4,56.3-25,56.6-55.6
+		c0.4-30.7-24.8-56.1-55.6-56.3C807.4,1045,782.4,1069.5,782.2,1100.5z" />
+                                            <path d="M1378.2,1427.5c-1.7-22.9,19.8-42.7,41.9-42.7c19.3,0,42,16.3,42.1,41.7c0.1,23.6-18.6,42.6-42.2,42.6
+		C1396.7,1469.2,1378.3,1450.8,1378.2,1427.5z" />
+                                            <path d="M796.2,428.5c0.1-23.3,18.8-41.6,42.3-41.3c23.2,0.2,41.9,19.3,41.6,42.3c-0.3,22.9-19.8,42-42.6,41.6
+		C814.5,470.8,796.1,451.8,796.2,428.5z" />
+                                            <path d="M496.3,563.8c-23.5,0.1-41.9-18.2-42-41.6c-0.1-23.2,18.6-42.2,41.6-42.3c22.9-0.1,42.2,19,42.3,41.9
+		C538.3,544.8,519.4,563.7,496.3,563.8z" />
+                                            <path d="M1173,563.8c-23.2,0-42-18.7-42.1-41.8c-0.1-22.8,19.3-42.1,42.1-42.1c23.1,0,41.8,18.9,41.8,42.1
+		C1214.9,545.4,1196.4,563.8,1173,563.8z" />
+                                            <path d="M296.8,765.2c-0.1,23.2-19.1,42-42,41.9c-22.9-0.2-42-19.5-41.9-42.3c0.1-23,19.1-41.7,42.3-41.6
+		C278.7,723.3,297,741.8,296.8,765.2z" />
+                                            <path d="M1420.2,723.2c23.2,0.1,42,18.9,41.9,42c-0.1,22.8-19.4,42.1-42.2,41.9c-23.1-0.1-41.7-19-41.7-42.3
+		C1378.3,741.5,1396.8,723.1,1420.2,723.2z" />
+                                            <path d="M118.2,1100.6c0.1-23.3,18.7-41.6,42.2-41.4c23.2,0.2,42,19.2,41.7,42.2c-0.3,22.9-19.7,42-42.5,41.7
+		C136.6,1142.8,118.1,1123.9,118.2,1100.6z" />
+                                            <path d="M1558.8,1101.2c-0.1,23.2-19.1,42-42,41.9c-22.9-0.2-42-19.5-41.9-42.3c0.1-23,19.1-41.7,42.3-41.6
+		C1540.7,1059.3,1559,1077.8,1558.8,1101.2z" />
+                                            <path d="M296.8,1426.7c0.1,23.3-18.4,42.2-41.5,42.5c-22.8,0.3-42.1-18.8-42.4-41.7c-0.3-22.9,18.6-42,41.7-42.2
+		C278.2,1385.1,296.7,1403.3,296.8,1426.7z" />
+                                            <path d="M504.8,1639.2c23.5-0.1,42,18.2,42.1,41.5c0.1,23.2-18.5,42.2-41.5,42.4c-22.8,0.2-42.1-18.9-42.4-41.8
+		C462.7,1658.3,481.6,1639.3,504.8,1639.2z" />
+                                            <path d="M1172.6,1639.2c23.5-0.2,42.1,18,42.3,41.3c0.2,23.3-18.3,42.2-41.4,42.6c-22.8,0.3-42.2-18.6-42.5-41.6
+		C1130.6,1658.5,1149.5,1639.4,1172.6,1639.2z" />
+                                            <path d="M796.2,1772.5c0.1-23.3,18.8-41.6,42.3-41.3c23.2,0.2,42,19.3,41.6,42.3c-0.3,22.9-19.8,42-42.6,41.6
+		C814.5,1814.8,796.1,1795.8,796.2,1772.5z" /> </g>
+                                    </svg>
+                                </div>
+                                <div class="section-point-label">13-45 Minutes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DEFINE YOURSELF SECTION - END -->
+                
+                <!-- CHALENE PROFILE SECTION - START -->
+                
+                <div id="chalene-profile-section" class="section">
+                    <div id="chalene-profile-content" class="section-content">
+                        <div class="section-profile">
+                            <div class="section-profile-circle">
+                                <div class="section-profile-circle-img chalene-profile-bg"></div>
+                            </div>
+                        </div>
+                        <div class="section-text">
+                            <div class="section-text-header">Your PiYo Trainer,
+                                <br>Chalene Johnson</div>
+                            <div class="section-text-description">New York Times best-selling author Chalene Johnson
+                                <br>has revolutionized the fitness industry by turning her
+                                <br>lifelong love of health and fitness into exciting,
+                                <br>challenging workouts that scorch calories and burn fat.</div>
+                            <div class="section-text-more-button">
+                                <div class="section-text-more-button-text">More</div>
+                                <div class="section-text-more-button-circle">
+                                    <div class="section-text-more-button-circle-bg"></div>
+                                    <div class="section-text-more-button-circle-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CHALENE PROFILE SECTION - END -->
+                
+                <!-- WHY PIYO WORKS SECTION - START -->
+                
+                <div id="why-piyo-works-section" class="section">
+                    <div id="why-piyo-works-content" class="section-content">
+                        <div id="why-piyo-works-squares" class="section-squares stagger-squares">
+                            <div class="section-squares-header">Why PiYo Works</div>
+                            <div id="pilates-square" class="section-square">
+                                <div class="section-square-bg blue-textured-bg">
+                                    <div class="section-square-bg-fade">
+                                        <div class="white-fade height-30"></div>
+                                        <div class="white-solid height-70"></div>
+                                    </div>
+                                </div>
+                                <div class="section-square-trainer"> <img class="section-square-trainer-img" src="images/trainer-squares/chalene-plank.png"> </div>
+                                <div class="section-square-headers">
+                                    <div class="section-square-subheader pink-text">The muscle sculpting of</div>
+                                    <div class="section-square-header pink-text">Pilates</div>
+                                </div>
+                                <div class="section-square-description light-grey-text">Lorem ipsum dolor sit amet, constetur
+                                    <br>adipiscing elit, do eiusmod tempor
+                                    <br>indunt est labore et dolore aliqua.</div>
+                            </div>
+                            <div id="yoga-square" class="section-square">
+                                <div class="section-square-bg pink-textured-bg">
+                                    <div class="section-square-bg-fade">
+                                        <div class="white-fade height-30"></div>
+                                        <div class="white-solid height-70"></div>
+                                    </div>
+                                </div>
+                                <div class="section-square-bg-fade">
+                                    <div class="white-fade height-30"></div>
+                                    <div class="white-solid height-70"></div>
+                                </div>
+                                <div class="section-square-trainer"> <img class="section-square-trainer-img" src="images/trainer-squares/woman-warrior.png"> </div>
+                                <div class="section-square-headers">
+                                    <div class="section-square-subheader pink-text">The flexibility of</div>
+                                    <div class="section-square-header pink-text">Yoga</div>
+                                </div>
+                                <div class="section-square-description light-grey-text">Lorem ipsum dolor sit amet, constetur
+                                    <br>adipiscing elit, do eiusmod tempor
+                                    <br>indunt est labore et dolore aliqua.</div>
+                            </div>
+                            <div id="movement-square" class="section-square">
+                                <div class="section-square-bg blue-textured-bg">
+                                    <div class="section-square-bg-fade">
+                                        <div class="white-fade height-30"></div>
+                                        <div class="white-solid height-70"></div>
+                                    </div>
+                                </div>
+                                <div class="section-square-bg-fade">
+                                    <div class="white-fade height-30"></div>
+                                    <div class="white-solid height-70"></div>
+                                </div>
+                                <div class="section-square-trainer"> <img class="section-square-trainer-img" src="images/trainer-squares/man-cardio.png"> </div>
+                                <div class="section-square-headers">
+                                    <div class="section-square-subheader pink-text">Nonstop, fluid</div>
+                                    <div class="section-square-header pink-text">Movement</div>
+                                </div>
+                                <div class="section-square-description light-grey-text">Lorem ipsum dolor sit amet, constetur
+                                    <br>adipiscing elit, do eiusmod tempor
+                                    <br>indunt est labore et dolore aliqua.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- WHY PIYO WORKS SECTION - END -->
+                
+                <!-- TWELVE WORKOUTS SECTION - START -->
+                
+                <div id="twelve-workouts-section" class="section">
+                    <div class="section-content">
+                        <div class="section-gallery">
+                            <div class="section-gallery-header">12 Workouts</div>
+                            <div class="section-gallery-tiles-container-outer">
+                                <div class="section-gallery-tiles-arrow section-gallery-tiles-left-arrow left"></div>
+                                <div class="section-gallery-tiles-arrow section-gallery-tiles-right-arrow right"></div>
+                                <div class="section-gallery-tiles-nav">
+                                    <div class="section-gallery-tiles-nav-inner">
+                                        <div class="section-gallery-tiles-nav-tracker"></div>
+                                    </div>
+                                </div>
+                                <div id="twelve-workouts-tiles-container" class="section-gallery-tiles-container">
+                                    <div class="section-gallery-tiles">
+                                        <div class="section-gallery-tiles-inner">
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-gallery-tiles">
+                                        <div class="section-gallery-tiles-inner">
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-gallery-tiles">
+                                        <div class="section-gallery-tiles-inner">
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-gallery-tiles">
+                                        <div class="section-gallery-tiles-inner">
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-gallery-tiles">
+                                        <div class="section-gallery-tiles-inner">
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/align-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Align: The Fundamentals</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                            <div class="section-gallery-tile">
+                                                <div class="section-gallery-tile-thumb">
+                                                    <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                    <div class="section-gallery-tile-thumb-overlay">
+                                                        <div class="section-gallery-tile-thumb-overlay-bg"></div>
+                                                        <div class="section-gallery-tile-thumb-overlay-symbol">+</div>
+                                                    </div> <img class="section-gallery-tile-thumb-img" src="images/thumbs/define-thumb.jpg"> </div>
+                                                <div class="section-gallery-tile-label">
+                                                    <div class="section-gallery-tile-label-header">Define: Lower Body</div>
+                                                    <div class="section-gallery-tile-label-link">Show more</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- TWELVE WORKOUTS SECTION - END -->
+                
+                <!-- PROGRAM TOOLS SECTION - START -->
+                
+                <div id="program-tools-section" class="section">
+                    <div class="section-content">
+                        <div class="section-header">Program Tools for Success</div>
+                        <div id="program-tools-section-points" class="section-points">
+                            <div class="section-point define-section-point">
+                                <div class="section-point-icon lines-icon">
+                                    <svg id="rocket-icon-svg" class="section-point-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 689 1357.1" style="enable-background:new 0 0 689 1357.1;" xml:space="preserve">
+                                        <g>
+                                            <path d="M423.4,1090.9c-9.9,10.7-19.2,21.1-28.9,31.1c-11.7,11.9-23.7,23.4-35.8,34.9c-2.6,2.5-3.8,5-3.8,8.6
+		c0.1,58.8,0.1,117.7,0.1,176.5c0,10-3.9,15.2-11.2,15.1c-7.1-0.2-10.7-5.2-10.7-15c0-58.5,0-117,0-175.5c0-3.3-0.8-5.8-3.3-8.4
+		c-21-21.1-41.9-42.5-62.8-63.7c-0.7-0.7-1.4-1.4-2.4-2.5c-1.3,1.1-2.6,2-3.8,3.1c-78.6,74.5-157.2,149.1-235.8,223.6
+		c-2.2,2-4.5,4-7.2,5.4c-6.9,3.6-14.6-0.6-15.7-8.3c-0.2-1.6-0.2-3.3-0.2-5c-0.7-105.5-1.3-211-2.1-316.5
+		c-0.1-7.8,2.9-13.4,8.5-18.2c37.5-32.2,75-64.6,112.7-96.7c3.4-2.9,3.7-5.1,1.9-9.2C82,776,60.9,677.8,63.4,574.8
+		c2.4-97.1,25.3-189.6,65-278C177.2,188.3,244.7,92.7,329.8,9.5c1.9-1.9,3.5-4,5.4-5.9c4.8-4.8,11.7-4.8,16.6-0.1
+		c57.1,55.8,107.2,117.3,149.3,185.1c40.8,65.7,73.3,135.3,94.8,209.7c22.3,77,31.7,155.6,26.5,235.7
+		c-5.3,81.5-25.2,159.4-57.7,234.1c-2.2,5.1-1.2,7.4,2.6,10.7c37.8,32.2,75.4,64.7,113.1,97c5.7,4.9,8.7,10.7,8.6,18.7
+		c-0.8,105.3-1.4,210.6-2.1,316c0,1.7,0,3.3-0.2,5c-1.1,8-9,12.2-16.1,8.3c-2.6-1.4-4.9-3.4-7.1-5.5
+		c-78.7-74.6-157.4-149.3-236.1-224C426.3,1093.4,425,1092.3,423.4,1090.9z M344.4,26.8c-1.3,0.7-1.8,0.9-2.2,1.2
+		c-1,0.9-2,1.8-2.9,2.8c-82.7,82.5-148.2,176.7-194.9,283.9c-34.9,80.2-55.6,163.9-59,251.6c-3.3,84.4,9.7,166.5,38.2,245.9
+		c43.4,121.3,113.5,225.3,205,315.4c1.1,1.1,2.4,2.1,4.3,3.6c0.1-2.5,0.3-4.1,0.3-5.7c0-75.5,0-151,0-226.5c0-7.8-0.1-15.7,0-23.5
+		c0.1-8,4.2-12.9,10.8-12.9c6.7-0.1,10.9,4.9,11.1,13.2c0,1.2,0,2.3,0,3.5c0,81.8,0,163.6,0,245.5c0,1.6,0.2,3.1,0.3,5.8
+		c2.1-1.9,3.4-3.1,4.6-4.3c43.5-42.3,81.9-89,115.5-139.5c60.4-90.8,102.3-189.1,119.1-297.3c9.4-60.7,10-121.5,2.1-182.3
+		c-9.4-71.7-30-140.3-60-206.1c-43-94.3-101.1-178.4-172.3-253.5C357.6,40.4,350.9,33.5,344.4,26.8z M552.7,895
+		c-31.2,64.8-69.8,123.9-115.2,179c75.8,71.9,151.2,143.5,226.6,215c1.2-2.8,1.2-5,1.2-7.1c0.6-94.3,1.1-188.6,1.8-282.9
+		c0-4.3-1.4-7-4.5-9.8c-23.6-20.1-47-40.3-70.5-60.5C579.1,917.7,566.3,906.6,552.7,895z M250.4,1075
+		C204.6,1019.8,166,960.6,135,896.4c-1.3,0.9-2,1.3-2.6,1.9c-35.6,30.6-71.3,61.2-106.8,92c-1.9,1.7-3.5,5-3.4,7.5
+		c0.4,95.5,1,191,1.6,286.5c0,1.4,0.2,2.8,0.5,5.3C100,1217.7,175,1146.6,250.4,1075z" />
+                                            <path d="M437,396.1c0.1,51.5-41.6,93.2-93.1,93.2c-51.2,0-92.9-41.6-92.9-92.8c-0.1-51.5,41.6-93.2,93.1-93.2
+		C395.3,303.3,436.9,344.9,437,396.1z M415,396.4c0-39.1-31.7-71-70.8-71.1c-39.1-0.1-71.1,31.7-71.2,70.7
+		c-0.1,39.3,31.7,71.4,71,71.3C383.1,467.3,415,435.4,415,396.4z" /> </g>
+                                    </svg>
+                                </div>
+                                <div class="section-point-label">Quick Start Guide</div>
+                            </div>
+                            <div class="section-point define-section-point">
+                                <div class="section-point-icon bars-icon">
+                                    <svg id="calendar-icon-svg" class="section-point-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1185.5 1334.7" style="enable-background:new 0 0 1185.5 1334.7;" xml:space="preserve">
+                                        <g>
+                                            <path d="M0,1334.7c0-398,0-795.5,0-1193.5c90.5,0,180.8,0,271.8,0c0-2.3,0-4.2,0-6.1c0-39.8,0-79.7,0-119.5
+		c0-11.4,9.7-18.6,19.4-14.4c6.2,2.7,8.7,7.7,8.7,14.4c-0.1,28,0,56,0,84c0,13.6,0,27.3,0,41.2c190.7,0,381,0,572,0
+		c0-1.8,0-3.7,0-5.6c0-40,0-80,0-120c0-11,9.8-18.1,19.3-14c6.2,2.7,8.8,7.7,8.7,14.4c-0.1,23.8,0,47.7,0,71.5c0,17.8,0,35.6,0,54
+		c95.4,0,190.5,0,285.8,0c0,398.1,0,795.7,0,1193.7C790.5,1334.7,395.4,1334.7,0,1334.7z M28,1306.7c376.8,0,753.1,0,1129.4,0
+		c0-292.7,0-585.1,0-877.4c-376.7,0-752.9,0-1129.4,0C28,721.9,28,1014.1,28,1306.7z M871.8,169.4c-191,0-381.4,0-572,0
+		c0,2.2,0,4,0,5.8c0,26,0.1,52-0.1,78c0,3.3-1,7-2.7,9.9c-3.1,5.2-9.6,7.1-15.3,5.3c-6.2-2-9.9-7-9.9-14c-0.1-26.5,0-53,0-79.5
+		c0-1.8,0-3.6,0-5.5c-81.6,0-162.6,0-243.6,0c0,77.4,0,154.4,0,231.4c376.7,0,752.9,0,1129.3,0c0-77.3,0-154.4,0-231.3
+		c-86.1,0-171.8,0-257.7,0c0,17.1,0,33.7,0,50.4c0,11.7,0.1,23.3,0,35c-0.1,8.1-6.1,14.1-13.8,14.2c-7.9,0.1-14-6-14.2-14.3
+		c-0.1-2.3,0-4.7,0-7C871.8,221.8,871.8,195.8,871.8,169.4z" />
+                                            <path d="M592.5,1008.1c0-106,0-211.2,0-317.2c-1.9,1.4-3.3,2.4-4.7,3.5c-22.1,17.7-44.1,35.5-66.3,53.2c-8.8,7-20.5,3.5-23.1-6.8
+		c-1.6-6.3,1-11.3,5.9-15.3c23-18.4,46.1-36.8,68.9-55.5c5.4-4.4,10.7-6.4,17.6-6c9.4,0.5,18.9,0.1,28.7,0.1c0,114.7,0,229,0,344
+		c2.1,0,3.9,0,5.6,0c20.5,0,41,0,61.5,0c9.6,0,16,5.6,16.1,14c0,8.4-6.4,14-16,14c-53.7,0-107.3,0-161,0c-9.6,0-16-5.6-16-14
+		c0-8.4,6.4-14,16-14c20.3,0,40.7,0,61,0C588.6,1008.1,590.4,1008.1,592.5,1008.1z" /> </g>
+                                    </svg>
+                                </div>
+                                <div class="section-point-label">Workout Calendar</div>
+                            </div>
+                            <div class="section-point define-section-point">
+                                <div class="section-point-icon calendar-icon">
+                                    <svg id="fork-spoon-icon-svg" class="section-point-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 775.6 1135.1" style="enable-background:new 0 0 775.6 1135.1;" xml:space="preserve">
+                                        <g>
+                                            <path d="M608.7,0c14.8,2.1,29.4,3,43.3,6.4c20.5,5.1,34.7,18,37.5,39.9c1.2,9.4-0.3,19.3-0.8,28.9c-1.8,35.1-3.9,70.2-5.7,105.3
+		c-2.6,49.8-5.1,99.5-7.6,149.3c-1.8,36.4-3.6,72.9-5.3,109.3c-2.2,45.4-4.5,90.9-6.7,136.3c-1.9,38.6-3.6,77.2-5.6,115.8
+		c-0.2,3.6,1.1,5.2,4.1,6.8c29.9,15.6,56.3,35.6,77.4,62.1c33.5,42.1,43.9,89.8,30.1,141.5c-14.3,53.4-33.5,105.3-60.5,153.9
+		c-12.4,22.4-26.8,43.4-46.8,59.9c-15.2,12.6-32.4,20.4-52.6,19.6c-13.3-0.5-25.4-4.8-36.7-11.6c-17.7-10.7-31.7-25.3-44.1-41.6
+		c-26-34-44.9-72-60.5-111.6c-8.7-22.1-17.6-44.4-22.8-67.5c-15-65.9,5-121.5,53.8-167.3c15.9-14.9,33.6-27.3,52.9-37.4
+		c3.1-1.6,4.2-3.3,4-6.9c-2.4-47.1-4.6-94.2-6.8-141.3c-1.8-37.1-3.5-74.2-5.3-111.3c-2.2-44.9-4.4-89.9-6.6-134.8
+		c-2.1-42.4-4.1-84.9-6.4-127.3c-2.1-38.8-4.2-77.5-6.8-116.3c-2-29,13.3-49.6,44.1-55.8C581.7,1.6,595.4,1.4,608.7,0z M609.1,25.4
+		c-4.2,0-8.3,0.1-12.5,0c-13.7-0.5-26.4,2.7-38.2,9.6c-7.3,4.3-10.3,10.8-10,18.8c0.8,16.8,2.2,33.6,3.1,50.4
+		c2.6,48.1,5.2,96.2,7.6,144.3c2.2,43.1,4.3,86.2,6.4,129.3c2.2,45.8,4.5,91.5,6.7,137.3c1.9,37.9,3.8,75.9,5.6,113.8
+		c1.2,26,2.3,51.9,3.5,77.9c0.1,2.9-0.3,4.8-3.5,6.1c-22.3,8.7-42.1,21.5-59.8,37.4c-45.9,41.3-63.6,92.2-47.5,152.3
+		c6.9,25.7,17.5,50.6,27.9,75.2c14.3,33.8,31.5,66.1,54.7,94.9c9.5,11.7,20,22.4,33.2,30c18.2,10.6,36.2,10.3,53.5-1.7
+		c5.6-3.9,10.9-8.3,15.7-13.1c15.4-15.5,26.7-34,36.8-53.2c22.7-43.2,39.4-88.9,52.6-135.7c14.7-52.3,2-98.5-35.7-137.6
+		c-19.2-19.9-41.8-35-67-46.4c-10.3-4.6-10.2-4.5-9.7-15.8c2.3-45.4,4.4-90.9,6.6-136.3c2.5-51.9,4.8-103.9,7.4-155.8
+		c3.1-63.2,6.3-126.5,9.6-189.7c2.8-53.1,5.9-106.1,9-159.2C666,42.8,661,35,646,29.9C634,25.8,621.6,24.9,609.1,25.4z" />
+                                            <path d="M287.2,178.4c0,50.7-0.5,101.3,0.2,152c0.4,26.5-9.5,47.9-26.9,66.6c-13.1,14.1-29,24.4-46.2,32.7
+		c-3.1,1.5-4.5,2.9-4.3,6.6c3.1,61.7,6,123.5,9,185.2c2.1,44.8,4.2,89.5,6.4,134.3c2.8,56.6,5.7,113.2,8.6,169.7
+		c2.1,39.9,4.2,79.9,6.4,119.8c0.4,7,0.7,14,1.4,20.9c2.2,21.9-6.9,38.6-26.6,48.6c-13,6.6-27,9.6-41.3,10.5
+		c-26.3,1.8-52.6,2.2-78.7-1.7c-7.6-1.1-15.3-3.6-22.3-6.9c-19.2-9-28.5-24.5-27.4-45.7c1.2-24.1,2.9-48.2,4.2-72.4
+		c2-35.9,3.8-71.9,5.7-107.8c2.6-50.6,5.1-101.2,7.6-151.8c1.8-36.8,3.6-73.6,5.3-110.3c2.2-46.1,4.5-92.2,6.7-138.3
+		c0.9-18.1,1.5-36.3,2.5-54.4c0.2-3.5-1.1-4.9-4-6.3c-21.7-10.6-41.1-24.1-55.5-43.8C6.2,370.3-0.1,352.9,0,332.7
+		C0.3,227.6,0.2,122.4,0.2,17.2C0.2,6.9,4.5,1.1,12.3,1.1c7.9,0,12.1,5.6,12.1,16c0,104.7,0.2,209.3-0.2,314
+		c-0.1,18.4,6.4,33.4,18.1,46.7c14.8,16.7,33.6,27.6,54.1,35.8c4.7,1.9,6.1,4.2,5.9,9.1c-1.7,32.6-3,65.2-4.5,97.9
+		c-1.8,38.4-3.7,76.9-5.6,115.3c-2.2,44.8-4.4,89.5-6.7,134.3c-1.8,35.3-3.5,70.6-5.3,105.8c-2.5,47.8-5.1,95.5-7.7,143.3
+		c-1,17.8-2.2,35.6-3.4,53.4c-0.8,10.8,3.6,19,13.5,22.7c8.8,3.2,18.2,6.1,27.5,6.3c22.5,0.7,45,0.4,67.4-0.8
+		c9-0.5,18.3-3.7,26.7-7.3c11.1-4.7,14-11.5,13.3-23.6c-1.8-30.3-3.6-60.5-5.2-90.8c-2.7-50.1-5.2-100.2-7.7-150.3
+		c-2.2-43.6-4.2-87.2-6.4-130.8c-2.2-45.1-4.4-90.2-6.6-135.3c-1.8-37.8-3.6-75.6-5.4-113.3c-0.4-9.2-0.5-18.3-1.2-27.5
+		c-0.3-4.3,1.5-6.1,5.1-7.6c16.5-6.6,32-14.9,45.4-26.7c13.4-11.8,24-25.5,26.8-43.8c0.4-2.5,0.4-5,0.4-7.5c0-106,0-212,0-318
+		c0-2-0.1-4,0.1-6c0.6-6.5,5.5-11.2,11.8-11.3c6.4-0.1,11.8,4.8,12.4,11.3c0.1,1.7,0.1,3.3,0.1,5
+		C287.2,71.1,287.2,124.8,287.2,178.4z" />
+                                            <path d="M119.2,166.5c0,47.1,0,94.3,0,141.4c0,7.1-2.7,11.4-8.3,13.3c-7.1,2.5-14.6-2-15.8-9.3c-0.3-1.8-0.3-3.7-0.3-5.5
+		c0-93.3,0-186.5,0-279.8c0-2.5,0.1-5.1,0.8-7.4c1.6-5.1,7.3-8.5,12.6-7.9c5.7,0.7,10.2,5,10.9,10.7c0.2,1.6,0.1,3.3,0.1,5
+		C119.2,73.6,119.2,120,119.2,166.5z" />
+                                            <path d="M196.4,166.9c0,46.5,0,92.9,0,139.4c0,2.3,0.1,4.7-0.5,6.9c-1.3,5.4-7,9.1-12.5,8.7c-5.8-0.5-10.6-5.1-11.2-10.9
+		c-0.1-1.5-0.1-3-0.1-4.5c0-93.3,0-186.5,0-279.8c0-2.2-0.1-4.4,0.4-6.4c1.4-5.6,7.2-9.6,12.8-8.9c5.9,0.7,10.4,5.2,10.9,11.2
+		c0.1,1.8,0.1,3.7,0.1,5.5C196.4,74.3,196.4,120.6,196.4,166.9z" /> </g>
+                                    </svg>
+                                </div>
+                                <div class="section-point-label">Eating Plan</div>
+                            </div>
+                            <div class="section-point define-section-point">
+                                <div class="section-point-icon timer-icon">
+                                    <svg id="food-icon-svg" class="section-point-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1382.4 1239.6" style="enable-background:new 0 0 1382.4 1239.6;" xml:space="preserve">
+                                        <g>
+                                            <path d="M0,634.2c0.2-2,0.6-3.9,0.6-5.9c0.7-58,8.2-114.9,26.4-170.1C42.9,409.8,65.7,365,101.5,328
+		c44.6-46.2,99.1-75.2,161.8-88.7c42.1-9,84.3-8.4,126.6-1.1c48.3,8.3,96,18.8,142.4,35c25.9,9,50.4,20.9,74.7,33.3
+		c1.8,0.9,3.5,1.8,6.2,3.1c-1.5-8.5-2.9-16.2-4.1-24c-6.2-39.8-21.8-75.6-50.5-103.8c-18-17.8-39.1-32.7-59.7-47.6
+		c-26.3-19-55.3-33.2-86.6-42.3c-4.1-1.2-8.4-1.8-12.7-2.5c-7.4-1.1-12.9-8.7-11.3-15.9c1.3-6.3,9.5-10.9,16.2-9.1
+		c33.5,9,65.1,22.3,94.5,40.8c27.2,17,52.6,36.4,76.6,57.6c12,10.6,21.6,23.1,29.1,37.2c4.6,8.6,9.5,17.1,14.7,26.4
+		c3.5-8.6,7-16.1,9.7-23.8c13-36.8,35.1-67.7,60.7-96.7c22.4-25.4,46.8-48.2,77-64.4c39.4-21.2,81.4-34.4,125.6-41.1
+		c3.4-0.5,7-0.6,10.4-0.1c8,1.4,11,6.2,9.2,14c-6.3,26.6-14.7,52.5-25.4,77.7c-24.2,56.8-58.2,106.9-101.9,150.5
+		c-8.4,8.3-16.8,16.5-25.3,24.7c0.3,0.4,0.5,0.8,0.8,1.2c10.6-2.6,21.2-5,31.8-7.7c27.1-6.8,54.2-13.5,82.1-16.7
+		c62.8-7.3,122.3,4,178.9,31.7c69,33.8,113,88.6,137.4,160.6c13.8,40.7,22.1,82.5,26.5,125.6c-8.8-3.8-17.4-7.3-25.7-11.4
+		c-1.3-0.6-1.8-3.6-2.1-5.6c-5.7-46.7-16.9-91.8-36.7-134.8c-25.9-56.2-69.7-92.7-125.2-116.8c-41.8-18.2-85.5-26.4-131-23.9
+		c-33.4,1.8-65.9,8.9-98.2,17.3c-57,14.7-112.4,33.9-166.6,56.8c-6.5,2.8-12.1,2.2-17.4-1.5c-38-26.3-80.7-42-124.6-54.9
+		c-41.1-12.1-82.9-21.7-125.4-26.3c-78.1-8.5-148.9,11.3-212,58.2c-43.7,32.4-72.1,76-91.7,125.9c-14.6,37.2-23.4,75.9-28.3,115.6
+		c-5.4,43.2-6.3,86.4-2.7,129.7c10.4,126.1,47.3,243.4,118.7,348.6c25.3,37.2,53.9,71.8,90.7,98.4c38.3,27.6,79.9,48.6,125.8,60.3
+		c33.5,8.6,67.2,6.4,100.4-1.9c27.7-7,55.1-15.4,82.7-22.8c21.1-5.7,42.7-9.6,64.5-10c24.8-0.4,49.1,4.1,72.6,12.2
+		c12.8,4.5,25.5,9.9,37.6,15.9c27.5,13.7,56.7,21.2,87,24.3c15.2,1.5,29.7-2.6,44-7.2c1.3-0.4,3.1-1.1,4.1-0.5
+		c8.8,4.6,17.6,9.3,26.6,14.2c-26.7,12.8-54,20.7-83.8,17.4c-32.8-3.6-63.7-12.8-93.3-27.6c-27.8-14-57.2-23.1-88.5-24.1
+		c-25-0.8-49.4,4-73.4,10.7c-24.8,6.9-49.4,14.9-74.4,21.2c-56.5,14.2-110.7,7.5-164.2-16c-68.5-30-123-75.6-166.7-135.9
+		C77.9,981.6,37.4,887,16,784C6.3,737.3,1.1,690.2,0.6,642.6c0-1.8-0.4-3.6-0.6-5.4C0,636.2,0,635.2,0,634.2z M637.6,313.7
+		c60.6-29.4,112.9-68,156.1-118.7c42.2-49.6,72.1-105.8,90.7-168.9c-1.8,0.3-3.1,0.5-4.3,0.8c-10.3,2.8-20.6,5.4-30.8,8.4
+		C799,50.3,753,72.5,718,113.2c-5.1,5.9-10.6,11.6-15.7,17.5c-21.1,24.3-39.4,50.3-49.9,81.2c-8.7,25.6-11.8,52.2-13.4,79
+		C638.6,298.2,638.1,305.6,637.6,313.7z" />
+                                            <path d="M1035.7,545.6c14.3-0.1,36.3,2.3,58.1,6.5c8.8,1.7,14.3,9.9,12.4,17.9c-1.8,7.5-10.9,13.5-19.8,11.1
+		c-20.3-5.5-41.4-6.6-62.4-6.2c-140.4,2.5-258.7,101.9-285.6,239.7c-30.2,155,68.7,307.3,222.5,342.6
+		c163.7,37.6,323.5-66.1,355.5-231.1c3.4-17.7,4.2-36,6-54c0.7-6.6,4.5-12,10.5-13.7c6-1.7,13.3,1.1,16.4,6.7c1.2,2.2,1.9,5,1.9,7.5
+		c-1.9,94.5-37.3,174.2-106.8,238.2c-47.8,44.1-104.5,70.8-168.9,80.1c-170.2,24.6-324-84.9-362.2-243.6
+		c-39.5-164.1,51-329.5,209.7-384.4C955.4,551.5,992.9,545.4,1035.7,545.6z" />
+                                            <path d="M1034.3,926.5c18.5-23.4,36.6-46.4,54.8-69.4c86.9-110.1,173.8-220.2,260.7-330.3c1.6-2.1,3.3-4.2,4.7-6.4
+		c5-7.8,15-10.1,22-4.9c6.8,4.9,7.7,15.1,2,22.2c-77.1,97.7-154.2,195.4-231.2,293.1c-35.9,45.5-71.8,91.1-107.6,136.6
+		c-0.7,0.9-1.5,1.8-2.4,2.9c-1.1-0.8-2.2-1.6-3.1-2.4c-39.4-35.2-78.8-70.3-118.2-105.5c-6.2-5.5-6.8-14.5-1.4-20.5
+		c5.7-6.4,15.4-7.3,21.4-2c31.4,27.7,62.7,55.3,94.1,83C1031.3,924,1032.6,925.1,1034.3,926.5z" />
+                                            <path d="M304.6,387c3.8,0,7.7-0.2,11.5,0c8.2,0.6,12.5,6.4,11,14.4c-2,11.2-9.8,16.4-20.4,15.6c-24-1.9-45.4,5.8-63.8,21.1
+		c-29.4,24.6-45,56.2-46,94.8c-0.2,9.3-6.4,15.7-15.1,15.7c-7.7,0-13.8-6.9-13.7-16c0.4-30.1,9.3-57.5,25.4-82.9
+		c22.8-35.8,55.3-56.2,97.1-62.1c4.6-0.6,9.3-0.6,13.9-0.9C304.6,386.9,304.6,387,304.6,387z" /> </g>
+                                    </svg>
+                                </div>
+                                <div class="section-point-label">Food Tracker</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PROGRAM TOOLS SECTION - END -->
+                
+                <!-- BOD COMMUNITY SECTION - START -->
+                
+                <div id="bod-community-section" class="section">
+                    <div class="section-content">
+                        <div class="section-header">The BOD Community
+                            <br>is here for you</div>
+                        <div class="section-checkmarks">
+                            <div class="section-checkmarks-inner">
+                                <div class="section-checkmark">
+                                    <div class="section-checkmark-icon">
+                                        <svg class="section-checkmark-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-checkmark-text">
+                                        <div class="section-checkmark-text-inner">
+                                            <div class="section-checkmark-text-description">Join Message Boards</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-checkmark">
+                                    <div class="section-checkmark-icon">
+                                        <svg class="section-checkmark-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-checkmark-text">
+                                        <div class="section-checkmark-text-inner">
+                                            <div class="section-checkmark-text-description">Get Expert Advice</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-checkmark">
+                                    <div class="section-checkmark-icon">
+                                        <svg class="section-checkmark-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-checkmark-text">
+                                        <div class="section-checkmark-text-inner">
+                                            <div class="section-checkmark-text-description">Explore the Beachbody Blog</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-circles">
+                        <div class="section-circles-inner">
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                            <div class="section-circle img-circle front">
+                                <div class="section-circle-img"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-circles-bg">
+                        <div class="section-circles-bg-inner">
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                            <div class="section-circle-bg color-circle front"></div>
+                        </div>
+                    </div>
+                    <div class="section-bodcom-text-more-button">
+                        <div class="section-bodcom-text-more-button-text">Learn More</div>
+                        <div class="section-bodcom-text-more-button-circle">
+                            <div class="section-bodcom-text-more-button-circle-bg"></div>
+                            <div class="section-bodcom-text-more-button-circle-plus">+</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BOD COMMUNITY SECTION - END -->
+                
+                <!-- PERSONAL COACH SECTION - START -->
+                
+                <div id="personal-coach-section" class="section">
+                    <div class="section-content">
+                        <div class="section-content-text">
+                            <div class="section-header">Succeed with your
+                                <br>own Personal Coach</div>
+                            <div class="section-description">Get better and quicker results with a fitness
+                                <br>coach. Lorem ipsum dolor sit amen efter querem
+                                <br>dolor ipsum. Included in your BOD Membership.</div>
+                        </div>
+                        <div class="section-content-icon">
+                            <div class="section-content-icon-circle">
+                                <div class="section-content-icon-circle-inner gradient-purple-blue-top-bottom stagger-icon">
+                                    <svg class="section-content-icon-circle-shield stagger-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 438.7 538.1" style="enable-background:new 0 0 438.7 538.1;" xml:space="preserve">
+                                        <path d="M219.4,0c59.2,59.6,131.4,87.7,215.2,90.4c0.8,8.1,1.7,16.1,2.3,24.2c5.5,80.4-0.4,159.5-27.5,236
+	c-16.5,46.5-40.9,88.1-76.6,122.6c-31.5,30.4-68.6,51.4-110.2,64.5c-2.3,0.7-5.3,0.3-7.7-0.4C134.3,511.5,78,458.5,42.5,382.6
+	c-18.8-40.3-29.8-82.9-36.2-126.7c-5.7-39-7.3-78.3-5.8-117.6c0.6-15.9,2.2-31.8,3.3-47.8C87.8,87.8,160.1,59.6,219.4,0z
+	 M218.8,379.2c60.3,0,109.4-48.9,109.6-109.2c0.1-60.5-48.9-109.8-109.4-109.8c-60.3,0-109.5,48.9-109.6,109.2
+	C109.3,330,158.3,379.2,218.8,379.2z M217.4,116.8c25.5,0,50.9,0,76.4,0c2.2,0,4.4,0,6.4-0.5c4.3-1.1,6.5-4,6.3-8.4
+	c-0.1-4.1-2.5-6.9-6.5-7.7c-2.2-0.5-4.6-0.4-7-0.4c-50.8,0-101.5,0-152.3,0c-8.2,0-12.3,2.8-12.4,8.4c-0.1,5.8,4.1,8.7,12.6,8.7
+	C166.5,116.8,192,116.8,217.4,116.8z M212.9,443.2c33.4,0,61-10.3,81.9-28.1c0.9-0.8,1.8-1.5,2.5-2.4c2.7-3.4,2.7-7.9-0.2-11
+	c-3-3.2-6.7-3.7-10.5-1.6c-2.2,1.2-4,2.9-6,4.4c-22.5,16.8-47.4,24.7-75.5,20.7c-20.7-3-39.3-11.2-56.1-23.6
+	c-5.2-3.8-10.2-3.5-13.3,0.6c-3.1,4.1-2.1,9.2,3,12.9C162.6,432.6,189.1,442.7,212.9,443.2z" />
+                                        <path d="M167.5,345.9c3.9-15.7,7.1-30.7,11.5-45.3c2.3-7.7,1.2-12.4-5.4-17.5c-12.1-9.3-23.3-19.8-36-30.8
+	c8.2-0.8,15.3-1.4,22.4-2.1c10.8-1,21.6-2,32.4-2.7c3.2-0.2,4.6-1.5,5.7-4.3c6.1-15.3,12.4-30.4,19.1-46.5c1,2,1.7,3.2,2.3,4.5
+	c5.8,14,11.6,28,17.2,42c1.1,2.8,2.5,4.1,5.7,4.3c17.1,1.3,34.2,2.9,51.3,4.4c0.8,0.1,1.6,0.2,3.3,0.5c-2.1,1.9-3.6,3.3-5.2,4.7
+	c-11.7,10.1-23.4,20.3-35.2,30.3c-2.4,2-3,3.7-2.2,6.8c4,15.3,7.7,30.6,11.6,46c0.4,1.6,0.7,3.1,1.3,5.5c-2-1-3.2-1.5-4.5-2.2
+	c-13.8-7.8-27.6-15.5-41.2-23.5c-3-1.7-5.1-1.8-8.1,0c-13.5,7.9-27.2,15.6-40.8,23.3C171.2,344,169.7,344.7,167.5,345.9z" /> </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PERSONAL COACH SECTION - END -->
+                
+                <!-- REAL PIYO RESULTS SECTION - START -->
+                
+                <div id="real-piyo-results-section" class="section">
+                    <div class="section-content">
+                        <div class="section-header">Real PiYo results</div>
+                        <div class="section-video-sliders-container">
+                            <div class="section-video-sliders-inner">
+                                <div class="section-video-sliders">
+                                    <div class="section-video-slider">
+                                        <div class="section-video-slider-tile">
+                                            <div class="section-video-slider-tile-thumb">
+                                                <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba1.jpg"> </div>
+                                                <div class="arrow-right"></div>
+                                            </div>
+                                            <div class="section-video-slider-tile-label">
+                                                <div class="section-video-slider-tile-label-header">Emilie Burns Lost 11 lbs. in 60 Days</div>
+                                                <div class="section-video-slider-tile-label-description">"I loved how challenging it was. PiYo is that program that you
+                                                    <br>think is going to be a walk in the park lorem ipsum."</div>
+                                            </div>
+                                        </div>
+                                        <div class="section-video-slider-tile">
+                                            <div class="section-video-slider-tile-thumb">
+                                                <div class="section-video-slider-tile-thumb-bg"> <img class="section-video-slider-tile-thumb-bg-img" src="images/piyo-result-ba/piyo-result-ba2.jpg"> </div>
+                                                <div class="arrow-right"></div>
+                                            </div>
+                                            <div class="section-video-slider-tile-label">
+                                                <div class="section-video-slider-tile-label-header">Rachael Smith Lost 18 lbs. in 60 Days</div>
+                                                <div class="section-video-slider-tile-label-description">"I loved how challenging it was. PiYo is that program that you
+                                                    <br>think is going to be a walk in the park lorem ipsum."</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-video-slider-nav">
+                                    <div class="section-video-slider-nav-items">
+                                        <div class="section-video-slider-nav-item active-nav-item">
+                                            <div class="section-video-slider-nav-item-bg"></div>
+                                        </div>
+                                        <div class="section-video-slider-nav-item">
+                                            <div class="section-video-slider-nav-item-bg"></div>
+                                        </div>
+                                        <div class="section-video-slider-nav-item">
+                                            <div class="section-video-slider-nav-item-bg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="section-video-slider-nav-disclaimer">Results vary depending on starting point, goals, and effort.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- REAL PIYO RESULTS SECTION - END -->
+                
+                <!-- BOD FEATURES SECTION - START -->
+                
+                <div id="bod-features-section" class="section">
+                    <div class="section-content">
+                        <div class="section-header">In addition to PiYo, here's what
+                            <br>you get with Beachbody On Demand</div>
+                        <div class="section-bullets">
+                            <div class="section-bullets-column">
+                                <div class="section-bullet">
+                                    <div class="section-bullet-icon">
+                                        <svg class="section-bullet-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-bullet-text">700+ Beachbody Workouts</div>
+                                </div>
+                                <div class="section-bullet">
+                                    <div class="section-bullet-icon">
+                                        <svg class="section-bullet-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-bullet-text">Fitness Guides &amp; Calendars</div>
+                                </div>
+                                <div class="section-bullet">
+                                    <div class="section-bullet-icon">
+                                        <svg class="section-bullet-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-bullet-text">Meal Plans &amp; Recipes</div>
+                                </div>
+                            </div>
+                            <div class="section-bullets-column">
+                                <div class="section-bullet">
+                                    <div class="section-bullet-icon">
+                                        <svg class="section-bullet-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-bullet-text">Personal Coack</div>
+                                </div>
+                                <div class="section-bullet">
+                                    <div class="section-bullet-icon">
+                                        <svg class="section-bullet-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-bullet-text">Fitness &amp; Nutrition</div>
+                                </div>
+                                <div class="section-bullet">
+                                    <div class="section-bullet-icon">
+                                        <svg class="section-bullet-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1342 1342" style="enable-background:new 0 0 1342 1342;" xml:space="preserve">
+                                            <g>
+                                                <path d="M1342,671c0,371-301.2,671-673.5,671C301.4,1341.9,0,1039.8,0,672C0,300.2,301-0.3,673.1,0C1041.4,0.3,1342,301.8,1342,671
+		z M1254,671c0-321.9-261.7-583.2-583.8-583C349.5,88.2,88.2,349.7,88,670.7c-0.2,321.5,261.7,583.5,583.1,583.3
+		C992.6,1253.8,1254,992.4,1254,671z" />
+                                                <path d="M567.8,798.5c2.4-2.8,3.5-4.5,4.9-5.9c113.2-113.3,226.5-226.5,339.7-339.7c14-14,30.5-18.2,48.9-11.1
+		c28.9,11.1,36.9,48.2,15.8,70.7c-1.1,1.2-2.3,2.4-3.5,3.6C849.1,640.6,724.5,765.1,600,889.7c-18.4,18.4-45.4,18.7-63.9,0.3
+		C479.5,833.4,423,776.9,366.5,720.2c-17.9-17.9-18-45.3-0.6-62.7c17.4-17.4,44.8-17.2,62.8,0.6c45.1,44.9,90.1,90,135.1,135
+		C565,794.4,566,796,567.8,798.5z" /> </g>
+                                        </svg>
+                                    </div>
+                                    <div class="section-bullet-text">Expert Advice</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BOD FEATURES SECTION - END -->
+                
+                <!-- PLAN SECTION - START -->
+                
+                <div id="plan-section" class="section">
+                    <div class="section-header">Choose your plan</div>
+                    <div class="section-subheader">PiYo comes with an All-Access Membership. Save with
+                        <br>an Annual plan or select one of the options below</div>
+                    <div class="section-content">
+                        <div class="section-plans">
+                            <div class="section-plan best-value"></div>
+                            <div class="section-plan"></div>
+                            <div class="section-plan"></div>
+                            <div class="section-plans-disclaimer">
+                                <div class="section-plans-disclaimer-header">Membership Details</div>
+                                <div class="section-plans-disclaimer-description">Membership automatically renews for the same term and price,
+                                    <br>until you cancel. Cancel anytime to avoid future charges by
+                                    <br>calling 1 (800) 470-7870.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PLAN SECTION - END -->
+                
+                <!-- PIYO FAQS SECTION - START -->
+                
+                <div id="piyo-faqs-section" class="section">
+                    <div class="section-header">PiYo FAQs</div>
+                    <div class="section-content">
+                        <div class="section-faqs">
+                            <div class="section-faq">
+                                <div class="section-faq-text">What do you need to be successful
+                                    <br>with PiYo?</div>
+                                <div class="section-faq-icon">
+                                    <div class="section-faq-icon-ring">
+                                        <div class="section-faq-icon-plus">+</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-faq">
+                                <div class="section-faq-text">How long are the workouts and how many days a week is the program</div>
+                                <div class="section-faq-icon">
+                                    <div class="section-faq-icon-ring">
+                                        <div class="section-faq-icon-plus">+</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-piyo-faqs-text-more-button">
+                                <div class="section-piyo-faqs-text-more-button-text">View More</div>
+                                <div class="section-piyo-faqs-text-more-button-circle">
+                                    <div class="section-piyo-faqs-text-more-button-circle-bg"></div>
+                                    <div class="section-piyo-faqs-text-more-button-circle-plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PIYO FAQS SECTION - END -->
+                
+                <!-- STREAM DEVICE SECTION - START -->
+                
+                <div id="stream-device-section" class="section">
+                    <div class="section-header">Stream on your
+                        <br>favorite device</div>
+                    <div class="section-content">
+                        <div class="section-devices">
+                            <div class="section-device">
+                                <div class="section-device-icon">
+                                    <svg class="section-device-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 904.4 702.8" style="enable-background:new 0 0 904.4 702.8;" xml:space="preserve">
+                                        <g>
+                                            <path d="M904.4,0c0,187.2,0,374.1,0,561.6c-137.9,0-275.6,0-413.6,0c0,22.1,0,43.7,0,66c1.9,0,3.8,0,5.8,0c51.5,0,103,0,154.5-0.1
+		c3.9,0,6.2,0.9,8.3,4.5c9.8,17.2,20,34.2,29.9,51.3c1.6,2.7,2.9,5.7,3.7,8.7c1.4,5.6-2.3,10.4-8.2,10.5c-6.7,0.1-13.3,0-20,0
+		c-147,0-294-0.1-440.9,0.2c-10,0-15.4-6.6-9.7-16.3c11-18.9,21.9-37.7,33.2-56.4c0.9-1.5,3.8-2.4,5.7-2.4
+		c41.5-0.1,83-0.1,124.5-0.1c10.8,0,21.6,0,32.7,0c0-22,0-43.8,0-65.8c-136.7,0-273.3,0-410.3,0C0,374.4,0,187.4,0,0
+		C301.2,0,602.6,0,904.4,0z M77,76.9c0,136.1,0,271.8,0,407.4c250.4,0,500.4,0,750.4,0c0-136,0-271.6,0-407.4
+		C577.2,76.9,327.2,76.9,77,76.9z" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="section-device-text">
+                                    <div class="section-device-text-header">On Your TV</div>
+                                    <div class="section-device-text-description">Apple TV, Chromecast,
+                                        <br>Roku, Amazon Fire</div>
+                                </div>
+                            </div>
+                            <div class="section-device">
+                                <div class="section-device-icon">
+                                    <svg class="section-device-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1625 1205.5" style="enable-background:new 0 0 1625 1205.5;" xml:space="preserve">
+                                        <g>
+                                            <path d="M0,1092c3.9-5.5,7.4-11.4,11.8-16.4c1.8-2.1,5.5-3.3,8.4-3.4c19.5-0.6,38.9-0.9,58.4-1c49-0.1,98-0.1,147,0
+		c100,0,200,0,299.9,0.1c21.5,0,43,0.6,64.5,0.6c16,0,32-0.4,47.9-0.9c4.4-0.1,7.2,1.1,9.2,5.1c2,4,4.7,7.7,6.7,11.7
+		c3.1,6.2,8,8.9,14.8,9.1c6.6,0.2,13.3,1.1,19.9,1.1c84.2,0.1,168.3,0.1,252.5-0.1c6.3,0,12.6-1,18.8-1.9c8.1-1.1,13-6.1,15.5-13.7
+		c3.1-9.5,5.8-11.3,16.1-11.3c76.8,0,153.6,0.1,230.5,0.1c93.8,0.1,187.6,0.1,281.4,0.2c17.8,0,35.6,0.5,53.4,0.5
+		c12.8,0,25.7,0.2,38.4-0.7c13.1-0.9,21.6,4.7,27.2,16c0.8,1.6,1.8,3.2,2.7,4.7c0,3,0,6,0,9c-8.9,22.4-19.3,44-34,63.5
+		c-11.3,15-24.8,27.3-40.3,37.5c-3.3,2.2-7.8,2.8-11.8,3.3c-4.6,0.5-9.3,0-14,0c-45-0.1-89.9-0.1-134.9-0.1
+		c-160.6,0-321.2,0-481.9,0c-63,0-126,0.1-188.9,0c-199.6,0-399.2,0-598.8-0.1c-10.3,0-20.7-0.2-31,0c-12.7,0.3-23.3-5.4-32-13.3
+		c-9.6-8.6-17.8-18.9-25.7-29.1c-13.9-18-23.3-38.6-31.8-59.7C0,1099.4,0,1095.7,0,1092z" />
+                                            <path d="M812.5,0.1c201.2,0,402.3,0,603.5,0c8,0,16-0.2,24,0c10.8,0.2,20.8,4.6,29.3,10.2c11,7.2,21.2,16,30.4,25.5
+		c11.9,12.3,19.2,27.4,23.6,44.2c4.8,18.2,3.4,36.6,3.5,55c0.2,75.8,0.1,151.6,0.1,227.5c0,172.8,0,345.6,0,518.5
+		c0,34.8-0.3,69.7-0.2,104.5c0,9.7-4.8,17.2-10.5,23.6c-3.1,3.4-10,4.7-15.2,4.8c-30.9,0.5-61.9,0.4-92.8,0.4
+		c-23.3,0-46.7-0.1-70-0.2c-113.8,0-227.7,0-341.5,0c-57.7,0-115.3-0.5-173-0.4c-177.6,0.1-355.3,0.4-532.9,0.7
+		c-34.6,0.1-69.3,0.8-103.9,1c-20.5,0.1-41,0.4-61.4-0.2c-15.1-0.5-25.2-10-25.4-28c-0.2-26.3-0.1-52.6-0.1-78.9
+		c0-185.5,0-371,0-556.5c0-38.3,0-76.7,0-115c0-44.1-0.2-88.3,0.2-132.4c0.2-20.1,3.6-39.7,15.7-56.8c3.3-4.7,5.4-10.4,11.2-12.9
+		c0.6-0.2,1.1-0.8,1.4-1.4C138.7,18.6,154,12,169.5,4.9c11.2-5.1,22.2-4.8,33.6-4.8C406.2,0,609.3,0,812.5,0.1
+		C812.5,0.1,812.5,0.1,812.5,0.1z M812.5,934c165.2,0,330.3,0,495.5,0c26.7,0,53.3,0,80-0.1c9.4,0,17.1-4.2,23-11.2
+		c6.3-7.5,7.6-16.8,7.4-26.3c-0.2-10.1-0.4-20.3-0.4-30.4c0-48.3,0-96.6,0-145c0.1-168.6,0.2-337.3,0.3-505.9c0-23-0.6-46,0.2-69
+		c0.4-11.8-3.3-21.9-7.9-32.1c-0.6-1.2-1.9-2.7-3.1-3c-5.9-1.6-11.9-3.8-17.9-3.9c-21.1-0.4-42.2-0.2-63.4-0.1
+		c-16.1,0.1-32.2,0.6-48.3,0.6c-327,0-653.9,0-980.9,0c-6.6,0-13.2-0.2-19.9-0.1c-17.1,0.2-34.2,0.4-51.3,1
+		c-2.6,0.1-5.8,1.4-7.6,3.2c-7.3,7.6-12,16.3-10.7,27.4c0.3,2.5,0.4,5,0.4,7.5c-0.2,22.5-0.7,45-0.7,67.5
+		c-0.1,173.8-0.1,347.6-0.1,521.5c0,53.5,0.1,107,0.3,160.4c0,5.5,0.2,11,1,16.4c0.5,3.1,1.9,6.4,3.8,8.9
+		c6.5,8.7,15.2,12.8,26.3,12.7c35.2-0.2,70.3-0.1,105.5-0.1C500.1,934,656.3,934,812.5,934z" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="section-device-text">
+                                    <div class="section-device-text-header">On Your Computer</div>
+                                    <div class="section-device-text-description">PC or Laptop</div>
+                                </div>
+                            </div>
+                            <div class="section-device">
+                                <div class="section-device-icon">
+                                    <svg class="section-device-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1681 1722.5" style="enable-background:new 0 0 1681 1722.5;" xml:space="preserve">
+                                        <g>
+                                            <path d="M0,135.5c1.3-10.4,1.9-20.9,4.2-31.1C16,50.3,62.9,7.9,117.7,1.4c6.8-0.8,13.6-1.2,20.4-1.2c297-0.1,594,0.2,891-0.2
+		c64.6-0.1,118.3,42.7,133,100.5c2.9,11.3,4.5,23.3,4.6,35c0.4,91.5,0.2,183,0.2,274.5c0,1.3,0,2.6,0,4.4c-39,0-77.8,0-117.2,0
+		c0-61.8,0-123.7,0-185.8c-310.8,0-620.9,0-931.4,0c0,419,0,838.1,0,1257.8c261.7,0,523.6,0,786,0c0,2.6,0,4.5,0,6.5
+		c0,42.8,0.4,85.7-0.1,128.5c-0.5,38.7,11.3,72.3,39.1,99.8c0.3,0.3,0.5,0.8,0.7,1.3c-273.3,0-546.7,0-820,0
+		c-1.5-0.3-2.9-0.8-4.4-0.9c-57.5-5.9-106.9-51.9-116.7-109c-1.4-8.3-2-16.7-3-25.1C0,1103.5,0,619.5,0,135.5z M585.9,1554.3
+		c-28.2,0.1-50.8,22.7-50.8,50.8c0,28.2,23.2,51.3,51.2,51.2c28.1-0.1,50.9-23.3,50.8-51.5C636.9,1576.8,614.1,1554.2,585.9,1554.3z
+		" />
+                                            <path d="M1102,1722.5c-5.7-1.3-11.4-2.2-17-3.8c-40.7-11.6-69-47.9-70.3-90.2c-0.1-2.2-0.1-4.3-0.1-6.5c0-338.1,0-676.2,0-1014.3
+		c0-38.8,16.2-68.3,49.5-88.2c14.8-8.8,31.1-12.6,48.2-12.6c157,0,313.9-0.1,470.9,0.1c50,0.1,89.6,35,96.8,84.3
+		c0.1,0.8,0.6,1.5,0.9,2.2c0,347.3,0,694.7,0,1042c-0.3,1.1-0.8,2.2-0.9,3.3c-5.5,39.5-34.3,71.5-73,80.8c-4.3,1-8.7,1.9-13,2.8
+		C1430,1722.5,1266,1722.5,1102,1722.5z M1074.9,671.7c0,293.8,0,587.1,0,880.4c182.3,0,364.2,0,546,0c0-293.7,0-586.9,0-880.4
+		C1438.9,671.7,1257.1,671.7,1074.9,671.7z M1237.7,613.6c73.7,0,146.9,0,220.3,0c0-8.2,0-16.1,0-24.1c-73.6,0-146.8,0-220.3,0
+		C1237.7,597.5,1237.7,605.3,1237.7,613.6z M1349.8,1674.7c20.2-0.1,36.3-16.3,36.3-36.7c0-20.2-16.3-36.6-36.5-36.6
+		c-20.4,0-36.7,16.5-36.6,37C1313.2,1658.7,1329.6,1674.8,1349.8,1674.7z" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="section-device-text">
+                                    <div class="section-device-text-header">On Mobile or Tablet</div>
+                                    <div class="section-device-text-description">iPhone, iPad, and
+                                        <br>Android devices</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- STREAM DEVICE SECTION - END -->
+                
+                <!-- STREAM SIMILAR PROGRAMS SECTION - START -->
+                
+                <div id="similar-programs-section" class="section">
+                    <div class="section-header">More programs similar
+                        <br>to PiYo</div>
+                    <div class="section-content">
+                        <div class="section-program-banners">
+                            <div class="section-program-banner"></div>
+                            <div class="section-program-banner"></div>
+                            <div class="section-program-banner"></div>
+                        </div>
+                        <div class="section-program-banners-nav">
+                            <div class="section-program-banners-nav-inner">
+                                <div class="section-program-banners-nav-tracker"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- STREAM SIMILAR PROGRAMS SECTION - END -->
+                
+                <!-- MORE SECTION - START -->
+                
+                <div class="section section-more">
+                    <img id="hp-fpo" src="images/fpos/hp-no-header-3-fpo.jpg">
+                </div>
+                
+                <!-- MORE SECTION - END -->
+                
+            </div>
+        </div>
+    </div>
+    <div id="container-mobile"></div>
+    <script src="js/variables.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
